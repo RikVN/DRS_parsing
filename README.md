@@ -1,5 +1,11 @@
 # DRS parsing
 
+This folder contains three scripts:
+
+* counter.py - for evaluating scoped meaning representations
+* spar.py    - baseline DRS parser
+* amr2drs.py - automatically convertings AMRs to DRSs
+
 ## Counter: evaluating scoped meaning representations
 
 Counter is a tool that is able to evaluate scoped meaning representations, in this case Discourse Representation Structures (DRSs). It compares sets of clauses and outputs an F-score. The tool can be used to evaluate different DRS-parsers.
