@@ -1,0 +1,10 @@
+%%% He smiled .
+b1 REF x1 % He [0...2]
+b1 male "n.02" x1 % He [0...2]
+b3 REF t1 % smiled [3...9]
+b3 TPR t1 "now" % smiled [3...9]
+b3 time "n.08" t1 % smiled [3...9]
+k0 Agent e1 x1 % smiled [3...9]
+k0 REF e1 % smiled [3...9]
+k0 Time e1 t1 % smiled [3...9]
+k0 smile "v.01" e1 % smiled [3...9]

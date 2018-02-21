@@ -1,0 +1,31 @@
+### He is a baseball player.
+(p / person 
+	:ARG0-of (p2 / play-08) 
+	:mod (b / baseball) 
+	:domain (h / he))
+
+### Everybody laughs.
+(l / laugh-01 
+	:ARG0 (i / i))
+
+### I knitted a sweater for him.
+(k / knit-01 
+	:ARG0 (i / i) 
+	:ARG1 (s / sweater) 
+	:beneficiary (h / he))
+
+### He painted a dog.
+(p / paint-02 
+	:ARG0 (h / he) 
+	:ARG1 (d / dog))
+
+### Tom drives a truck for a living.
+(d / drive-01 
+	:ARG0 (p / person
+		:name (n / name :op1 "Tom")) 
+	:ARG1 (t / truck) 
+	:purpose (l / live-01))
+
+
+
+
