@@ -1,5 +1,11 @@
 # DRS parsing
 
+This folder contains three scripts:
+
+* counter.py - for evaluating scoped meaning representations
+* spar.py    - baseline DRS parser
+* amr2drs.py - automatically convertings AMRs to DRSs
+
 ## Counter: evaluating scoped meaning representations
 
 Counter is a tool that is able to evaluate scoped meaning representations, in this case Discourse Representation Structures (DRSs). It compares sets of clauses and outputs an F-score. The tool can be used to evaluate different DRS-parsers.
@@ -62,7 +68,7 @@ etc
 
 DRSs in clause format follow a strict format. The second value in the clause identifies its type. Operators are always in capitals (e.g. REF, POS, IMP), concepts always start with a lowercase letter (e.g. person), while roles start with a capital, followed by letters (at least one lowercase) or dashes (e.g. Patient, Co-Agent). Clauses can have two types of variable, box variables and other variables. The type of variable can be determined by the place it occurs in a clause, e.g. the first variable is always a box variable, while non-first variables of concepts are always of the other type. This means that you can name the variables to whatever is convenient for you, but realize that using same name in a DRS matches the same variable.
 
-D-match checks if the input structure is valid according to these standards. They are not all described here, for a full overview please see the [http://pmb.let.rug.nl/drs.php](DRS page) on the PMB website.
+D-match checks if the input structure is valid according to these standards. They are not all described here, for a full overview please see the [DRS page](http://pmb.let.rug.nl/drs.php) on the PMB website.
 
 Actual examples of our DRSs can be found in the **data** folder.
 
