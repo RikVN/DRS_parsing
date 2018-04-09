@@ -174,14 +174,14 @@ An existing AMR parser is available [here](https://github.com/RikVN/AMR).
 
 * **Rik van Noord** - PhD-student at University of Groningen - [Personal website](http://www.rikvannoord.nl)
 
-## Paper ##
+## Citation ##
 
 If you use Counter, amr2drs or SPAR, please refer to our [LREC paper](http://www.let.rug.nl/rob/doc/lrec2018.pdf):
 
 Rik van Noord, Lasha Abzianidze, Hessel Haagsma, and Johan Bos, 2018. **Evaluating scoped meaning representations**. In Proceedings of the Eleventh International Conference on Language Resources andEvaluation (LREC 2018), Miyazaki, Japan
 
 @inproceedings{vanNoordLREC:2018,
-   title     = {Evaluating Scoped Meaning Representations},
+   title     = {Evaluating Scoped Meaning Representations}
    author    = {van Noord, Rik and Abzianidze, Lasha and Haagsma, Hessel and Bos, Johan},
    booktitle = {Proceedings of the Eleventh International Conference on Language Resources and Evaluation (LREC 2018)},
    address   = {Miyazaki, Japan},
