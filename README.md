@@ -180,13 +180,13 @@ If you use Counter, amr2drs or SPAR, please refer to our [LREC paper](http://www
 
 Rik van Noord, Lasha Abzianidze, Hessel Haagsma, and Johan Bos, 2018. **Evaluating scoped meaning representations**. In Proceedings of the Eleventh International Conference on Language Resources andEvaluation (LREC 2018), Miyazaki, Japan
 
-@inproceedings{vanNoordLREC:2018,
-   title     = {Evaluating Scoped Meaning Representations}
-   author    = {van Noord, Rik and Abzianidze, Lasha and Haagsma, Hessel and Bos, Johan},
-   booktitle = {Proceedings of the Eleventh International Conference on Language Resources and Evaluation (LREC 2018)},
-   address   = {Miyazaki, Japan},
-   year      = {2018}
-}
+@inproceedings{vanNoordLREC:2018,  
+   title     = {Evaluating Scoped Meaning Representations}  
+   author    = {van Noord, Rik and Abzianidze, Lasha and Haagsma, Hessel and Bos, Johan},  
+   booktitle = {Proceedings of the Eleventh International Conference on Language Resources and Evaluation (LREC 2018)},  
+   address   = {Miyazaki, Japan},  
+   year      = {2018}  
+}  
 
 ## Acknowledgments
 
