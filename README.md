@@ -95,18 +95,16 @@ python counter.py -f1 data/release_boxer.txt -f2 data/release_gold.txt
 -m    : Max number of clauses for a DRS to still take them into account - default 0 means no limit
 -p    : Number of parallel threads to use (default 1)
 -s    : What kind of smart initial mapping we use:
-	    -no    No smart mappings
-	    -conc  Smart mapping based on matching concepts (their match is likely to be in the optimal mapping)
-	    -role  Smart mapping based on matching role clauses
-	    -all   Doing both the smart concept and smart role mapping
+	    -no   No smart mappings
+	    -conc Smart mapping based on matching concepts (their match is likely to be in the optimal mapping)
 -prin : Print more specific output, such as individual (average) F-scores for the smart initial mappings, and the matching and non-matching clauses
 -sig  : Number of significant digits to output (default 4)
 -b    : Use this for baseline experiments, comparing a single DRS to a list of DRSs. Produced DRS file should contain a single DRS.
 -ms   : Instead of averaging the score, output a score for each DRS
+-msf  : Output individual F-scores per DRS-pair to a file, making it easier to do statistics
 -pr   : Also output precison and recall
 -pa   : Partial matching of clauses instead of full matching -- experimental setting!
         Means that the clauses x1 work "n.01" x2 and x1 run "n.01" x2 are able to match for 0.75, for example
--st   : Printing statistics regarding number of variables and clauses, don't do matching
 -ic   : Include REF clauses when matching (otherwise they are ignored because they inflate the matching)
 -v    : Verbose output
 -vv   : Very verbose output 
@@ -117,7 +115,7 @@ python counter.py -f1 data/release_boxer.txt -f2 data/release_gold.txt
 Run with 50 restarts, also showing precision and recall, with 4 parallel threads to speed things up:
 
 ```
-python counter.py -f1 data/release_boxer.txt -f2 data/release_gold.txt -pr -r 50 -p 4
+python counter.py -f1 data/release_boxer.txt -f2 data/release_gold.txt -pr -r 50 -p 4 -s no
 ```
 
 Print specific output, while only using the smart mapping based on concepts:
@@ -126,7 +124,7 @@ Print specific output, while only using the smart mapping based on concepts:
 python counter.py -f1 data/release_boxer.txt -f2 data/release_gold.txt -pr -r 100 -p 4 -prin -s conc
 ```
 
-Only take smaller DRSs into account, with a maximum of 20 clauses:
+Only take smaller DRSs into account, with a maximum of 10 clauses:
 
 ```
 python counter.py -f1 data/release_boxer.txt -f2 data/release_gold.txt -pr -r 100 -p 4 -prin -m 10
@@ -135,13 +133,13 @@ python counter.py -f1 data/release_boxer.txt -f2 data/release_gold.txt -pr -r 10
 Doing a single DRS, printing the matching and non-matching clauses:
 
 ```
-python counter.py -f1 data/baseline_drs.txt -f2 data/baseline_drs.txt -pr -r 100 -p 4 -prin
+python counter.py -f1 data/baseline_drs.txt -f2 data/baseline_drs.txt -pr -r 100 -p 1 -prin
 ```
 
-Outputting a score for each DRS (note we use -p 1 to not mess up printing):
+Outputting a score for each DRS and writing them to a file (note we use -p 1 to not mess up printing):
 
 ```
-python counter.py -f1 data/release_boxer.txt -f2 data/release_gold.txt -pr -r 100 -p 1 -ms
+python counter.py -f1 data/release_boxer.txt -f2 data/release_gold.txt -pr -r 100 -p 1 -ms -msf idv_scores.txt
 ```
 
 Doing a baseline experiment, comparing a single DRS to a number of DRSs:
