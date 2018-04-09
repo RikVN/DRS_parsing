@@ -24,6 +24,7 @@ Counter runs with Python 2.7. The memory component needs [psutil](https://pypi.p
 ### Differences with SMATCH ###
 
 * Counter takes clauses directly as input
+* Counter normalizes WordNet concepts to their synset IDs
 * Counter can process clauses that contain three variables (instead of max 2)
 * Counter can process multiple DRSs in parallel
 * Counter can do baseline experiments, comparing a single DRS to a set of DRSs
