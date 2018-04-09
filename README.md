@@ -27,7 +27,6 @@ Counter runs with Python 2.7. The memory component needs [psutil](https://pypi.p
 * Counter can process clauses that contain three variables (instead of max 2)
 * Counter can process multiple DRSs in parallel
 * Counter can do baseline experiments, comparing a single DRS to a set of DRSs
-* Counter can use two smart initial mappings, based on matching concepts and matching roles
 * Counter can print more detailed output, such as specific matching clauses and F-scores for each smart mapping
 * Counter can have a maximum number of clauses for a single DRS, ignoring DRS-pairs with more clauses
 * Counter can have a memory limit per parallel thread
