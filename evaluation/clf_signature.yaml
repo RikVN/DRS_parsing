@@ -1,0 +1,143 @@
+# The signature of Discourse Representation Structures (DRSs)
+# that are formatted in the clausal form (CLF) 
+
+# Every clause in CLFs starts with a box variable and an operator. 
+# The rest of the clause is a sequence of variables where its size depends on the operator
+
+# The signature represented as a set of key-value pairs.
+# The KEY is a sequence of letters representing variable types 
+# and following the variable order in clauses: 
+#   b stands for a box, x for a discourse referent, t for a term (i.e. a disc. referent or a constant) 
+# The VALUE is a list of operators whose argument types are described by the KEY
+
+# NB: except the operators in the signature, CLFs also contain wordnet word senses and constants.
+# "constants" and "pos.sense_numbers" are in double quotes. 
+   
+bx:
+  DRS:
+    - REF
+
+bb:
+  DRS:
+    - NOT
+    - POS
+    - NEC
+    - DRS    
+
+bbb:
+  DRS:
+    # DRS-specific operators
+    - IMP
+    - DIS
+    - DUP
+  DRL:
+    # Discourse relations. Not all
+    # Not all of them are used for now
+    - BACKGROUND
+    - COMMENTARY 
+    - CONTINUATION 
+    - CONTRAST
+    - ELABORATION
+    - EXPLANATION
+    - INSTANCE
+    - NARRATION
+    - PARALLEL
+    - PRECONDITION
+    - RESULT
+    - TOPIC
+
+bxb:
+  DRS:
+    - PRP
+
+btt:
+  TRL:
+    # temporal relations
+    - EQU #equal
+    - NEQ #not equla
+    - APX #approximate
+    - LES #less
+    - LEQ #less or equal
+    - TPR #precede
+    - TAB #abut
+    - TIN #include
+  SRL:
+    # spatial operators
+    - SZP #above x / y
+    - SZN #under x \ y
+    - SXP #behind x » y
+    - SXN #before x « y
+    - STI #inside
+    - STO #outside
+    - SY1 #beside
+    - SY2 #between
+    - SXY #around
+  SRO:
+    # Event roles
+    - Agent
+    - Asset
+    - Attribute
+    - Beneficiary
+    - Causer
+    - Co-Agent
+    - Co-Patient
+    - Co-Theme
+    - Destination
+    - Duration
+    - Experiencer
+    - Finish
+    - Frequency
+    - Goal
+    - Instrument
+    - Location
+    - Manner
+    - Material
+    - Path
+    - Patient
+    - Pivot
+    - Product
+    - Recipient
+    - Result
+    - Source
+    - Start
+    - Stimulus
+    - Theme
+    - Time
+    - Topic 
+    - Value
+  CRO:
+    # Concept roles
+    - Colour
+    - Creator
+    - MadeOf
+    - Name
+    - Of
+    - Owner
+    - PartOf
+    - Quantity
+    - Role
+    - Title
+    - Unit
+    - User
+  TRO:
+    # Time roles
+    - ClockTime
+    - DayOfMonth
+    - DayOfWeek
+    - Decade
+    - MonthOfYear
+    - YearOfCentury
+  ORO:
+    # Other roles. #FIXME They need to be verified
+    - Affector
+    - Context
+    - Equal
+    - Extent
+    - Precondition
+    - Part
+    - Measure
+    - Cause 
+    - Order
+    - Participant
+    - Content
+
