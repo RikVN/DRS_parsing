@@ -235,8 +235,8 @@ def rewrite_concept(concept, sense, en_sense_dict):
 	else:
 		conc_sense = en_sense_dict[dict_key]
 		# Now divide back again in concept + sense with quotes
-		new_concept = conc_sense.split('.')[0]
-		new_sense = '"' + ".".join(conc_sense.split('.')[1:]) + '"'
+		new_concept = ".".join(conc_sense.split('.')[0:-2])
+		new_sense = '"' + ".".join(conc_sense.split('.')[-2:]) + '"'
 		if dict_key == conc_sense: #nothing normalized after all
 			return new_concept, new_sense, []
 		else:
