@@ -3,11 +3,11 @@
 This folder contains four scripts:
 
 * evaluation/
-  * counter.py     - for evaluating scoped meaning representations
-  * clf_referee.py - extensive format check of produced meaning representations 
+  * counter.py     - for evaluating scoped meaning representations (DRSs)
+  * clf_referee.py - extensive format check of produced DRSs
 * parsing/
   * spar.py        - baseline DRS parser
-  * amr2drs.py     - automatically convertings AMRs to DRSs
+  * amr2drs.py     - automatically converting AMRs to DRSs
 
 ## Getting Started
 
@@ -88,6 +88,10 @@ python clf_referee.py ../data/boxer_parse_dev.txt
 
 Counter contains a setting to automatically replace ill-formed DRSs by either a dummy DRS (-ill dummy) or the SPAR default DRS (-ill spar) to make sure you can still get a score when producing ill-formed output.
 
+#### Data ####
+
+The data folder contains the PMB train and dev set for release 2.1.0. This data is also available on [the PMB webpage](http://pmb.let.rug.nl/data.php), but there it is already in a more convenient format.
+
 ### Running Counter
 
 The most vanilla version can be run like this:
@@ -99,7 +103,7 @@ python counter.py -f1 FILE1 -f2 FILE2
 Running with our example data:
 
 ```
-python counter.py -f1 ../data/boxer_parse_dev.txt -f2 ../data/dev_gold.txt
+python counter.py -f1 ../data/boxer_parse_dev.txt -f2 ../data/dev.txt
 ```
 
 Please note that redudant REF-clauses are ignored during matching, since they inflate the F-score. However, they are still needed for the format checker.
@@ -139,25 +143,25 @@ Please note that redudant REF-clauses are ignored during matching, since they in
 Run with 20 restarts and no smart initial mappings:
 
 ```
-python counter.py -f1 ../data/boxer_parse_dev.txt -f2 ../data/dev_gold.txt -r 20 -s no
+python counter.py -f1 ../data/boxer_parse_dev.txt -f2 ../data/dev.txt -r 20 -s no
 ```
 
 Run with 4 parallel threads to speed things up
 
 ``` 
-python counter.py -f1 ../data/boxer_parse_dev.txt -f2 ../data/dev_gold.txt -p 4 -s no
+python counter.py -f1 ../data/boxer_parse_dev.txt -f2 ../data/dev.txt -p 4 -s no
 ```
 
 Print specific output, while only using the smart mapping based on concepts:
 
 ```
-python counter.py -f1 ../data/boxer_parse_dev.txt -f2 ../data/dev_gold.txt -prin -s conc
+python counter.py -f1 ../data/boxer_parse_dev.txt -f2 ../data/dev.txt -prin -s conc
 ```
 
 Print even more specific output, for all clause type (e.g. Agent, NOT) that occur 10 times or more
 
 ```
-python counter.py -f1 ../data/boxer_parse_dev.txt -f2 ../data/dev_gold.txt -prin -ds 10
+python counter.py -f1 ../data/boxer_parse_dev.txt -f2 ../data/dev.txt -prin -ds 10
 ```
 
 Doing a single DRS, printing the matching and non-matching clauses:
@@ -169,19 +173,19 @@ python counter.py -f1 ../data/baseline_drs.txt -f2 ../data/baseline_drs.txt -pri
 Outputting a score for each DRS (note we use -p 1 to not mess up printing):
 
 ```
-python counter.py -f1 ../data/boxer_parse_dev.txt -f2 ../data/dev_gold.txt -p 1 -ms
+python counter.py -f1 ../data/boxer_parse_dev.txt -f2 ../data/dev.txt -p 1 -ms
 ```
 
 Doing a baseline experiment, comparing a single DRS to a number of DRSs:
 
 ```
-python counter.py -f1 ../data/baseline_drs.txt -f2 ../data/dev_gold.txt -prin --baseline
+python counter.py -f1 ../data/baseline_drs.txt -f2 ../data/dev.txt -prin --baseline
 ```
 
 Doing an experiment by replacing all senses in both files by a default sense ("n.01"), removing the need for word sense disambiguation:
 
 ```
-python counter.py -f1 ../data/boxer_parse_dev.txt -f2 ../data/dev_gold.txt -r 50 -dse
+python counter.py -f1 ../data/boxer_parse_dev.txt -f2 ../data/dev.txt -r 50 -dse
 ```
 
 
