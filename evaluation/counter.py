@@ -190,8 +190,7 @@ def get_clauses(file_name, signature, ill_type):
 						original_clauses.append(cur_orig)
 					except Exception as e:
 						if ill_type == 'error':
-							lang = 'for ' + re.findall(r'/([a-z][a-z])\.drs.clf', file_name)[0] + ': '
-							raise ValueError(lang + str(e))
+							raise ValueError(e)
 						elif ill_type == 'dummy':
 							print 'WARNING: DRS {0} is ill-formed and replaced by a dummy DRS'.format(len(clause_list) +1)
 							clause_list.append(dummy_drs())
@@ -236,8 +235,8 @@ def rewrite_concept(concept, sense, en_sense_dict):
 	else:
 		conc_sense = en_sense_dict[dict_key]
 		# Now divide back again in concept + sense with quotes
-		new_concept = conc_sense.split('.')[0]
-		new_sense = '"' + ".".join(conc_sense.split('.')[1:]) + '"'
+		new_concept = ".".join(conc_sense.split('.')[0:-2])
+		new_sense = '"' + ".".join(conc_sense.split('.')[-2:]) + '"'
 		if dict_key == conc_sense: #nothing normalized after all
 			return new_concept, new_sense, []
 		else:
