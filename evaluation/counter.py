@@ -36,6 +36,7 @@ Command line options:
 -dr   : Change all roles to a default role
 -dc   : Change all concepts to a default concept
 -ill  : What to do with ill-formed DRSs. Throw an error (default), input dummy DRS or input the SPAR baseline DRS
+-coda : File where the score details will be written (for CodaLab use) 
 """
 
 import os
