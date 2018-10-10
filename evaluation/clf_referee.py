@@ -23,6 +23,7 @@ def check_clf(clf, signature, v=0):
     '''checks well-formedness of a clausal form'''
     # get argument typing and for each clause an operator type 
     (op_types, arg_typing) = clf_typing(clf, signature, v=v)
+    if v>=3: print "Typing: {}".format(pr_2rel(arg_typing.items(), sep=':'))
     # get dictionary of box objects
     box_dict = clf_to_box_dict(clf, op_types, arg_typing, v=v)
     if v>=2: print "#boxes = {}".format(len(box_dict))
@@ -31,14 +32,14 @@ def check_clf(clf, signature, v=0):
             pr_box(box_dict[b])   
     # get transitive closure of subordinate relation (as set)
     sub_rel = box_dict_to_subordinate_rel(box_dict, v=v)
-    if v>=2: print "subordinate relation: {}".format(pr_2rel(sub_rel))
+    if v>=2: print "Subordinate relation: {}".format(pr_2rel(sub_rel))
     # get main box name
     main_box = detect_main_box(box_dict, sub_rel, v=v)
-    if v>=2: print "main box is {}".format(main_box)
+    if v>=2: print "Main box is {}".format(main_box)
     # find is there are unbound referents
     unbound_refs = unbound_referents(box_dict, sub_rel, v=v)
-    if unbound_refs: 
-        raise RuntimeError('Unbound referents || {}'.format(pr_set(unbound_refs)))
+    if unbound_refs:
+        report_error('Unbound referents || {}'.format(pr_set(unbound_refs)), v=v)
     return (main_box, box_dict, sub_rel, op_types) 
 
 #####################################
@@ -64,7 +65,7 @@ def clf_typing(clf, signature, v=0):
         if v >= 4: print "{}: {} @ {}".format(pr_clause(cl), op_type, pr_2rel(typing, sep=':'))  
         for (arg, t) in typing:
             # make type more specific if possible
-            t = specify_arg_type(arg, t, v=v) # 't' might become 'c'    
+            t = specify_arg_type(arg, t, v=v) # 't' might become 'c' or 'x'   
             if arg in arg_typing:
                 u = unify_types(arg_typing[arg], t) 
                 if not u: 
@@ -100,17 +101,20 @@ def specify_arg_type(arg, t, v=0):
        and return a type, more specific if possible 
        (e.g., "now" will be of type c instead of t)
     '''
-    if v >= 4: print arg, t
+    if v >= 5: print arg, t
     # argument is in double quotes or has no quotes 
     if (not re.match('"[^"]+"$', arg) and 
         not re.match('[^"]+$', arg)): # try without re
-        report_error("Syntax error || argument {} is ill-formed".format(arg), v=v) 
-    # if in double quotes, then is of type t, and if of type c, then id double quotes
-    if ((t == 'c' and (arg[0], arg[-1]) != ('"', '"')) or 
-        ('c' != unify_types(t, 'c') and (arg[0], arg[-1]) == ('"', '"'))):
+        report_error("Syntax error || argument {} is ill-formed".format(arg), v=v)
+    # if of type c, then it must be in double quotes 
+    # if in double quotes, then its type is unifiable with c
+    if ((t == 'c' and (arg[0], arg[-1]) != ('"', '"')) or
+        ('c' != unify_types(t, 'c') and (arg[0], arg[-1]) == ('"', '"'))): 
         report_error("Type clash || {} is of type {}".format(arg, t), v=v)
-    if  (arg[0], arg[-1]) == ('"', '"'):
-        return 'c' # constant type  
+    if (arg[0], arg[-1]) == ('"', '"'):
+        return 'c' # usually changes t to c
+    if t == 't':
+        return 'x' # usually changes t to x
     return t
 
 #################################
@@ -130,7 +134,7 @@ def operator_type(op, args, sig, v=0):
     # Wordnet senses 
     if re.match('"[avnr]\.\d\d"$', args[1]):
         return ('LEX', 'bct') # b LEX c t   
-    # whne signature is empty use a fallback type-checking
+    # when signature is empty use a fallback type-checking
     if not sig:
        return operator_type_default(op, args, v=v)
     # Operator is in the signature    
@@ -206,7 +210,7 @@ def file_to_clfs(filepath, v=0):
 #################################
 def report_error(message, v=0):
     if v >= 1: 
-        print message
+        print "ERROR: {}".format(message)
     raise RuntimeError(message)  
 
 #################################
@@ -232,7 +236,7 @@ def get_signature(sig_file, out='{op:(kind,types)}', v=0):
     if out == '[op]':
         return [ op for t in sig for k in sig[t] for op in sig[t][k] ]
     # error for the uncovered mode found
-    raise RuntimeError("Unknown parameter || {}".format(out))
+    report_error("Unknown parameter || {}".format(out), v=v)
 
 #################################
 ######### OBJECT MODEL ##########
@@ -398,6 +402,7 @@ def clf_to_box_dict(clf, op_types, arg_typing, v=0):
             assert (arg_typing[b], arg_typing[pos]) == ('b', 'c') and unify_types(arg_typing[t], 't')
             if v >=4: print "Adding {} to {} as {}".format(cl, b, op_type)
             box_dict.setdefault(b, Box(b)).conds.add((op, pos, t))
+            #print "!!! {} is of type {}".format(t, arg_typing[t]) 
             if arg_typing[t] == 'x': 
                 #box_dict[b].refs.add(x)
                 box_dict[b].cond_refs.add(t)
@@ -423,13 +428,13 @@ def clf_to_box_dict(clf, op_types, arg_typing, v=0):
             box_dict[b].cond_refs.update(refs)
             continue
         # raise an error for the uncovered clauses 
-        raise RuntimeError("Cannot accommodate clause of this type in box || {} {}".format(cl, op_type))
+        report_error("Cannot accommodate clause of this type in box || {} {}".format(cl, op_type), v=v)
     # a set of referent boxes (introduced by DRS) should equal 
     # a set of boxes participating in discourse relations
     for b in box_dict:
         if box_dict[b].box_refs != box_dict[b].rel_boxes:
-            raise RuntimeError("Referent boxes differ from boxes in relations || {} {} {}".format(
-                pr_set(box_dict[b].box_refs), b, pr_set(box_dict[b].rel_boxes)))
+            report_error("Referent boxes differ from boxes in relations || {} {} {}".format(
+                pr_set(box_dict[b].box_refs), b, pr_set(box_dict[b].rel_boxes)), v=v)
     return box_dict  
                        
 #################################
@@ -475,7 +480,7 @@ def box_dict_to_subordinate_rel(box_dict, v=0):
     # subordination relation has no loops
     for (a, b) in subs:
         if a == b:
-            raise RuntimeError("Subordinate relation has a loop || {}>{}".format(a, b))
+            report_error("Subordinate relation has a loop || {}>{}".format(a, b), v=v)
     return subs 
 
 
@@ -507,7 +512,7 @@ def connectivity_closure(box_dict, subs, v=0):
             # add b>b0 if b>b1 directly, works well in practice 
             for b in [ b2 for (b2, b3) in subs if b3 == b1 and b2 != b0 and (b0, b2) not in subs ]: 
                 cl_subs.add((b, b0))   
-    if v>=4: print "+ connecticity closure: {}".format(pr_2rel(sorted(cl_subs - subs)))
+    if v>=4: print "+ connectivity closure: {}".format(pr_2rel(sorted(cl_subs - subs)))
     return cl_subs
 
 #################################
@@ -530,9 +535,9 @@ def detect_main_box(box_dict, sub_rel, v=0):
             main_box.add(b) 
     # main box is expected to be unique  
     if len(main_box) > 1:
-        raise RuntimeError("Non-unique ({}) main boxes || {}".format(len(main_box), main_box))
+        report_error("Non-unique ({}) main boxes || {}".format(len(main_box), main_box), v=v)
     elif len(main_box) < 1: 
-        raise RuntimeError("No main box found")
+        report_error("No main box found", v=v)
     else: 
         return main_box.pop()
 
