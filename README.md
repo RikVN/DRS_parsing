@@ -217,7 +217,7 @@ An existing AMR parser is available [here](https://github.com/RikVN/AMR).
 
 ## Citation ##
 
-If you use any of our scripts, please refer to our [LREC paper](http://www.let.rug.nl/rob/doc/lrec2018.pdf):
+If you use any of our scripts, please refer to our [LREC paper](https://arxiv.org/pdf/1802.08599.pdf):
 
 Rik van Noord, Lasha Abzianidze, Hessel Haagsma, and Johan Bos, 2018. **Evaluating scoped meaning representations**. In Proceedings of the Eleventh International Conference on Language Resources and Evaluation (LREC 2018), Miyazaki, Japan
 
