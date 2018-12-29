@@ -48,7 +48,12 @@ import sys
 import multiprocessing
 from multiprocessing import Pool
 import json #reading in dict
-import cPickle
+
+try:
+        import cPickle as pickle
+except ImportError:
+        import pickle
+
 from numpy import median
 reload(sys)
 sys.setdefaultencoding('utf-8')  # necessary to avoid unicode errors
@@ -694,7 +699,7 @@ def save_stats(all_clauses, all_vars, stat_file):
 	print('Mean variables: {0}\nMedian variables: {1}\nMax variables: {2}\n'.format(mean_variables, median(all_vars), max(all_vars)))
 
 	dump_lists = [all_clauses, all_vars]
-	cPickle.dump(dump_lists, open(stat_file, 'w'))
+	pickle.dump(dump_lists, open(stat_file, 'w'))
 
 
 def main(args):
