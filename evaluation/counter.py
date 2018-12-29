@@ -137,15 +137,15 @@ def build_arg_parser():
 		raise ValueError('Number of restarts must be larger than 0')
 
 	if args.ms and args.parallel > 1:
-		print 'WARNING: using -ms and -p > 1 messes up printing to screen - not recommended'
+		print('WARNING: using -ms and -p > 1 messes up printing to screen - not recommended')
 		time.sleep(5)  # so people can still read the warning
 	
 	if args.ill != 'error':
-		print 'WARNING: by using -ill {0}, ill-formed DRSs are replaced by a {0} DRS'.format(args.ill)
+		print('WARNING: by using -ill {0}, ill-formed DRSs are replaced by a {0} DRS'.format(args.ill))
 		time.sleep(3)
 		
 	if args.runs > 1 and args.prin:
-		print 'WARNING: we do not print specific information (-prin) for runs > 1, only final averages'
+		print('WARNING: we do not print specific information (-prin) for runs > 1, only final averages')
 		time.sleep(5)
 
 	if args.partial:
@@ -192,11 +192,11 @@ def get_clauses(file_name, signature, ill_type):
 						if ill_type == 'error':
 							raise ValueError(e)
 						elif ill_type == 'dummy':
-							print 'WARNING: DRS {0} is ill-formed and replaced by a dummy DRS'.format(len(clause_list) +1)
+							print('WARNING: DRS {0} is ill-formed and replaced by a dummy DRS'.format(len(clause_list) +1))
 							clause_list.append(dummy_drs())
 							original_clauses.append([" ".join(x) for x in dummy_drs()])
 						elif ill_type == 'spar':
-							print 'WARNING: DRS {0} is ill-formed and replaced by the SPAR DRS'.format(len(clause_list) +1)
+							print('WARNING: DRS {0} is ill-formed and replaced by the SPAR DRS'.format(len(clause_list) +1))
 							clause_list.append(spar_drs())
 							original_clauses.append([" ".join(x) for x in spar_drs()])		
 				cur_clauses = []
@@ -270,7 +270,7 @@ def get_num_concepts(clause_list, pos_tag):
 				if cur_pos_tag == pos_tag:
 					num_concepts += 1
 			except:
-				print 'Strange concept clause', " ".join(clause)		
+				print('Strange concept clause', " ".join(clause))
 	return num_concepts
 
 
@@ -298,7 +298,7 @@ def get_detailed_results(match):
 				if pos_tag in event_tags:
 					match_division[7] += 1	
 			except:
-				print 'Strange concept clause:', " ".join(spl_line)
+				print('Strange concept clause:', " ".join(spl_line))
 	return match_division				
 
 
@@ -390,7 +390,7 @@ def get_matching_clauses(arg_list):
 	gold_drs.get_specific_clauses(gold_t, en_sense_dict, args)
 	
 	if single and (args.max_clauses > 0 and ((prod_drs.total_clauses > args.max_clauses) or (gold_drs.total_clauses > args.max_clauses))):
-		print 'Skip calculation of DRS, more clauses than max of {0}'.format(args.max_clauses)
+		print('Skip calculation of DRS, more clauses than max of {0}'.format(args.max_clauses))
 		return 'skip'
 
 	if args.stats: #only do stats
@@ -413,8 +413,8 @@ def get_matching_clauses(arg_list):
 				[uniq_rewrite.append(item) for item in rewrite_list if item not in uniq_rewrite] #only unique transformations, but keep order
 
 				# Print match and non-match to screen
-				for print_line in print_match: print print_line
-				for print_line in print_no_match: print print_line
+				for print_line in print_match: print(print_line)
+				for print_line in print_no_match: print(print_line)
 		else:
 			match_division = []
 			idv_dict = {}		
@@ -455,35 +455,35 @@ def print_results(res_list, no_print, start_time, single, args):
 	elif no_print:  # averaging over multiple runs, don't print results
 		return [precision, recall, best_f_score]
 	else:
-		print '\n## Clause information ##\n'
-		print 'Clauses prod : {0}'.format(total_test_num)
-		print 'Clauses gold : {0}\n'.format(total_gold_num)
+		print('\n## Clause information ##\n')
+		print('Clauses prod : {0}'.format(total_test_num))
+		print('Clauses gold : {0}\n'.format(total_gold_num))
 		if args.max_clauses > 0:
-			print 'Max number of clauses per DRS:  {0}\n'.format(args.max_clauses)
-		print '## Main Results ##\n'
+			print('Max number of clauses per DRS:  {0}\n'.format(args.max_clauses))
+		print('## Main Results ##\n')
 		if not single:
-			print 'All shown number are micro-averages calculated over {0} DRS-pairs\n'.format(len(res_list))
-		print 'Matching clauses: {0}\n'.format(total_match_num)
-		print "Precision: {0}".format(round(precision, args.significant))
-		print "Recall   : {0}".format(round(recall, args.significant))
-		print "F-score  : {0}".format(round(best_f_score, args.significant))
+			print('All shown number are micro-averages calculated over {0} DRS-pairs\n'.format(len(res_list)))
+		print('Matching clauses: {0}\n'.format(total_match_num))
+		print("Precision: {0}".format(round(precision, args.significant)))
+		print("Recall   : {0}".format(round(recall, args.significant)))
+		print("F-score  : {0}".format(round(best_f_score, args.significant)))
 
 		# Print specific output here
 		if args.prin:
-			print '\n## Detailed precision, recall, F-score ##\n'
+			print('\n## Detailed precision, recall, F-score ##\n')
 			for idx in range(0,len(name_list)):
-				print 'Prec, rec, F1 {0}: {1}, {2}, {3}'.format(name_list[idx], res_dict[name_list[idx]][0], res_dict[name_list[idx]][1], res_dict[name_list[idx]][2])
+				print('Prec, rec, F1 {0}: {1}, {2}, {3}'.format(name_list[idx], res_dict[name_list[idx]][0], res_dict[name_list[idx]][1], res_dict[name_list[idx]][2]))
 			if args.smart == 'conc':
 				smart_conc = compute_f(sum([y[0] for y in [x[3] for x in res_list]]), total_test_num, total_gold_num, args.significant, True)
-				print 'Smart F-score concepts: {0}\n'.format(smart_conc)
+				print('Smart F-score concepts: {0}\n'.format(smart_conc))
 
 			# For a single DRS we can print some more information
 			if single:
-				print '\n## Restarts and processing time ##\n'
-				print 'Num restarts specified       : {0}'.format(args.restarts)
-				print 'Found best mapping at restart: {0}'.format(int(found_idx))
+				print('\n## Restarts and processing time ##\n')
+				print('Num restarts specified       : {0}'.format(args.restarts))
+				print('Found best mapping at restart: {0}'.format(int(found_idx)))
 
-	print 'Total processing time: {0} sec'.format(runtime)
+	print('Total processing time: {0} sec'.format(runtime))
 	return [precision, recall, best_f_score]
 
 
@@ -491,23 +491,23 @@ def check_input(clauses_prod_list, original_prod, original_gold, clauses_gold_li
 	'''Check if the input is valid -- or fill baseline if that is asked'''
 	if baseline:  # if we try a baseline DRS, we have to fill a list of this baseline
 		if len(clauses_prod_list) == 1:
-			print 'Testing baseline DRS vs {0} DRSs...\n'.format(len(clauses_gold_list))
+			print('Testing baseline DRS vs {0} DRSs...\n'.format(len(clauses_gold_list)))
 			clauses_prod_list = fill_baseline_list(clauses_prod_list[0], clauses_gold_list)
 			original_prod = fill_baseline_list(original_prod[0], original_gold)
 		else:
 			raise ValueError("Using --baseline, but there is more than 1 DRS in prod file")
 	elif len(clauses_prod_list) != len(clauses_gold_list):
-		print "Number of DRSs not equal, {0} vs {1}, exiting...".format(len(clauses_prod_list), len(clauses_gold_list))
+		print("Number of DRSs not equal, {0} vs {1}, exiting...".format(len(clauses_prod_list), len(clauses_gold_list)))
 		sys.exit(0)
 	elif len(clauses_prod_list) == 0 and len(clauses_gold_list) == 0:
-		print "Both DRSs empty, exiting..."
+		print("Both DRSs empty, exiting...")
 		sys.exit(0)
 	elif not single:
-		print 'Comparing {0} DRSs...\n'.format(len(clauses_gold_list))
+		print('Comparing {0} DRSs...\n'.format(len(clauses_gold_list)))
 
 	# Print number of DRSs we skip due to the -max_clauses parameter
 	if max_clauses > 0 and not single:
-		print 'Skipping {0} DRSs due to their length exceeding {1} (--max_clauses)\n'.format(len([x for x, y in zip(clauses_gold_list, clauses_prod_list) if len(x) > max_clauses or len(y) > max_clauses]), max_clauses)
+		print('Skipping {0} DRSs due to their length exceeding {1} (--max_clauses)\n'.format(len([x for x, y in zip(clauses_gold_list, clauses_prod_list) if len(x) > max_clauses or len(y) > max_clauses]), max_clauses))
 	return original_prod, clauses_prod_list
 
 
@@ -632,7 +632,7 @@ class DRS:
 
 		# Operators that have two box variables
 		for idx, cur_clause in enumerate(clause_list):
-			#print cur_clause
+			#print(cur_clause)
 			# Clause has three items and belongs in op_two_vars (b0 REF x1 ,  b0 NOT b1)
 			if len(cur_clause) == 3:
 				val0 = self.rename_var(cur_clause[0], 'b', args)
@@ -676,9 +676,9 @@ def save_detailed_stats(all_dicts, args):
 	
 	# Now print a nicely aligned tab-list for the three types of clauses so it is easier to keep them straight
 	for idx, item in enumerate(print_list):
-		print '\n{0} {1}:\n'.format(print_line, print_headers[idx].lower())
+		print('\n{0} {1}:\n'.format(print_line, print_headers[idx].lower()))
 		to_print = create_tab_list([[print_headers[idx], 'F-score','Gold inst']] + print_list[idx], [], '\t')
-		for t in to_print: print t
+		for t in to_print: print(t)
 									
 
 def save_stats(all_clauses, all_vars, stat_file):
@@ -690,8 +690,8 @@ def save_stats(all_clauses, all_vars, stat_file):
 			best_idx = idx
 
 	drs_max_clauses, mean_clauses, mean_variables = best_idx + 1, float(sum(all_clauses)) / float(len(all_clauses)), float(sum(all_vars)) / float(len(all_vars))
-	print '\nStatistics:\n\nDRS {0} has max clauses\nLen DRSs: {1}\nMean clauses: {2}\nMedian clauses: {3}\nMax clauses: {4}\n'.format(drs_max_clauses, len(all_clauses), mean_clauses, median(all_clauses), max(all_clauses))
-	print 'Mean variables: {0}\nMedian variables: {1}\nMax variables: {2}\n'.format(mean_variables, median(all_vars), max(all_vars))
+	print('\nStatistics:\n\nDRS {0} has max clauses\nLen DRSs: {1}\nMean clauses: {2}\nMedian clauses: {3}\nMax clauses: {4}\n'.format(drs_max_clauses, len(all_clauses), mean_clauses, median(all_clauses), max(all_clauses)))
+	print('Mean variables: {0}\nMedian variables: {1}\nMax variables: {2}\n'.format(mean_variables, median(all_vars), max(all_vars)))
 
 	dump_lists = [all_clauses, all_vars]
 	cPickle.dump(dump_lists, open(stat_file, 'w'))
@@ -745,10 +745,10 @@ def main(args):
 
 	# If multiple runs, print averages
 	if res and args.runs > 1 and not args.stats:
-		print 'Average scores over {0} runs:\n'.format(args.runs)
-		print 'Precision: {0}'.format(round(float(sum([x[0] for x in res])) / float(args.runs), args.significant))
-		print 'Recall   : {0}'.format(round(float(sum([x[1] for x in res])) / float(args.runs), args.significant))
-		print 'F-score  : {0}'.format(round(float(sum([x[2] for x in res])) / float(args.runs), args.significant))
+		print('Average scores over {0} runs:\n'.format(args.runs))
+		print('Precision: {0}'.format(round(float(sum([x[0] for x in res])) / float(args.runs), args.significant)))
+		print('Recall   : {0}'.format(round(float(sum([x[1] for x in res])) / float(args.runs), args.significant)))
+		print('F-score  : {0}'.format(round(float(sum([x[2] for x in res])) / float(args.runs), args.significant)))
 	
 	# print scores in scores.txt file for codalab usage
 	if len(res) == 1 and args.runs == 1 and args.codalab:

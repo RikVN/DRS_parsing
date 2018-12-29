@@ -80,7 +80,7 @@ def get_best_match(prod_drs, gold_drs, args, single):
 				(gain, new_mapping, match_clause_dict) = get_best_gain(cur_mapping, candidate_mappings, weight_dict, num_vars, match_clause_dict)
 
 				if match_num + gain > prod_drs.total_clauses:
-					print new_mapping, match_num + gain, prod_drs.total_clauses
+					print(new_mapping, match_num + gain, prod_drs.total_clauses)
 					raise ValueError(
 						"More matches than there are produced clauses. If this ever occurs something is seriously wrong with the algorithm")
 
@@ -110,7 +110,7 @@ def get_best_match(prod_drs, gold_drs, args, single):
 		# stop instead of doing all other restarts - but always do smart mappings
 		if match_num == prod_drs.total_clauses and i > len(smart_fscores) - 1:
 			if args.prin and single:
-				print 'Best match already found, stop restarts at restart {0}'.format(i)
+				print('Best match already found, stop restarts at restart {0}'.format(i))
 			if i < len(smart_fscores):
 				smart_fscores[i] = match_num
 			break
