@@ -17,7 +17,12 @@ git clone https://github.com/RikVN/DRS_parsing
 
 ### Prerequisites
 
-All script are written in Python 2.7. Make sure to install [psutil](https://pypi.python.org/pypi/psutil) and [yaml](https://pypi.org/project/PyYAML/).
+All script are written in Python 2.7 (but should work with Python 3.5+).
+Install requirements using:
+
+```
+pip install -r requirements.txt
+```
 
 ## Counter: evaluating scoped meaning representations
 
