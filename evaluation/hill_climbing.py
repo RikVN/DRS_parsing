@@ -131,7 +131,7 @@ def get_best_match(prod_drs, gold_drs, args, single):
 def add_random_mapping(result, matched_dict, candidate_mapping):
 	'''If mapping is still -1 after adding a smart mapping, randomly fill in the blanks'''
 	# First shuffle the way we loop over result, so that we increase the randomness of the mappings
-	indices = range(len(result))
+	indices = list(range(len(result)))
 	random.shuffle(indices)
 	for idx in indices:
 		if result[idx] == -1:  # no mapping yet
