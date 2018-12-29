@@ -55,8 +55,15 @@ except ImportError:
         import pickle
 
 from numpy import median
-reload(sys)
-sys.setdefaultencoding('utf-8')  # necessary to avoid unicode errors
+
+try:
+        # only needed for Python 2
+        reload(sys)
+        sys.setdefaultencoding('utf-8')  # necessary to avoid unicode errors
+except:
+        pass
+
+
 import psutil  # for memory usage
 
 # Imports for the hillclimbing algorithm
