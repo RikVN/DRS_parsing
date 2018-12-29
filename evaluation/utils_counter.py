@@ -108,8 +108,16 @@ def create_tab_list(print_rows, print_item, joiner):
 		return_rows = []
 	if print_rows:
 		for idx in range(len(print_rows[0])):  # for nice printing, calculate max column length
-			col_widths.append(max([len(x[idx].decode('utf-8')) for x in print_rows]) + 1)
+			try:
+				col_widths.append(max([len(x[idx].decode('utf-8')) for x in print_rows]) + 1)
+			except AttributeError:
+				# in Python 3 a string is utf8 and has no decode
+				col_widths.append(max([len(x[idx]) for x in print_rows]) + 1)
 
 		for idx, row in enumerate(print_rows):  # print rows here, adjusted for column width
-			return_rows.append(joiner.join(word.decode('utf-8').ljust(col_widths[col_idx]) for col_idx, word in enumerate(row)))
+			try:
+				return_rows.append(joiner.join(word.decode('utf-8').ljust(col_widths[col_idx]) for col_idx, word in enumerate(row)))
+			except AttributeError:
+				# in Python 3 a string is utf8 and has no decode
+				return_rows.append(joiner.join(word.ljust(col_widths[col_idx]) for col_idx, word in enumerate(row)))
 	return return_rows
