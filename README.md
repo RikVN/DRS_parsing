@@ -90,7 +90,9 @@ Counter contains a setting to automatically replace ill-formed DRSs by either a 
 
 #### Data ####
 
-The data folder contains the PMB train and dev set for release 2.1.0. This data is also available on [the PMB webpage](http://pmb.let.rug.nl/data.php), but there it is already in a more convenient format.
+The data folder contains the train/dev split for release 2.1.0 and train/dev/test split for release 2.2.0. **Note that these splits are different**. Our annotation is data-driven, meaning we add certain phenomena at the time. We feel that if there are new phenomena in the training set, this should also be reflected in the suggested dev/test splits. Therefore, those splits also change per release.
+
+This data is also available on [the PMB webpage](http://pmb.let.rug.nl/data.php), but here it is already in a more convenient format.
 
 ### Running Counter
 
@@ -143,51 +145,50 @@ Please note that redudant REF-clauses are ignored during matching, since they in
 Run with 20 restarts and no smart initial mappings:
 
 ```
-python counter.py -f1 ../data/boxer_parse_dev.txt -f2 ../data/dev.txt -r 20 -s no
+python counter.py -f1 ../data/pmb-2.1.0/boxer_parse_dev.txt -f2 ../data/pmb-2.1.0/dev.txt -r 20 -s no
 ```
 
 Run with 4 parallel threads to speed things up
 
 ``` 
-python counter.py -f1 ../data/boxer_parse_dev.txt -f2 ../data/dev.txt -p 4 -s no
+python counter.py -f1 ../data/pmb-2.1.0/boxer_parse_dev.txt -f2 ../data/pmb-2.1.0/dev.txt -p 4 -s no
 ```
 
 Print specific output, while only using the smart mapping based on concepts:
 
 ```
-python counter.py -f1 ../data/boxer_parse_dev.txt -f2 ../data/dev.txt -prin -s conc
+python counter.py -f1 ../data/pmb-2.1.0/boxer_parse_dev.txt -f2 ../data/pmb-2.1.0/dev.txt -prin -s conc
 ```
 
 Print even more specific output, for all clause type (e.g. Agent, NOT) that occur 10 times or more
 
 ```
-python counter.py -f1 ../data/boxer_parse_dev.txt -f2 ../data/dev.txt -prin -ds 10
+python counter.py -f1 ../data/pmb-2.1.0/boxer_parse_dev.txt -f2 ../data/pmb-2.1.0/dev.txt -prin -ds 10
 ```
 
 Doing a single DRS, printing the matching and non-matching clauses:
 
 ```
-python counter.py -f1 ../data/baseline_drs.txt -f2 ../data/baseline_drs.txt -prin
+python counter.py -f1 ../data/pmb-2.1.0/baseline_drs.txt -f2 ../data/pmb-2.1.0/baseline_drs.txt -prin
 ```
 
 Outputting a score for each DRS (note we use -p 1 to not mess up printing):
 
 ```
-python counter.py -f1 ../data/boxer_parse_dev.txt -f2 ../data/dev.txt -p 1 -ms
+python counter.py -f1 ../data/pmb-2.1.0/boxer_parse_dev.txt -f2 ../data/pmb-2.1.0/dev.txt -p 1 -ms
 ```
 
 Doing a baseline experiment, comparing a single DRS to a number of DRSs:
 
 ```
-python counter.py -f1 ../data/baseline_drs.txt -f2 ../data/dev.txt -prin --baseline
+python counter.py -f1 ../data/pmb-2.1.0/baseline_drs.txt -f2 ../data/pmb-2.1.0/dev.txt -prin --baseline
 ```
 
 Doing an experiment by replacing all senses in both files by a default sense ("n.01"), removing the need for word sense disambiguation:
 
 ```
-python counter.py -f1 ../data/boxer_parse_dev.txt -f2 ../data/dev.txt -r 50 -dse
+python counter.py -f1 ../data/pmb-2.1.0/boxer_parse_dev.txt -f2 ../data/pmb-2.1.0/dev.txt -r 50 -dse
 ```
-
 
 ### Application ###
 
