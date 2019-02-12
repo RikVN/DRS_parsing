@@ -110,7 +110,7 @@ python counter.py -f1 FILE1 -f2 FILE2
 Running with our example data:
 
 ```
-python counter.py -f1 ../data/boxer_parse_dev.txt -f2 ../data/dev.txt
+python counter.py -f1 ../data/pmb-2.1.0/boxer_parse_dev.txt -f2 ../data/pmb-2.1.0/dev.txt
 ```
 
 Please note that redudant REF-clauses are ignored during matching, since they inflate the F-score. However, they are still needed for the format checker.
