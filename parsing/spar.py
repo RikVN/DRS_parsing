@@ -25,4 +25,4 @@ b2 Theme e1 x1
 """
 
     for line in open(sys.argv[1], 'r'):
-        print baseline.strip() + '\n'
+        print(baseline.strip() + '\n')

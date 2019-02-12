@@ -291,7 +291,7 @@ def get_argument(arg, arg_dict):
 	try:
 		final_arg = arg[1].upper() + arg[2:]
 	except:
-		print "WARNING: strange AMR argument", arg, "return Agent as default"
+		print("WARNING: strange AMR argument", arg, "return Agent as default")
 		final_arg = "Agent"
 
 	return [final_arg, False]
@@ -438,6 +438,6 @@ if __name__ == "__main__":
 			for d in drs:
 				out_f.write(d.strip() + '\n')
 			out_f.write('\n')
-	print "Changed {0} AMRs to DRS".format(len(amrs))
+	print("Changed {0} AMRs to DRS".format(len(amrs)))
 
 
