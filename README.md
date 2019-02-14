@@ -1,5 +1,3 @@
-
-
 # DRS parsing
 
 This folder contains four scripts:
@@ -20,8 +18,8 @@ git clone https://github.com/RikVN/DRS_parsing
 ### Prerequisites
 
 All scripts are written in Python 2.7 (but should work with Python 3.5+).
+
 Install requirements using:
-<<<<<<< HEAD
 
 ```
 pip install -r requirements.txt
@@ -29,15 +27,6 @@ pip install -r requirements.txt
 
 ## Counter: evaluating scoped meaning representations
 
-=======
-
-```
-pip install -r requirements.txt
-```
-
-## Counter: evaluating scoped meaning representations
-
->>>>>>> e150879aefd236a985f2e10caa7fee49bcb01cfb
 Counter is a tool that is able to evaluate scoped meaning representations, in this case Discourse Representation Structures (DRSs). It compares sets of clauses and outputs an F-score. The tool can be used to evaluate different DRS-parsers. It is based on [SMATCH](https://github.com/snowblink14/smatch), with a number of modifications. It was developed as part of the [Parallel Meaning Bank](http:/pmb.let.rug.nl).
 
 ### Differences with SMATCH ###
@@ -90,7 +79,6 @@ DRSs in clause format follow a strict format. The second value in the clause ide
 Clauses can have two types of variable, box variables and other variables. The type of variable can be determined by the place it occurs in a clause, e.g. the first variable is always a box variable. This means that you can name the variables to whatever is convenient for you, but realize that using the same name in a DRS matches the same variable.
 
 If all clauses are correctly formatted syntactically, they do not necessarily form a well-formed DRS (e.g. translatable into a first-order logic formula without free occurrences of a variable). To check if the input is well-formed, we use a format checker called Referee (see `clf_referee.py` by [Lasha Abzianidze](https://sites.google.com/site/lashabzianidze/home)). Referee does the following things:
-<<<<<<< HEAD
 
 * Checks individual clauses on well-formedness (distinguishing between box and entity variables)
 * Recovers all subordinate relations between boxes in such a way that free occurrences of variables are avoided (if possible)
@@ -99,10 +87,12 @@ If all clauses are correctly formatted syntactically, they do not necessarily fo
 * Finds a unique main box (if exists)
 
 Counter uses Referee to determine whether the input is valid, and throws an error otherwise. The Referee script can also be run separately to spot ill-formed DRSs (with or without the signature file):
+
 ```
 python clf_referee.py clfs.txt  		      # without the signature
 python clf_referee.py clfs.txt -s clf_signature.yaml  # with the signature
 ```
+
 When Referee is run without signature, it assumes simple heuristics for operators. Roles are in initial caps, comparison operators (e.g., temporal and spatial) in 3-letter all caps, and discourse relations in >3-letter all caps. With a specified signature, Referee is stricter as the signature restricts a set of allowed roles, comparison operators and discourse relatons.  
 
 Counter contains a setting to automatically replace ill-formed DRSs by either a dummy DRS (-ill dummy) or the SPAR default DRS (-ill spar) to make sure you can still get a score when producing ill-formed output.
@@ -120,29 +110,6 @@ The data for release 2.2.0 contains these data types:
 * **Bronze** - no manual annotations involved
 
 Note that this means that the silver and bronze data can be pretty far away from gold standard. Use at your own risk. The data for bronze is split in two parts to circumvent Githubs size limit of 100MB.
-=======
-
-* Checks individual clauses on well-formedness (distinguishing between box and entity variables)
-* Recovers all subordinate relations between boxes in such a way that free occurrences of variables are avoided (if possible)
-* Makes sure that there are no free occurrences of variables
-* Checks that the subordinate relation is loop-free.
-* Finds a unique main box (if exists)
-
-Counter uses Referee to determine whether the input is valid, and throws an error otherwise. The Referee script can also be run separately to spot ill-formed DRSs (with or without the signature file):
-```
-python clf_referee.py clfs.txt  		      # without the signature
-python clf_referee.py clfs.txt -s clf_signature.yaml  # with the signature
-```
-When Referee is run without signature, it assumes simple heuristics for operators. Roles are in initial caps, comparison operators (e.g., temporal and spatial) in 3-letter all caps, and discourse relations in >3-letter all caps. With a specified signature, Referee is stricter as the signature restricts a set of allowed roles, comparison operators and discourse relatons.  
-
-Counter contains a setting to automatically replace ill-formed DRSs by either a dummy DRS (-ill dummy) or the SPAR default DRS (-ill spar) to make sure you can still get a score when producing ill-formed output.
-
-#### Data ####
-
-The data folder contains the train/dev split for release 2.1.0 and train/dev/test split for release 2.2.0. **Note that these splits are different**. Our annotation is data-driven, meaning we add certain phenomena at the time. We feel that if there are new phenomena in the training set, this should also be reflected in the suggested dev/test splits. Therefore, those splits also change per release.
-
-This data is also available on [the PMB webpage](http://pmb.let.rug.nl/data.php), but here it is already in a more convenient format.
->>>>>>> e150879aefd236a985f2e10caa7fee49bcb01cfb
 
 ### Running Counter
 
@@ -155,11 +122,7 @@ python counter.py -f1 FILE1 -f2 FILE2
 Running with our example data:
 
 ```
-<<<<<<< HEAD
 python counter.py -f1 ../data/pmb-2.2.0/boxer_parse_dev.txt -f2 ../data/pmb-2.2.0/gold/dev.txt
-=======
-python counter.py -f1 ../data/pmb-2.1.0/boxer_parse_dev.txt -f2 ../data/pmb-2.1.0/dev.txt
->>>>>>> e150879aefd236a985f2e10caa7fee49bcb01cfb
 ```
 
 Please note that redundant REF-clauses are ignored during matching, since they inflate the F-score. However, they are still needed for the format checker.
@@ -199,81 +162,49 @@ Please note that redundant REF-clauses are ignored during matching, since they i
 Run with 20 restarts and no smart initial mappings:
 
 ```
-<<<<<<< HEAD
 python counter.py -f1 ../data/pmb-2.2.0/boxer_parse_dev.txt -f2 ../data/pmb-2.2.0/gold/dev.txt -r 20 -s no
-=======
-python counter.py -f1 ../data/pmb-2.1.0/boxer_parse_dev.txt -f2 ../data/pmb-2.1.0/dev.txt -r 20 -s no
->>>>>>> e150879aefd236a985f2e10caa7fee49bcb01cfb
 ```
 
 Run with 4 parallel threads to speed things up
 
 ``` 
-<<<<<<< HEAD
 python counter.py -f1 ../data/pmb-2.2.0/boxer_parse_dev.txt -f2 ../data/pmb-2.2.0/gold/dev.txt -p 4 -s no
-=======
-python counter.py -f1 ../data/pmb-2.1.0/boxer_parse_dev.txt -f2 ../data/pmb-2.1.0/dev.txt -p 4 -s no
->>>>>>> e150879aefd236a985f2e10caa7fee49bcb01cfb
 ```
 
 Print specific output, while only using the smart mapping based on concepts:
 
 ```
-<<<<<<< HEAD
 python counter.py -f1 ../data/pmb-2.2.0/boxer_parse_dev.txt -f2 ../data/pmb-2.2.0/gold/dev.txt -prin -s conc
-=======
-python counter.py -f1 ../data/pmb-2.1.0/boxer_parse_dev.txt -f2 ../data/pmb-2.1.0/dev.txt -prin -s conc
->>>>>>> e150879aefd236a985f2e10caa7fee49bcb01cfb
 ```
 
 Print even more specific output, for all clause type (e.g. Agent, NOT) that occur 10 times or more
 
 ```
-<<<<<<< HEAD
 python counter.py -f1 ../data/pmb-2.2.0/boxer_parse_dev.txt -f2 ../data/pmb-2.2.0/gold/dev.txt -prin -ds 10
-=======
-python counter.py -f1 ../data/pmb-2.1.0/boxer_parse_dev.txt -f2 ../data/pmb-2.1.0/dev.txt -prin -ds 10
->>>>>>> e150879aefd236a985f2e10caa7fee49bcb01cfb
 ```
 
 Doing a single DRS, printing the matching and non-matching clauses:
 
 ```
-<<<<<<< HEAD
 python counter.py -f1 ../data/pmb-2.2.0/baseline_drs.txt -f2 ../data/pmb-2.2.0/baseline_drs.txt -prin
-=======
-python counter.py -f1 ../data/pmb-2.1.0/baseline_drs.txt -f2 ../data/pmb-2.1.0/baseline_drs.txt -prin
->>>>>>> e150879aefd236a985f2e10caa7fee49bcb01cfb
 ```
 
 Outputting a score for each DRS (note we use -p 1 to not mess up printing):
 
 ```
-<<<<<<< HEAD
 python counter.py -f1 ../data/pmb-2.2.0/boxer_parse_dev.txt -f2 ../data/pmb-2.2.0/gold/dev.txt -p 1 -ms
-=======
-python counter.py -f1 ../data/pmb-2.1.0/boxer_parse_dev.txt -f2 ../data/pmb-2.1.0/dev.txt -p 1 -ms
->>>>>>> e150879aefd236a985f2e10caa7fee49bcb01cfb
 ```
 
 Doing a baseline experiment, comparing a single DRS to a number of DRSs:
 
 ```
-<<<<<<< HEAD
 python counter.py -f1 ../data/pmb-2.2.0/baseline_drs.txt -f2 ../data/pmb-2.2.0/gold/dev.txt -prin --baseline
-=======
-python counter.py -f1 ../data/pmb-2.1.0/baseline_drs.txt -f2 ../data/pmb-2.1.0/dev.txt -prin --baseline
->>>>>>> e150879aefd236a985f2e10caa7fee49bcb01cfb
 ```
 
 Doing an experiment by replacing all senses in both files by a default sense ("n.01"), removing the need for word sense disambiguation:
 
 ```
-<<<<<<< HEAD
 python counter.py -f1 ../data/pmb-2.2.0/boxer_parse_dev.txt -f2 ../data/pmb-2.2.0/gold/dev.txt -r 50 -dse
-=======
-python counter.py -f1 ../data/pmb-2.1.0/boxer_parse_dev.txt -f2 ../data/pmb-2.1.0/dev.txt -r 50 -dse
->>>>>>> e150879aefd236a985f2e10caa7fee49bcb01cfb
 ```
 
 ### Application ###
@@ -303,15 +234,9 @@ An existing AMR parser is available [here](https://github.com/RikVN/AMR).
 * **Rik van Noord** - PhD-student at University of Groningen - [Personal website](http://www.rikvannoord.nl)
 
 ## Citation ##
-<<<<<<< HEAD
 
 If you use any of our scripts, please refer to our [LREC paper](https://arxiv.org/pdf/1802.08599.pdf):
 
-=======
-
-If you use any of our scripts, please refer to our [LREC paper](https://arxiv.org/pdf/1802.08599.pdf):
-
->>>>>>> e150879aefd236a985f2e10caa7fee49bcb01cfb
 Rik van Noord, Lasha Abzianidze, Hessel Haagsma, and Johan Bos, 2018. **Evaluating scoped meaning representations**. In Proceedings of the Eleventh International Conference on Language Resources and Evaluation (LREC 2018), Miyazaki, Japan
 
 @inproceedings{vanNoordLREC:2018,  
