@@ -36,7 +36,7 @@ Command line options:
 -dr   : Change all roles to a default role
 -dc   : Change all concepts to a default concept
 -ill  : What to do with ill-formed DRSs. Throw an error (default), input dummy DRS or input the SPAR baseline DRS
--coda : File where the score details will be written (for CodaLab use) 
+-coda : For the CodaLab usage. Given a 'name', the script creates 'name.txt' and 'name.html' files  
 """
 
 import os
@@ -71,6 +71,8 @@ from hill_climbing import *
 # Imports for format checking
 from clf_referee import check_clf
 from clf_referee import get_signature
+# import html priting for codalab
+from html_results import coda_html
 # Import utils
 from utils_counter import *
 
@@ -112,7 +114,7 @@ def build_arg_parser():
 						help='If added, this contains a file with all allowed roles otherwise a simple signature is used that\
               				  mainly recognizes operators based on their formatting') 
 	parser.add_argument('-coda', '--codalab', default='',
-						help='a file where evaluation score key-value pairs for CodaLab competitions are written (if empty do not write)')
+						help='a filename for which evaluation results for CodaLab are written in filename.txt and filename.html (default no writing)')
 	
 	# Experiments with changing the input/output, or the matching algorithm
 	# If you add this the results will differ from the general F-score
@@ -494,6 +496,15 @@ def print_results(res_list, no_print, start_time, single, args):
 				print('\n## Restarts and processing time ##\n')
 				print('Num restarts specified       : {0}'.format(args.restarts))
 				print('Found best mapping at restart: {0}'.format(int(found_idx)))
+		
+		# Print detailed results in an html file for the CodaLab usage
+		if args.codalab:
+			#global ill_drs_ids # number of ill DRSs found in the system output
+			counts = (total_test_num, total_gold_num, total_match_num) 
+			measures = (precision, recall, best_f_score)  
+			html_content = coda_html(len(res_list), ill_drs_ids, counts, measures, name_list, res_dict)
+			with codecs.open(args.codalab+'.html', 'w', encoding='UTF-8') as html:
+				html.write(html_content)
 
 	print('Total processing time: {0} sec'.format(runtime))
 	return [precision, recall, best_f_score]
@@ -722,6 +733,12 @@ def main(args):
 	# Get all the clauses and check if they are valid
 	clauses_gold_list, original_gold = get_clauses(args.f2, signature, args.ill)
 	clauses_prod_list, original_prod = get_clauses(args.f1, signature, args.ill)
+
+	# Count ill-DRSs in the system output
+	global ill_drs_ids
+	if args.codalab and args.ill == 'dummy':
+		ill_drs_ids = [ i for (i, x) in enumerate(clauses_prod_list, start=1) if len(x) < 3 
+						and	next( (cl for cl in x if len(cl) > 1 and cl[1].startswith('alwayswrong')), False ) ]	
 	
 	# Don't print the results each time if we do multiple runs
 	no_print = True if args.runs > 1 else False
@@ -764,7 +781,7 @@ def main(args):
 	
 	# print scores in scores.txt file for codalab usage
 	if len(res) == 1 and args.runs == 1 and args.codalab:
-		with codecs.open(args.codalab, 'w', encoding='UTF-8') as scores_file:
+		with codecs.open(args.codalab+'.txt', 'w', encoding='UTF-8') as scores_file:
 			[[score_p, score_r, score_f]] = res
 			scores_file.write("Precision: {}\nRecall: {}\nF-score: {}".format(*res[0]))
 	

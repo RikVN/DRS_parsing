@@ -1,3 +1,5 @@
+
+
 # DRS parsing
 
 This folder contains four scripts:
@@ -17,7 +19,7 @@ git clone https://github.com/RikVN/DRS_parsing
 
 ### Prerequisites
 
-All script are written in Python 2.7 (but should work with Python 3.5+).
+All scripts are written in Python 2.7 (but should work with Python 3.5+).
 Install requirements using:
 
 ```
@@ -73,23 +75,24 @@ etc
 
 #### Format checking ####
 
-DRSs in clause format follow a strict format. The second value in the clause identifies its type. We distinguish between DRS operators (e.g. REF, POS, IMP), semantic roles (e.g. Agent, Time, Location) and WordNet concepts (work "n.01"). These are closed classes. For a full list of accepted DRS operators and semantic roles please see clf_signature.yaml. We do accept concepts that are not in WordNet, however be aware that they can then never match with a clause in the gold standard. 
+DRSs in clause format follow a strict format. The second value in the clause identifies its type. We distinguish between DRS operators (e.g. REF, POS, IMP), semantic roles (e.g. Agent, Time, Location) and WordNet concepts (work "n.01"). These are closed classes. For a full list of accepted DRS operators and semantic roles please see `clf_signature.yaml`. We do accept concepts that are not in WordNet, however be aware that they can then never match with a clause in the gold standard. 
 
-Clauses can have two types of variable, box variables and other variables. The type of variable can be determined by the place it occurs in a clause, e.g. the first variable is always a box variable. This means that you can name the variables to whatever is convenient for you, but realize that using same name in a DRS matches the same variable.
+Clauses can have two types of variable, box variables and other variables. The type of variable can be determined by the place it occurs in a clause, e.g. the first variable is always a box variable. This means that you can name the variables to whatever is convenient for you, but realize that using the same name in a DRS matches the same variable.
 
-If all clauses are correctly formatted syntactically, they do not necessary form a well-formed DRS (i.e. translatable into a first-order logic formula without free occurrences of a variable). To check if the input is well-formed, we use a format checker called clf_referee.py, developed by [Lasha Abzianidze](https://sites.google.com/site/lashabzianidze/home). It checks the following things:
+If all clauses are correctly formatted syntactically, they do not necessarily form a well-formed DRS (e.g. translatable into a first-order logic formula without free occurrences of a variable). To check if the input is well-formed, we use a format checker called Referee (see `clf_referee.py` by [Lasha Abzianidze](https://sites.google.com/site/lashabzianidze/home)). Referee does the following things:
 
-* Whether the clauses are syntactically valid
-* Whether there are no free occurences of variables
-* Whether there are no loops in subordinate relations
-* Whether all necessary accesibility relations between boxes are present
-* Whether there is a unique main box
+* Checks individual clauses on well-formedness (distinguishing between box and entity variables)
+* Recovers all subordinate relations between boxes in such a way that free occurrences of variables are avoided (if possible)
+* Makes sure that there are no free occurrences of variables
+* Checks that the subordinate relation is loop-free.
+* Finds a unique main box (if exists)
 
-Counter uses clf_referee to determine whether the input is valid, and throws an error otherwise. The script can also be run as is in the following way:
-
+Counter uses Referee to determine whether the input is valid, and throws an error otherwise. The Referee script can also be run separately to spot ill-formed DRSs (with or without the signature file):
 ```
-python clf_referee.py ../data/boxer_parse_dev.txt
+python clf_referee.py clfs.txt  		      # without the signature
+python clf_referee.py clfs.txt -s clf_signature.yaml  # with the signature
 ```
+When Referee is run without signature, it assumes simple heuristics for operators. Roles are in initial caps, comparison operators (e.g., temporal and spatial) in 3-letter all caps, and discourse relations in >3-letter all caps. With a specified signature, Referee is stricter as the signature restricts a set of allowed roles, comparison operators and discourse relatons.  
 
 Counter contains a setting to automatically replace ill-formed DRSs by either a dummy DRS (-ill dummy) or the SPAR default DRS (-ill spar) to make sure you can still get a score when producing ill-formed output.
 
@@ -113,7 +116,7 @@ Running with our example data:
 python counter.py -f1 ../data/pmb-2.1.0/boxer_parse_dev.txt -f2 ../data/pmb-2.1.0/dev.txt
 ```
 
-Please note that redudant REF-clauses are ignored during matching, since they inflate the F-score. However, they are still needed for the format checker.
+Please note that redundant REF-clauses are ignored during matching, since they inflate the F-score. However, they are still needed for the format checker.
 
 #### Parameter options ####
 
@@ -124,8 +127,8 @@ Please note that redudant REF-clauses are ignored during matching, since they in
 -p       : Number of parallel threads to use (default 1)
 -mem     : Memory limit per parallel thread (default 1G)
 -s       : What kind of smart initial mapping we use:
-	      -no    No smart mappings
-	      -conc  Smart mapping based on matching concepts (their match is likely to be in the optimal mapping)
+          -no    No smart mappings
+          -conc  Smart mapping based on matching concepts (their match is likely to be in the optimal mapping)
 -runs    : Number of runs to average over, if you want a more reliable result (there is randomness involved in the initial restarts)
 -prin    : Print more specific output, such as individual (average) F-scores for the smart initial mapping, and the matching and non-matching clauses
 -sig     : Number of significant digits to output (default 4)
@@ -239,3 +242,4 @@ Rik van Noord, Lasha Abzianidze, Hessel Haagsma, and Johan Bos, 2018. **Evaluati
 
 * Thanks to [SMATCH](https://github.com/snowblink14/smatch) for publishing their code open source.
 * All members of the [Parallel Meaning Bank](http://pmb.let.rug.nl)
+

@@ -72,7 +72,7 @@ btt:
     - SY1 #beside
     - SY2 #between
     - SXY #around
-  SRO:
+  ERO:
     # Event roles
     - Agent
     - Asset
@@ -109,6 +109,8 @@ btt:
     # Concept roles
     - Colour
     - Creator
+    - ContentOf
+    - Content     
     - MadeOf
     - Name
     - Of
@@ -128,7 +130,7 @@ btt:
     - MonthOfYear
     - YearOfCentury
   ORO:
-    # Other roles. #FIXME They need to be verified
+    # Other roles
     - Affector
     - Context
     - Equal
@@ -139,5 +141,4 @@ btt:
     - Cause 
     - Order
     - Participant
-    - Content
 

@@ -2,10 +2,15 @@
 # -*- coding: utf8 -*-
 
 '''
-Validate sets of clauses in the file 
+Validate sets of clauses in the file whether they represent a well-formed DRSs
+Contact: Lasha.Abzianidze@gmail.com 
 '''
 
-# example how to run: python python/clf_referee.py FILE -v 1
+# example how to run
+# Check if DRSs can be reconstructed from CLFs in a deterministic way:	
+#	python python/clf_referee.py FILE -v 1
+# In addition to the above, constraint the CLFs by the signature (a list of closed class operators)
+#	python python/clf_referee.py FILE -s clf_signature.yaml -v 1
 
 from __future__ import unicode_literals
 import sys
@@ -184,17 +189,22 @@ def file_to_clfs(filepath, v=0):
     clf = []
     with codecs.open(filepath, 'r', encoding='UTF-8') as f:
         pre_line = ''
-        for line in f:
-            # when the line is a comment ignore, 
+        for i, line in enumerate(f):
+            # when the line is a commnet ignore, 
             # but if its previous line contains a raw text, then save it
             if line.startswith("%"):
-                if pre_line.startswith("%%% ") and line.startswith("% "):
-                    list_of_raw.append(pre_line[3:].strip())
-                pre_line = line
+                # save the last line starting with %%%, it can be a raw text
+                if line.startswith("%%%"):
+                    pre_line = line 
                 continue
             if not line.strip(): # clf separator
                 if clf: # add only non-empty clf
                     list_of_clf.append(clf)
+                    list_of_raw.append(pre_line[3:].strip())
+                    assert len(list_of_clf) == len(list_of_raw),\
+                        "Number of clfs ({}) and raws ({}) do not match: {} vs {}".format(
+                            len(list_of_clf), len(list_of_raw), 
+                            list_of_raw[-1], pr_clf(list_of_clf[-1]))  
                     clf = []
                 continue
             # remove % comments if any
@@ -205,6 +215,11 @@ def file_to_clfs(filepath, v=0):
                 clf.append(clause)
     if clf: # add last clf
         list_of_clf.append(clf)
+        list_of_raw.append(pre_line[3:].strip())
+    #if v >= 0:
+    #    for clf in list_of_clf:
+    #        pr_clf(clf)
+    #        print
     return (list_of_clf, list_of_raw) 
 
 #################################
@@ -509,7 +524,7 @@ def connectivity_closure(box_dict, subs, v=0):
     cl_subs = subs.copy()
     for b0 in box_dict:
         for b1 in box_dict[b0].subs:
-            # add b>b0 if b>b1 directly, works well in practice 
+            # add b>b0 if b0>b1 immediately and b>b1
             for b in [ b2 for (b2, b3) in subs if b3 == b1 and b2 != b0 and (b0, b2) not in subs ]: 
                 cl_subs.add((b, b0))   
     if v>=4: print("+ connectivity closure: {}".format(pr_2rel(sorted(cl_subs - subs))))
