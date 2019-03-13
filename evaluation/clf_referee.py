@@ -13,6 +13,7 @@ Contact: Lasha.Abzianidze@gmail.com
 #	python python/clf_referee.py FILE -s clf_signature.yaml -v 1
 
 from __future__ import unicode_literals
+from __future__ import print_function #prevent py2 from interpreting several arguments as tuples
 import sys
 import os
 import codecs
@@ -106,7 +107,7 @@ def specify_arg_type(arg, t, v=0):
        and return a type, more specific if possible 
        (e.g., "now" will be of type c instead of t)
     '''
-    if v >= 5: print(arg, t)
+    if v >= 5: print("{} of type {}".format(arg, t))
     # argument is in double quotes or has no quotes 
     if (not re.match('"[^"]+"$', arg) and 
         not re.match('[^"]+$', arg)): # try without re
@@ -287,7 +288,7 @@ class Box:
 def pr_box(box, indent=0):
     '''Print a box object'''
     ind = indent * ' '
-    print(ind, 20 * '_')
+    print(ind, 20*'_')
     print(ind, box.name)
     #discourse referents
     print(ind, '| ', ' '.join(box.refs))
@@ -542,12 +543,14 @@ def detect_main_box(box_dict, sub_rel, v=0):
         # there is no b1 that contains b0 in relations or conditions
         if not next(( b1 for b1 in box_dict if b0 in box_dict[b1].subs or b0 in box_dict[b1].rel_boxes ), False):
             independent_boxes.add(b0)
-    if v>=3: print("independent_boxes = {}".format(pr_set(independent_boxes)))
-    # get the independent boxe that is subordinate to the rest of the independent boxes 
+    if v>=3: print("Visually independent boxes = {}".format(pr_set(independent_boxes)))
+    # get the independent boxes that subordinate to the rest of the independent boxes 
     main_box = set()  
     for b in independent_boxes:
-        if len(independent_boxes) == len([b1 for (b1, b2) in sub_rel if b2 == b]) + 1:                                    
+        subordinates_b = [ b1 for (b1, b2) in sub_rel if b2 == b and b1 in independent_boxes ]
+        if len(independent_boxes) == len(subordinates_b) + 1:                                    
             main_box.add(b) 
+    if v>=3: print("Main boxes = {}".format(pr_set(main_box)))
     # main box is expected to be unique  
     if len(main_box) > 1:
         report_error("Non-unique ({}) main boxes || {}".format(len(main_box), main_box), v=v)
@@ -585,6 +588,10 @@ def parse_arguments():
     parser.add_argument(
     '-v', '--verbose', dest='v', default=0, type=int,
         metavar='N', help='verbosity level of reporting')
+    parser.add_argument('--buggy', action='store_true', help='Use buggy version')        
+    parser.add_argument(
+    '--nth-clf', type=int, 
+        help='Consider only the n-th CLF. Counting starts from 1')
     #parser.add_argument(
     #'--error', action='store_true', 
     #    help='report the mistakes found by throwing an error')
@@ -609,13 +616,18 @@ if __name__ == '__main__':
     error_counter = Counter()
     op_type_counter = Counter()
     for (i, clf) in enumerate(clfs):
-        counter_prog(i)
+        #ignore all except one, if nth CLF is set
+        if args.nth_clf is not None:
+            if i+1 != args.nth_clf: continue 
+        #print order of the CLF and its raw text 
+        counter_prog(i+1)
         if args.v >= 2 and raws: print(' "{}"'.format(raws[i]))
+        # check a CLF on well-formedness
         try:
             (mbox, box_dict, subs, op_types) = check_clf(clf, signature, v=args.v)
             op_type_counter.update(op_types)
         except RuntimeError as e:
-            error_counter.update([e[0]])
+            error_counter.update([e])
             if args.v >= 1: 
                 print("In the CLF:\n{}".format(pr_clf(clf)))
     print("Done")
