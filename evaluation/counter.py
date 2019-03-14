@@ -35,7 +35,7 @@ Command line options:
 -dse  : Change all senses to a default sense
 -dr   : Change all roles to a default role
 -dc   : Change all concepts to a default concept
--ill  : What to do with ill-formed DRSs. Throw an error (default), input dummy DRS or input the SPAR baseline DRS
+-ill  : What to do with ill-formed DRSs. Throw an error (default), input dummy/SPAR DRS or try to output a score anyway (unofficial!)
 -coda : For the CodaLab usage. Given a 'name', the script creates 'name.txt' and 'name.html' files  
 """
 
@@ -50,19 +50,18 @@ from multiprocessing import Pool
 import json #reading in dict
 
 try:
-        import cPickle as pickle
+	import cPickle as pickle
 except ImportError:
-        import pickle
+	import pickle
 
 from numpy import median
 
 try:
-        # only needed for Python 2
-        reload(sys)
-        sys.setdefaultencoding('utf-8')  # necessary to avoid unicode errors
+	# only needed for Python 2
+	reload(sys)
+	sys.setdefaultencoding('utf-8')  # necessary to avoid unicode errors
 except:
-        pass
-
+	pass
 
 import psutil  # for memory usage
 
@@ -118,8 +117,8 @@ def build_arg_parser():
 	
 	# Experiments with changing the input/output, or the matching algorithm
 	# If you add this the results will differ from the general F-score
-	parser.add_argument('-ill', default = 'error', choices =['error','dummy','spar'],
-						help='What to do when encountering an ill-formed DRS. Throw an error (default), input dummy DRS or input the SPAR baseline DRS')
+	parser.add_argument('-ill', default = 'error', choices =['error','dummy','spar', 'score'],
+						help='What to do when encountering an ill-formed DRS. Throw an error (default), input dummy or spar DRS, or give a score anyway (those scores are not official though!)')
 	parser.add_argument('-runs', type=int, default=1,
 						help='Usually we do 1 run, only for experiments we can increase the number of runs to get a better average')
 	parser.add_argument('-m', '--max_clauses', type=int, default=0,
@@ -154,8 +153,11 @@ def build_arg_parser():
 		print('WARNING: using -ms and -p > 1 messes up printing to screen - not recommended')
 		time.sleep(5)  # so people can still read the warning
 	
-	if args.ill != 'error':
+	if args.ill in ['dummy', 'spar']:
 		print('WARNING: by using -ill {0}, ill-formed DRSs are replaced by a {0} DRS'.format(args.ill))
+		time.sleep(3)
+	elif args.ill == 'score':
+		print ('WARNING: ill-formed DRSs are given a score as if they were valid -- results in unofficial F-scores')
 		time.sleep(3)
 		
 	if args.runs > 1 and args.prin:
@@ -212,7 +214,11 @@ def get_clauses(file_name, signature, ill_type):
 						elif ill_type == 'spar':
 							print('WARNING: DRS {0} is ill-formed and replaced by the SPAR DRS'.format(len(clause_list) +1))
 							clause_list.append(spar_drs())
-							original_clauses.append([" ".join(x) for x in spar_drs()])		
+							original_clauses.append([" ".join(x) for x in spar_drs()])
+						elif ill_type == 'score':
+							print('WARNING: DRS {0} is ill-formed, but try to give a score anyway - might still error later'.format(len(clause_list) +1))
+							clause_list.append(cur_clauses)
+							original_clauses.append(cur_orig)			
 				cur_clauses = []
 				cur_orig = []
 			else:

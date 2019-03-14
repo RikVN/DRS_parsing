@@ -346,36 +346,31 @@ def add_candidate_mapping(candidate_mapping, weight_dict, weight_score, node1_in
 	candidate_mapping[node2_index_drs1].add(node2_index_drs2)
 	node_pair1 = (node1_index_drs1, node1_index_drs2)
 	node_pair2 = (node2_index_drs1, node2_index_drs2)
-	if node_pair2 != node_pair1 or args.default_box:
-
-		# update weight_dict weight. Note that we need to update both entries for future search
-		if node_pair1 in weight_dict:
-			if node_pair2 in weight_dict[node_pair1]:
-				weight_dict[node_pair1][node_pair2].append(
-					[weight_score, no_match, gold_clause_idx, prod_clause_idx])
-			else:
-				weight_dict[node_pair1][node_pair2] = [
-					[weight_score, no_match, gold_clause_idx, prod_clause_idx]]
+	if node_pair2 == node_pair1:
+		print("WARNING: two nodepairs are the same, should never happen, except when using -ill score")
+	# update weight_dict weight. Note that we need to update both entries for future search
+	if node_pair1 in weight_dict:
+		if node_pair2 in weight_dict[node_pair1]:
+			weight_dict[node_pair1][node_pair2].append(
+				[weight_score, no_match, gold_clause_idx, prod_clause_idx])
 		else:
-			weight_dict[node_pair1] = {}
 			weight_dict[node_pair1][node_pair2] = [
 				[weight_score, no_match, gold_clause_idx, prod_clause_idx]]
-		if node_pair2 in weight_dict:
-			if node_pair1 in weight_dict[node_pair2]:
-				weight_dict[node_pair2][node_pair1].append(
-					[weight_score, no_match, gold_clause_idx, prod_clause_idx])
-			else:
-				weight_dict[node_pair2][node_pair1] = [
-					[weight_score, no_match, gold_clause_idx, prod_clause_idx]]
+	else:
+		weight_dict[node_pair1] = {}
+		weight_dict[node_pair1][node_pair2] = [
+			[weight_score, no_match, gold_clause_idx, prod_clause_idx]]
+	if node_pair2 in weight_dict:
+		if node_pair1 in weight_dict[node_pair2]:
+			weight_dict[node_pair2][node_pair1].append(
+				[weight_score, no_match, gold_clause_idx, prod_clause_idx])
 		else:
-			weight_dict[node_pair2] = {}
 			weight_dict[node_pair2][node_pair1] = [
 				[weight_score, no_match, gold_clause_idx, prod_clause_idx]]
 	else:
-		# When doing default boxes strange things are allowed to happen
-		if not args.default_box:
-			raise ValueError("Two nodepairs are the same, should never happen")
-
+		weight_dict[node_pair2] = {}
+		weight_dict[node_pair2][node_pair1] = [
+				[weight_score, no_match, gold_clause_idx, prod_clause_idx]]
 	return candidate_mapping, weight_dict
 
 
