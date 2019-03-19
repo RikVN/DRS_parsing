@@ -41,7 +41,11 @@ def get_best_match(prod_drs, gold_drs, args, single):
 	# In the hill-climbing, we only consider candidate in this pool to save computing time.
 	# weight_dict is a dictionary that maps a pair of node
 	(candidate_mappings, weight_dict) = compute_pool(prod_drs, gold_drs, args)
-
+	#for w in weight_dict:
+		#print w
+		#for x in weight_dict[w]:
+			#print x, weight_dict[w][x]
+		#print '\n'
 	# Save mapping and number of matches so that we don't have to calculate stuff twice
 	match_clause_dict = {}
 
@@ -62,7 +66,7 @@ def get_best_match(prod_drs, gold_drs, args, single):
 
 	# Then add random mappings
 	mapping_order = smart_mappings + get_mapping_list(candidate_mappings, weight_dict, args.restarts - len(smart_fscores), match_clause_dict)
-	
+	#mapping_order = [[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]]
 	# Set initial values
 	done_mappings = {}
 	# Loop over the mappings to find the best score
@@ -219,6 +223,8 @@ def add_node_pairs(node_pair1, node_pair2, node_pair3, weight_dict, weight_score
 		if node_pair1 in weight_dict:
 			if (node_pair2, node_pair3) in weight_dict[node_pair1]:
 				weight_dict[node_pair1][(node_pair2, node_pair3)].append([weight_score, no_match, gold_clause_idx, prod_clause_idx])
+			elif (node_pair3, node_pair2) in weight_dict[node_pair1]:
+				weight_dict[node_pair1][(node_pair3, node_pair2)].append([weight_score, no_match, gold_clause_idx, prod_clause_idx])
 			else:
 				weight_dict[node_pair1][(node_pair2, node_pair3)] = [[weight_score, no_match, gold_clause_idx, prod_clause_idx]]
 		else:
@@ -701,7 +707,7 @@ def compute_match(mapping, weight_dict, match_clause_dict, final=False):
 	"""
 	if tuple(mapping) in match_clause_dict:
 		return match_clause_dict[tuple(mapping)], match_clause_dict
-
+	
 	# Initialize class to save all information in
 	drs_match = DRS_match()
 	drs_match.mapping = mapping
