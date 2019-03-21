@@ -276,6 +276,23 @@ def add_candidate_mapping_three_vars(prod_clauses, gold_clauses, prod_drs, gold_
 			weight_dict = add_node_pairs(node_pair1, node_pair2, node_pair3, weight_dict, weight_score, no_match, j + add_to_index, i + add_to_index2)
 			weight_dict = add_node_pairs(node_pair2, node_pair1, node_pair3, weight_dict, weight_score, no_match, j + add_to_index, i + add_to_index2)
 			weight_dict = add_node_pairs(node_pair3, node_pair1, node_pair2, weight_dict, weight_score, no_match, j + add_to_index, i + add_to_index2)
+			
+			# If the edge is part of inv_boxes, it means that e.g. b1 INV_BOX x1 x2 == b1 INV_BOX x2 x1
+			# We want to add this information to the matching dictionary as well here
+			if prod_clauses[i][edge_index] in prod_drs.inv_boxes:
+				# Node pairs are inverted now
+				node_pair_new1 = (node1_index_drs1, node1_index_drs2)
+				node_pair_new2 = (node2_index_drs1, node3_index_drs2)
+				node_pair_new3 = (node3_index_drs1, node2_index_drs2)
+				# Add correct candidate mappings for these nodes
+				candidate_mapping[node1_index_drs1].add(node1_index_drs2)
+				candidate_mapping[node2_index_drs1].add(node3_index_drs2)
+				candidate_mapping[node3_index_drs1].add(node2_index_drs2)
+				# Update the weight dictionary
+				weight_dict = add_node_pairs(node_pair_new1, node_pair_new2, node_pair_new3, weight_dict, weight_score, no_match, j + add_to_index, i + add_to_index2)
+				weight_dict = add_node_pairs(node_pair_new2, node_pair_new1, node_pair_new3, weight_dict, weight_score, no_match, j + add_to_index, i + add_to_index2)
+				weight_dict = add_node_pairs(node_pair_new3, node_pair_new1, node_pair_new2, weight_dict, weight_score, no_match, j + add_to_index, i + add_to_index2)
+			
 	else:
 		# Do partial matching
 		# Check if edge matches

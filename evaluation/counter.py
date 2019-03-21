@@ -228,7 +228,23 @@ def get_clauses(file_name, signature, ill_type):
 	if cur_clauses:  # no newline at the end, still add the DRS
 		clause_list.append(cur_clauses)
 		original_clauses.append(cur_orig)
-
+	
+	# Invert -of relations and reorder inv_boxes if they contain a constant between quotes
+	inv_boxes = DRS().inv_boxes
+	for drs in clause_list:
+		for clause in drs:
+			if len(clause) == 4 and is_role(clause[1]) and clause[1].endswith('Of') and len(clause[1]) > 2:
+				# Switch clauses and remove the -Of
+				clause[2], clause[3] = clause[3], clause[2]
+				clause[1] = clause[1][:-2]
+			elif clause[1] in inv_boxes and len(clause) == 4 and between_quotes(clause[2]) and not between_quotes(clause[3]):	
+				# b1 NEQ x1 x2 is equal to b1 NEQ x2 x1
+				# If one of the two arguments is between quotes, rewrite them in such a way
+				# that it can always match
+				# For example rewrite b1 NEQ "speaker" x1 to b1 NEQ x1 "speaker"
+				# If there are two variables or two items between quotes, do nothing
+				clause[2], clause[3] = clause[3], clause[2]
+	
 	# If we want to include REF clauses we are done now
 	if args.include_ref:
 		return clause_list, original_clauses
@@ -542,8 +558,11 @@ def check_input(clauses_prod_list, original_prod, original_gold, clauses_gold_li
 
 class DRS:
 	'''Main DRS class with methods to process and rewrite the clauses'''
+	# List of operators who's variables are also boxes, e.g. b0 NOT b1
 	op_boxes = ['NOT', 'POS', 'NEC', 'IMP', 'DIS', 'PRP', 'DRS', 'ANSWER', 'PARALLEL', 'CONTINUATION', 'CONTRAST', 'RESULT', 'EXPLANATION']
-
+	# List of operators for which b OP y1 y2 == b1 OP y2 y1
+	inv_boxes = ['APX', 'NEQ', 'EQU', 'TAB']
+	
 	def __init__(self):
 		# List for different types of clauses
 		self.op_two_vars, self.op_two_vars_idx = [], []
