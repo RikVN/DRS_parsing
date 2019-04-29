@@ -534,7 +534,7 @@ def add_mapping_role_two_abs(prod_drs, gold_drs, weight_dict, candidate_mapping,
 					# use a minus count as key in weight_dict for roles_two_abs
 					if node_pair not in weight_dict:
 						weight_dict[node_pair] = {}
-					weight_dict[node_pair][minus_count] = [1, '', add_to_index_gold + j, add_to_index_prod + i]
+					weight_dict[node_pair][minus_count] = [[1, '', add_to_index_gold + j, add_to_index_prod + i]]
 					minus_count -= 1
 			# Do partial matching here
 			else:
