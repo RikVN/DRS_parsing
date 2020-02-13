@@ -31,12 +31,12 @@ Command line options:
 -ic   : Include REF clauses when matching (otherwise they are ignored because they inflate the matching)
 -ds   : Print detailed stats about individual clauses, parameter value is the minimum count of the clause to be included in the printing
 -m    : Max number of clauses for a DRS to still take them into account - default 0 means no limit
--g    : Path of the file that contains the signature of clausal forms 
+-g    : Path of the file that contains the signature of clausal forms
 -dse  : Change all senses to a default sense
 -dr   : Change all roles to a default role
 -dc   : Change all concepts to a default concept
 -ill  : What to do with ill-formed DRSs. Throw an error (default), input dummy/SPAR DRS or try to output a score anyway (unofficial!)
--coda : For the CodaLab usage. Given a 'name', the script creates 'name.txt' and 'name.html' files  
+-coda : For the CodaLab usage. Given a 'name', the script creates 'name.txt' and 'name.html' files
 """
 
 import os
@@ -82,18 +82,18 @@ def build_arg_parser():
 	parser.add_argument('-f1', required=True, type=str,
 						help='First file with DRS clauses, DRSs need to be separated by blank line')
 	parser.add_argument('-f2', required=True, type=str,
-						help='Second file with DRS clauses, DRSs need to be separated by blank line')		
-	
+						help='Second file with DRS clauses, DRSs need to be separated by blank line')
+
 	# Optimization (memory, speed, restarts, initial mappings)
 	parser.add_argument('-r', '--restarts', type=int,
-						default=20, help='Restart number (default: 20)')			
+						default=20, help='Restart number (default: 20)')
 	parser.add_argument('-p', '--parallel', type=int, default=1,
 						help='Number of parallel threads we use (default 1)')
 	parser.add_argument('-mem', '--mem_limit', type=int, default=1000,
 						help='Memory limit in MBs (default 1000 -> 1G). Note that this is per parallel thread! If you use -par 4, each thread gets 1000 MB with default settings.')
 	parser.add_argument('-s', '--smart', default='conc', action='store', choices=[
 						'no', 'conc'], help='What kind of smart mapping do we use (default concepts)')
-	
+
 	# Output settings (often not necessary to add or change), for example printing specific stats to a file, or to the screen
 	parser.add_argument('-prin', action='store_true',
 						help='Print very specific output - matching and non-matching clauses and specific F-scores for smart mappings')
@@ -109,12 +109,12 @@ def build_arg_parser():
 						help='If we add a value > 0 we print statistics about individual types of clauses that match or do not match, e.g. how well do we do on producing Theme, default 0 means do nothing')
 	parser.add_argument('-nm', '--no_mapping', action='store_true',
 						help='If added, do not print the mapping of variables in terms of clauses')
-	parser.add_argument('-g', '--signature', dest='sig_file', default = '', 
+	parser.add_argument('-g', '--signature', dest='sig_file', default = '',
 						help='If added, this contains a file with all allowed roles otherwise a simple signature is used that\
-              				  mainly recognizes operators based on their formatting') 
+              				  mainly recognizes operators based on their formatting')
 	parser.add_argument('-coda', '--codalab', default='',
 						help='a filename for which evaluation results for CodaLab are written in filename.txt and filename.html (default no writing)')
-	
+
 	# Experiments with changing the input/output, or the matching algorithm
 	# If you add this the results will differ from the general F-score
 	parser.add_argument('-ill', default = 'error', choices =['error','dummy','spar', 'score'],
@@ -124,7 +124,7 @@ def build_arg_parser():
 	parser.add_argument('-m', '--max_clauses', type=int, default=0,
 						help='Maximum number of clauses for DRS (default 0 means no limit)')
 	parser.add_argument('-b', '--baseline', action='store_true', default=False,
-						help="Helps in deciding a good baseline DRS. If added, prod-file must be a single DRS, gold file a number of DRSs to compare to (default false)")          
+						help="Helps in deciding a good baseline DRS. If added, prod-file must be a single DRS, gold file a number of DRSs to compare to (default false)")
 	parser.add_argument('-pa', '--partial', action='store_true',
 						help='Do partial matching for the DRSs (experimental!)')
 	parser.add_argument('-dse', '--default_sense', action='store_true',
@@ -132,9 +132,9 @@ def build_arg_parser():
 	parser.add_argument('-dr', '--default_role', action='store_true',
 						help='Add a default role for all role clauses (exclude effect of getting role correct)')
 	parser.add_argument('-dc', '--default_concept', action='store_true',
-						help='Add a default concept + sense for all concept clauses (exclude effect of getting concepts correct)')                                                                       
+						help='Add a default concept + sense for all concept clauses (exclude effect of getting concepts correct)')
 	parser.add_argument('-ic', '--include_ref', action='store_true',
-						help='Include REF clauses when matching -- will inflate the scores')						
+						help='Include REF clauses when matching -- will inflate the scores')
 	args = parser.parse_args()
 
 	# Check if files exist
@@ -152,14 +152,14 @@ def build_arg_parser():
 	if args.ms and args.parallel > 1:
 		print('WARNING: using -ms and -p > 1 messes up printing to screen - not recommended')
 		time.sleep(5)  # so people can still read the warning
-	
+
 	if args.ill in ['dummy', 'spar']:
 		print('WARNING: by using -ill {0}, ill-formed DRSs are replaced by a {0} DRS'.format(args.ill))
 		time.sleep(3)
 	elif args.ill == 'score':
 		print ('WARNING: ill-formed DRSs are given a score as if they were valid -- results in unofficial F-scores')
 		time.sleep(3)
-		
+
 	if args.runs > 1 and args.prin:
 		print('WARNING: we do not print specific information (-prin) for runs > 1, only final averages')
 		time.sleep(5)
@@ -185,13 +185,13 @@ def remove_refs(clause_list, original_clauses):
 				cur_orig.append(original_clauses[tup_idx][idx])
 		final_clauses.append(cur_tup)
 		final_original.append(cur_orig)
-	return final_clauses, final_original	
+	return final_clauses, final_original
 
 
 def get_clauses(file_name, signature, ill_type):
 	'''Function that returns a list of DRSs (that consists of clauses)'''
 	clause_list, original_clauses, cur_orig, cur_clauses = [], [], [], []
-	
+
 	with open(file_name, 'r') as in_f:
 		input_lines = in_f.read().split('\n')
 		for idx, line in enumerate(input_lines):
@@ -208,6 +208,7 @@ def get_clauses(file_name, signature, ill_type):
 						if ill_type == 'error':
 							raise ValueError(e)
 						elif ill_type == 'dummy':
+							# FIXME: uncomment
 							print('WARNING: DRS {0} is ill-formed and replaced by a dummy DRS'.format(len(clause_list) +1))
 							clause_list.append(dummy_drs())
 							original_clauses.append([" ".join(x) for x in dummy_drs()])
@@ -217,8 +218,9 @@ def get_clauses(file_name, signature, ill_type):
 							original_clauses.append([" ".join(x) for x in spar_drs()])
 						elif ill_type == 'score':
 							print('WARNING: DRS {0} is ill-formed, but try to give a score anyway - might still error later'.format(len(clause_list) +1))
+
 							clause_list.append(cur_clauses)
-							original_clauses.append(cur_orig)			
+							original_clauses.append(cur_orig)
 				cur_clauses = []
 				cur_orig = []
 			else:
@@ -228,23 +230,23 @@ def get_clauses(file_name, signature, ill_type):
 	if cur_clauses:  # no newline at the end, still add the DRS
 		clause_list.append(cur_clauses)
 		original_clauses.append(cur_orig)
-	
+
 	# Invert -of relations and reorder inv_boxes if they contain a constant between quotes
-	inv_boxes = DRS().inv_boxes
+	inv_boxes = DRS(signature).inv_boxes
 	for drs in clause_list:
 		for clause in drs:
 			if len(clause) == 4 and is_role(clause[1]) and clause[1].endswith('Of') and len(clause[1]) > 2:
 				# Switch clauses and remove the -Of
 				clause[2], clause[3] = clause[3], clause[2]
 				clause[1] = clause[1][:-2]
-			elif clause[1] in inv_boxes and len(clause) == 4 and between_quotes(clause[2]) and not between_quotes(clause[3]):	
+			elif clause[1] in inv_boxes and len(clause) == 4 and between_quotes(clause[2]) and not between_quotes(clause[3]):
 				# b1 NEQ x1 x2 is equal to b1 NEQ x2 x1
 				# If one of the two arguments is between quotes, rewrite them in such a way
 				# that it can always match
 				# For example rewrite b1 NEQ "speaker" x1 to b1 NEQ x1 "speaker"
 				# If there are two variables or two items between quotes, do nothing
 				clause[2], clause[3] = clause[3], clause[2]
-	
+
 	# If we want to include REF clauses we are done now
 	if args.include_ref:
 		return clause_list, original_clauses
@@ -332,10 +334,10 @@ def get_detailed_results(match):
 				if pos_tag in possible_tags:
 					match_division[possible_tags.index(pos_tag) + 3] += 1
 				if pos_tag in event_tags:
-					match_division[7] += 1	
+					match_division[7] += 1
 			except:
 				print('Strange concept clause:', " ".join(spl_line))
-	return match_division				
+	return match_division
 
 
 def get_mappings(clause_pairs, prod_drs, gold_drs, prec, rec, significant):
@@ -344,7 +346,7 @@ def get_mappings(clause_pairs, prod_drs, gold_drs, prec, rec, significant):
 	# Flatten lists of lists to get list of indices
 	indices_prod = prod_drs.op_two_vars_idx + prod_drs.op_two_vars_abs_idx1 + prod_drs.op_two_vars_abs_idx2 + prod_drs.op_three_vars_idx + prod_drs.roles_two_abs_idx + prod_drs.roles_abs_idx1 + prod_drs.roles_abs_idx2 + prod_drs.roles_idx + prod_drs.concepts_idx
 	indices_gold = gold_drs.op_two_vars_idx + gold_drs.op_two_vars_abs_idx1 + gold_drs.op_two_vars_abs_idx2 + gold_drs.op_three_vars_idx + gold_drs.roles_two_abs_idx + gold_drs.roles_abs_idx1 + gold_drs.roles_abs_idx2 + gold_drs.roles_idx + gold_drs.concepts_idx
-	
+
 	idv_dict = {} #idv_dict is used to save information about individual matches, e.g. what is the F-score for "Theme" only
 	match, no_match, orig_prod_idx_match, orig_gold_idx_match  = [], [], [], []
 
@@ -354,14 +356,14 @@ def get_mappings(clause_pairs, prod_drs, gold_drs, prec, rec, significant):
 		match.append([prod_drs.original_clauses[idx_prod], gold_drs.original_clauses[idx_gold]])
 		orig_prod_idx_match.append(idx_prod)
 		orig_gold_idx_match.append(idx_gold)
-		
+
 		#Save specific information about clause ID (Theme, work.n.01, IMP) here
 		clause_id = get_clause_id(prod_drs.original_clauses[idx_prod])
 		if clause_id not in idv_dict:
-			idv_dict[clause_id] = [1, 1, 1] #contains [match_num, prod_num, gold_num] 
+			idv_dict[clause_id] = [1, 1, 1] #contains [match_num, prod_num, gold_num]
 		else:
 			idv_dict[clause_id] = [x + y for x, y in zip(idv_dict[clause_id], [1, 1, 1])]
-	
+
 	# Get which indices match and do no match (do sorted for no match so that we have some kind of order still)
 	no_match_prod = sorted([x for x in range(len(prod_drs.original_clauses)) if x not in orig_prod_idx_match])
 	no_match_gold = sorted([x for x in range(len(gold_drs.original_clauses)) if x not in orig_gold_idx_match])
@@ -369,11 +371,11 @@ def get_mappings(clause_pairs, prod_drs, gold_drs, prec, rec, significant):
 	# Populate the no match part of what we will print later (is a bit cumbersome because we want aligned printing later)
 	for num in no_match_prod:
 		no_match.append([prod_drs.original_clauses[num], ''])
-		
+
 		# Save individual information again here
 		clause_id = get_clause_id(prod_drs.original_clauses[num])
 		if clause_id not in idv_dict:
-			idv_dict[clause_id] = [0, 1, 0] #contains [match_num, prod_num, gold_num] 
+			idv_dict[clause_id] = [0, 1, 0] #contains [match_num, prod_num, gold_num]
 		else:
 			idv_dict[clause_id][1] += 1 #else only add 1 to prod_num
 
@@ -386,13 +388,13 @@ def get_mappings(clause_pairs, prod_drs, gold_drs, prec, rec, significant):
 				break
 		if not found:  # no space to add, create new row
 			no_match.append(['', gold_drs.original_clauses[num]])
-		
+
 		# Save individual information again here
 		clause_id = get_clause_id(gold_drs.original_clauses[num])
 		if clause_id not in idv_dict:
-			idv_dict[clause_id] = [0, 0, 1] #contains [match_num, prod_num, gold_num] 
+			idv_dict[clause_id] = [0, 0, 1] #contains [match_num, prod_num, gold_num]
 		else:
-			idv_dict[clause_id][2] += 1 #else only add 1 to gold_num    
+			idv_dict[clause_id][2] += 1 #else only add 1 to gold_num
 
 	# Check if results make sense compared to our previous result
 	print_prec = round(len(match) / float(prod_drs.total_clauses), significant)
@@ -406,7 +408,7 @@ def get_mappings(clause_pairs, prod_drs, gold_drs, prec, rec, significant):
 	print_no_match = create_tab_list(no_match, '\n## Non-matching clauses ##\n', "| ")
 
 	# Also get number of matching operator/roles/concepts for more detailed results
-	match_division = get_detailed_results(match)		
+	match_division = get_detailed_results(match)
 	return print_match, print_no_match, match_division, idv_dict
 
 
@@ -414,17 +416,17 @@ def get_matching_clauses(arg_list):
 	'''Function that gets matching clauses (easier to parallelize)'''
 	start_time = time.time()
 	# Unpack arguments to make things easier
-	prod_t, gold_t, args, single, original_prod, original_gold, en_sense_dict = arg_list
+	prod_t, gold_t, args, single, original_prod, original_gold, en_sense_dict, signature = arg_list
 	# Create DRS objects
-	prod_drs, gold_drs = DRS(), DRS()
+	prod_drs, gold_drs = DRS(signature), DRS(signature)
 	prod_drs.prefix, gold_drs.prefix = 'a', 'b' # Prefixes are used to create standardized variable-names
 	prod_drs.file_name, gold_drs.file_name = args.f1, args.f2
 	prod_drs.original_clauses, gold_drs.original_clauses = original_prod, original_gold
-	
+
 	# Get the specific clauses here
 	prod_drs.get_specific_clauses(prod_t, en_sense_dict, args)
 	gold_drs.get_specific_clauses(gold_t, en_sense_dict, args)
-	
+
 	if single and (args.max_clauses > 0 and ((prod_drs.total_clauses > args.max_clauses) or (gold_drs.total_clauses > args.max_clauses))):
 		print('Skip calculation of DRS, more clauses than max of {0}'.format(args.max_clauses))
 		return 'skip'
@@ -435,8 +437,8 @@ def get_matching_clauses(arg_list):
 		# Do the hill-climbing for the matching here
 		(best_mapping, best_match_num, found_idx, smart_fscores, clause_pairs) = get_best_match(prod_drs, gold_drs, args, single)
 		(precision, recall, best_f_score) = compute_f(best_match_num, prod_drs.total_clauses, gold_drs.total_clauses, args.significant, False)
-		
-		
+
+
 		if not args.no_mapping:
 			# Print clause mapping if -prin is used and we either do multiple scores, or just had a single DRS
 			print_match, print_no_match, match_division, idv_dict = get_mappings(clause_pairs, prod_drs, gold_drs, precision, recall, args.significant)
@@ -453,7 +455,7 @@ def get_matching_clauses(arg_list):
 				for print_line in print_no_match: print(print_line)
 		else:
 			match_division = []
-			idv_dict = {}		
+			idv_dict = {}
 
 		# For single DRS we print results later on anyway
 		prod_clause_division = [prod_drs.num_operators, prod_drs.num_roles, prod_drs.num_concepts, get_num_concepts(prod_drs.concepts, 'n'), get_num_concepts(prod_drs.concepts, 'v'), get_num_concepts(prod_drs.concepts, 'a'), get_num_concepts(prod_drs.concepts, 'r'), get_num_concepts(prod_drs.concepts, 'v') + get_num_concepts(prod_drs.concepts, 'a')]
@@ -476,16 +478,16 @@ def print_results(res_list, no_print, start_time, single, args):
 	match_division = [x[5] for x in res_list]
 	prod_division = [x[6] for x in res_list]
 	gold_division = [x[7] for x in res_list]
-	
+
 	# Calculate detailed F-scores for clauses, roles, concepts etc
 	name_list = ['operators','roles','concepts','nouns','verbs','adjectives','adverbs','events']
 	res_dict = {}
 	for idx, name in enumerate(name_list):
-		res_dict[name] = compute_f(sum([x[idx] for x in match_division]), sum([x[idx] for x in prod_division]), sum([x[idx] for x in gold_division]), args.significant, False)	
+		res_dict[name] = compute_f(sum([x[idx] for x in match_division]), sum([x[idx] for x in prod_division]), sum([x[idx] for x in gold_division]), args.significant, False)
 
 	# Output document-level score (a single f-score for all DRS pairs in two files)
 	(precision, recall, best_f_score) = compute_f(total_match_num, total_test_num, total_gold_num, args.significant, False)
-	
+
 	if not res_list:
 		return []  # no results for some reason
 	elif no_print:  # averaging over multiple runs, don't print results
@@ -518,12 +520,12 @@ def print_results(res_list, no_print, start_time, single, args):
 				print('\n## Restarts and processing time ##\n')
 				print('Num restarts specified       : {0}'.format(args.restarts))
 				print('Found best mapping at restart: {0}'.format(int(found_idx)))
-		
+
 		# Print detailed results in an html file for the CodaLab usage
 		if args.codalab:
 			#global ill_drs_ids # number of ill DRSs found in the system output
-			counts = (total_test_num, total_gold_num, total_match_num) 
-			measures = (precision, recall, best_f_score)  
+			counts = (total_test_num, total_gold_num, total_match_num)
+			measures = (precision, recall, best_f_score)
 			html_content = coda_html(len(res_list), ill_drs_ids, counts, measures, name_list, res_dict)
 			with codecs.open(args.codalab+'.html', 'w', encoding='UTF-8') as html:
 				html.write(html_content)
@@ -558,12 +560,12 @@ def check_input(clauses_prod_list, original_prod, original_gold, clauses_gold_li
 
 class DRS:
 	'''Main DRS class with methods to process and rewrite the clauses'''
-	# List of operators who's variables are also boxes, e.g. b0 NOT b1
-	op_boxes = ['NOT', 'POS', 'NEC', 'IMP', 'DIS', 'PRP', 'DRS', 'ANSWER', 'PARALLEL', 'CONTINUATION', 'CONTRAST', 'RESULT', 'EXPLANATION']
-	# List of operators for which b OP y1 y2 == b1 OP y2 y1
-	inv_boxes = ['APX', 'NEQ', 'EQU', 'TAB']
-	
-	def __init__(self):
+
+	def __init__(self, signature):
+		# List of operators who's variables are also boxes, e.g. b0 NOT b1
+		self.op_boxes = [key for key in signature if signature[key][1] in ['bb', 'bbb']]
+		# List of operators for which b OP y1 y2 == b1 OP y2 y1
+		self.inv_boxes = ['APX', 'NEQ', 'EQU', 'TAB']
 		# List for different types of clauses
 		self.op_two_vars, self.op_two_vars_idx = [], []
 		self.op_two_vars_abs1, self.op_two_vars_abs_idx1 = [], []
@@ -583,7 +585,7 @@ class DRS:
 		self.added_var_map = False
 
 	def rename_var(self, var, var_type, args):
-		'''Function that renames the variables in a standardized way'''			
+		'''Function that renames the variables in a standardized way'''
 		if var in self.vars_seen:
 			new_var = self.prefix + str(self.vars_seen.index(var))
 		else:
@@ -617,13 +619,13 @@ class DRS:
 		# Save rewritten concepts
 		if rewritten_values:
 			self.rewritten_concepts.append(rewritten_values)
-			
+
 
 	def add_role_clauses(self, cur_clause, val0, idx, args):
 		'''Add clauses that have a Role as second item to our list of clauses'''
 		# Check if we want to rewrite the role to a default
 		role = 'Role' if args.default_role else cur_clause[1]
-		
+
 		# If second and third item are between quotes it belongs in roles_two_abs (b0 PartOf "speaker" "hearer")
 		if between_quotes(cur_clause[2]) and between_quotes(cur_clause[3]):
 			self.add_if_not_exists(self.roles_two_abs, self.roles_two_abs_idx, (val0, role, cur_clause[2], cur_clause[3]), idx)
@@ -646,7 +648,7 @@ class DRS:
 		'''Add clauses that have an operator as second item to our list of close'''
 		# Get var type of second variable
 		var_type = 'b' if cur_clause[1] in self.op_boxes and cur_clause[1] != 'PRP' else 'x'
-		
+
 		# If second item between quotes it belongs in op_two_vars_abs1
 		if between_quotes(cur_clause[2]):
 			val2 = self.rename_var(cur_clause[3], var_type, args) #get renamed variable
@@ -709,9 +711,9 @@ def save_detailed_stats(all_dicts, args):
 	'''Print detailed statistics to the screen, if args.detailed_stats > 0'''
 	final_dict, f_dict = merge_dicts(all_dicts, args) #first merge all dictionaries in a single dict and also create dict with F-scores
 	print_list = [[], [], []]
-	print_headers = ['Operators', 'Roles', 'Concepts'] 
+	print_headers = ['Operators', 'Roles', 'Concepts']
 	print_line = 'Individual clause scores for'
-	
+
 	# Create lists to print when looping over the sorted dictionary
 	for w in sorted(f_dict, key=f_dict.get, reverse=True):
 		if final_dict[w][1] > args.detailed_stats or final_dict[w][2] > args.detailed_stats: #only print if it has a minimum occurrence in prod or gold
@@ -720,14 +722,14 @@ def save_detailed_stats(all_dicts, args):
 			elif is_role(w):
 				print_list[1].append([w, str(f_dict[w]), str(final_dict[w][2])])
 			else:
-				print_list[2].append([w, str(f_dict[w]), str(final_dict[w][2])])        
-	
+				print_list[2].append([w, str(f_dict[w]), str(final_dict[w][2])])
+
 	# Now print a nicely aligned tab-list for the three types of clauses so it is easier to keep them straight
 	for idx, item in enumerate(print_list):
 		print('\n{0} {1}:\n'.format(print_line, print_headers[idx].lower()))
 		to_print = create_tab_list([[print_headers[idx], 'F-score','Gold inst']] + print_list[idx], [], '\t')
 		for t in to_print: print(t)
-									
+
 
 def save_stats(all_clauses, all_vars, stat_file):
 	'''Print and save statistics related to number of variables and clauses per DRSs'''
@@ -762,13 +764,13 @@ def main(args):
 	# Count ill-DRSs in the system output
 	global ill_drs_ids
 	if args.codalab and args.ill == 'dummy':
-		ill_drs_ids = [ i for (i, x) in enumerate(clauses_prod_list, start=1) if len(x) < 3 
-						and	next( (cl for cl in x if len(cl) > 1 and cl[1].startswith('alwayswrong')), False ) ]	
-	
+		ill_drs_ids = [ i for (i, x) in enumerate(clauses_prod_list, start=1) if len(x) < 3
+						and	next( (cl for cl in x if len(cl) > 1 and cl[1].startswith('alwayswrong')), False ) ]
+
 	# Don't print the results each time if we do multiple runs
 	no_print = True if args.runs > 1 else False
 	single = True if len(clauses_gold_list) == 1 else False  # true if we are doing a single DRS
-	
+
 	# Check if correct input (number of instances, baseline, etc)
 	original_prod, clauses_prod_list = check_input(clauses_prod_list, original_prod, original_gold, clauses_gold_list, args.baseline, args.f1, args.max_clauses, single)
 
@@ -776,13 +778,13 @@ def main(args):
 	for _ in range(args.runs):  # for experiments we want to more runs so we can average later
 		arg_list = []
 		for count, (prod_t, gold_t) in enumerate(zip(clauses_prod_list, clauses_gold_list)):
-			arg_list.append([prod_t, gold_t, args, single, original_prod[count], original_gold[count], en_sense_dict])
+			arg_list.append([prod_t, gold_t, args, single, original_prod[count], original_gold[count], en_sense_dict, signature])
 
 		# Parallel processing here
 		if args.parallel == 1:  # no need for parallelization for p=1
 			all_results = []
 			for num_count, arguments in enumerate(arg_list):
-				all_results.append(get_matching_clauses(arguments)) 
+				all_results.append(get_matching_clauses(arguments))
 		else:
 			all_results = multiprocessing.Pool(args.parallel).map(get_matching_clauses, arg_list)
 
@@ -803,13 +805,13 @@ def main(args):
 		print('Precision: {0}'.format(round(float(sum([x[0] for x in res])) / float(args.runs), args.significant)))
 		print('Recall   : {0}'.format(round(float(sum([x[1] for x in res])) / float(args.runs), args.significant)))
 		print('F-score  : {0}'.format(round(float(sum([x[2] for x in res])) / float(args.runs), args.significant)))
-	
+
 	# print scores in scores.txt file for codalab usage
 	if len(res) == 1 and args.runs == 1 and args.codalab:
 		with codecs.open(args.codalab+'.txt', 'w', encoding='UTF-8') as scores_file:
 			[[score_p, score_r, score_f]] = res
 			scores_file.write("Precision: {}\nRecall: {}\nF-score: {}".format(*res[0]))
-	
+
 	# Sometimes we are also interested in (saving and printing) some statistics, do that here
 	if args.stats and args.runs <= 1:
 		save_stats(all_clauses, all_vars, args.stats)
@@ -821,12 +823,12 @@ def main(args):
 				_, _, f_score = compute_f(items[0], items[1], items[2], args.significant, False)
 				out_f.write(str(f_score) + '\n')
 		out_f.close()
-	
+
 	# We might want to output statistics about individual types of clauses
 	if args.detailed_stats > 0:
 		save_detailed_stats([x[9] for x in all_results], args)
-		
-ERROR_LOG = sys.stderr 
+
+ERROR_LOG = sys.stderr
 DEBUG_LOG = sys.stderr
 
 if __name__ == "__main__":

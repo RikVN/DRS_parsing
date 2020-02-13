@@ -1,28 +1,21 @@
 # The signature of Discourse Representation Structures (DRSs)
-# that are formatted in the clausal form (CLF) 
+# that are formatted in the clausal form (CLF)
 
-# Every clause in CLFs starts with a box variable and an operator. 
+# Every clause in CLFs starts with a box variable and an operator.
 # The rest of the clause is a sequence of variables where its size depends on the operator
 
 # The signature represented as a set of key-value pairs.
-# The KEY is a sequence of letters representing variable types 
-# and following the variable order in clauses: 
-#   b stands for a box, x for a discourse referent, t for a term (i.e. a disc. referent or a constant) 
+# The KEY is a sequence of letters representing variable types
+# and following the variable order in clauses:
+#   b stands for a box, x for a discourse referent, t for a term (i.e. a disc. referent or a constant)
 # The VALUE is a list of operators whose argument types are described by the KEY
 
 # NB: except the operators in the signature, CLFs also contain wordnet word senses and constants.
-# "constants" and "pos.sense_numbers" are in double quotes. 
-   
+# "constants" and "pos.sense_numbers" are in double quotes.
+
 bx:
   DRS:
     - REF
-
-bb:
-  DRS:
-    - NOT
-    - POS
-    - NEC
-    - DRS    
 
 bbb:
   DRS:
@@ -30,25 +23,47 @@ bbb:
     - IMP
     - DIS
     - DUP
+
+bb:
+  DRS:
+    - NOT
+    - POS
+    - NEC
+    #- DRS
   DRL:
-    # Discourse relations. Not all
+    # Discourse relations.
     # Not all of them are used for now
+    - ALTERNATION
+    - ATTRIBUTION
     - BACKGROUND
-    - COMMENTARY 
-    - CONTINUATION 
+    - COMMENTARY
+    - CONDITION
+    - CONTINUATION
     - CONTRAST
+    - CONSEQUENCE
     - ELABORATION
     - EXPLANATION
     - INSTANCE
     - NARRATION
+    - NEGATION
+    - NECESSITY
+    - POSSIBILITY
     - PARALLEL
     - PRECONDITION
     - RESULT
     - TOPIC
 
+  PRE:
+    - PRESUPPOSITION
+
 bxb:
   DRS:
     - PRP
+
+btc:
+  CRO:
+    # Concept roles  
+    - Name
 
 btt:
   TRL:
@@ -77,11 +92,13 @@ btt:
     - Agent
     - Asset
     - Attribute
+    - AttributeOf
     - Beneficiary
     - Causer
     - Co-Agent
     - Co-Patient
     - Co-Theme
+    - Consumer
     - Destination
     - Duration
     - Experiencer
@@ -89,6 +106,7 @@ btt:
     - Frequency
     - Goal
     - Instrument
+    - Instance
     - Location
     - Manner
     - Material
@@ -103,21 +121,29 @@ btt:
     - Stimulus
     - Theme
     - Time
-    - Topic 
+    - Topic
     - Value
   CRO:
     # Concept roles
+    - Bearer
     - Colour
-    - Creator
+    - ColourOf
     - ContentOf
-    - Content     
+    - Content
+    - Creator
+    - Degree
     - MadeOf
-    - Name
+    #- Name
     - Of
+    - Operand
     - Owner
+    - Part
     - PartOf
+    - Player
     - Quantity
     - Role
+    - Sub
+    - SubOf
     - Title
     - Unit
     - User
@@ -130,15 +156,37 @@ btt:
     - MonthOfYear
     - YearOfCentury
   ORO:
-    # Other roles
+    # Other roles. #FIXME They need to be verified
     - Affector
     - Context
     - Equal
     - Extent
     - Precondition
-    - Part
     - Measure
-    - Cause 
+    - Cause
     - Order
     - Participant
 
+c:
+  UOM:
+    - minute
+    - hour
+    - day
+    - week
+    - month
+    - year
+    - centimeter
+    - inch
+    - foot
+    - mile
+    - meter
+    - acre
+    - kilogram
+    - ton
+    - kilometer
+    - pound
+    - yen
+    - dollar
+    - euro
+    - percent
+    - degree_celsius

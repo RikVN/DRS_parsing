@@ -1,0 +1,3534 @@
+# newdoc id = p22/d1865
+Das	the	DEF	np/n	O	[]
+Kätzchen	kitten	CON	n	kitten.n.01	[]
+rollte	roll	EPS	(s:dcl\np)/np	roll.v.01	[Theme,Agent]
+das	the	DEF	np/n	O	[]
+Garn	yarn	CON	n	yarn.n.02	[]
+über	across	REL	((s:dcl\np)\(s:dcl\np))/np	O	[Path]
+den	the	DEF	np/n	O	[]
+Fußboden	floor	CON	n	floor.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p23/d3543
+Tom	tom	PER	n	male.n.02	[]
+kocht	boil	ENS	(s:dcl\np)/np	boil.v.02	[Patient,Agent]
+ein	an	DIS	np/n	O	[]
+Ei	egg	CON	n	egg.n.02	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p33/d3536
+Sie	female	PRO	np	female.n.02	[]
+bezwang	defeat	EPS	(s:dcl\np)/np	defeat.v.01	[Co-Agent,Agent]
+ihn	male	PRO	np	male.n.02	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p83/d2406
+Wir	speaker	PRO	np	O	[]
+verstehen	understand	ENS	s:dcl\np	understand.v.01	[Experiencer]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p12/d2920
+Wir	speaker	PRO	np	O	[]
+schließen	close	ENS	(s:dcl\np)/np	close.v.03	[Patient,Agent]
+den	the	DEF	np/n	O	[]
+Laden	store	CON	n	store.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p03/d3167
+Ich	speaker	PRO	np	O	[]
+sah	see	EPS	(s:dcl\np)/np	see.v.08	[Co-Agent,Agent]
+sie	female	PRO	np	female.n.02	[]
+nie	time	NOT	(s:dcl\np)\(s:dcl\np)	time.n.01	[]
+wieder	again	ALT	(s:dcl\np)\(s:dcl\np)	O	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p02/d0712
+Kraft	kraft	ORG	n	company.n.01	[]
+verkaufte	sell	EPS	(s:dcl\np)/np	sell.v.01	[Theme,Agent]
+Celestial~Seasonings	celestial~seasonings	ORG	n	company.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p42/d1926
+Sie	female	PRO	np	female.n.02	[]
+spielte	play	EPS	(s:dcl\np)/np	play.v.03	[Theme,Agent]
+einen	a	DIS	np/n	O	[]
+Walzer	waltz	CON	n	waltz.n.02	[]
+auf	on	REL	((s:dcl\np)\(s:dcl\np))/np	O	[Instrument]
+dem	the	DEF	np/n	O	[]
+Klavier	piano	CON	n	piano.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p42/d1889
+Der	the	DEF	np/n	O	[]
+Hund	dog	CON	n	dog.n.01	[]
+grub	dig	EPS	(s:dcl\np)/np	dig.v.02	[Material,Agent]
+ein	a	DIS	np/n	O	[]
+Loch	hole	CON	n	hole.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p53/d2829
+Tom	tom	PER	n	male.n.02	[]
+rupft	pluck	ENS	(s:dcl\np)/np	pluck.v.05	[Patient,Agent]
+ein	a	DIS	np/n	O	[]
+Huhn	chicken	CON	n	chicken.n.02	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p93/d1736
+Ein	a	DIS	np/n	O	[]
+Lastwagen	truck	CON	n	truck.n.01	[]
+raste	rush	EPS	s:dcl\np	rush.v.01	[Theme]
+die	the	DEF	np/n	O	[]
+Straße	road	CON	n	road.n.01	[]
+entlang	along	REL	((s:dcl\np)\(s:dcl\np))\np	O	[Path]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p13/d2605
+Ich	speaker	PRO	np	O	[]
+verabscheue	resent	ENS	(s:dcl\np)/np	resent.v.01	[Stimulus,Experiencer]
+deine	hearer	HAS	np/(n/pp)	O	[Creator]
+zynischen	cynical	IST	n/n	cynical.a.01	[Attribute]
+Bemerkungen	remark	CON	n/pp	remark.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p03/d2785
+Das	entity	DST	np	entity.n.01	[]
+missfiel	displease	EPS	(s:dcl\np)/np	displease.v.01	[Experiencer,Stimulus]
+allen	person	AND	np	person.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p92/d3501
+Das	the	DEF	np/n	O	[]
+Schiff	ship	CON	n	ship.n.01	[]
+wird	will	FUT	(s:dcl\np)/(s:b\np)	O	[]
+um	by	REL	((s:b\np)/(s:b\np))/np	O	[Time]
+fünf~Uhr	17:00	CLO	n	O	[]
+ankommen	arrive	EXS	s:b\np	arrive.v.01	[Theme]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p83/d2540
+Tom	tom	PER	n	male.n.02	[]
+mag	like	ENS	(s:dcl\np)/np	like.v.02	[Stimulus,Experiencer]
+kein	not	NOT	(s:dcl\np)\(s:dcl\np)	O	[]
+Schach	chess	CON	n	chess.n.02	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p33/d3040
+Tom	tom	PER	n	male.n.02	[]
+gab	give	EPS	((s:dcl\np)/np)/np	give.v.03	[Recipient,Theme,Agent]
+der	the	DEF	np/n	O	[]
+Katze	cat	CON	n	cat.n.01	[]
+etwas	some	DIS	np/n	O	[]
+Milch	milk	CON	n	milk.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p82/d2239
+Wir	speaker	PRO	np	O	[]
+verschwenden	waste	ENS	(s:dcl\np)/np	waste.v.02	[]
+Munition	ammunition	CON	n	ammunition.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p72/d0940
+Er	male	PRO	np	male.n.02	[]
+wurde	be	PST	(s:dcl\np)/(s:pss\np)	O	[]
+gefoltert	torture	EXS	s:pss\np	torture.v.02	[Patient]
+und	and	COO	conj	O	[]
+ermordet	murder	EXS	s:pss\np	murder.v.01	[Patient]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p33/d2360
+Lass	let	FUT	(s:dcl/(s:b\np))/np	O	[]
+uns	speaker	PRO	np	O	[]
+ins	ins	DEF	pp/n	O	[Destination]
+Teehaus	teahouse	CON	n	teahouse.n.01	[]
+gehen	go	EXS	(s:b\np)\pp	go.v.01	[Theme]
+!	!	EMP	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p43/d1418
+Tom	tom	PER	n	male.n.02	[]
+pflanzt	plant	ENS	(s:dcl\np)/np	plant.v.01	[Theme,Agent]
+in	in	REL	((s:dcl\np)\(s:dcl\np))/np	O	[Destination]
+seinem	male	HAS	np/(n/pp)	male.n.02	[User]
+Hinterhof	backyard	CON	n/pp	backyard.n.01	[]
+eine	a	DIS	np/n	O	[]
+Palme	palm~tree	CON	n	palm_tree.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p03/d2977
+Diese	this	PRX	np/n	O	[]
+CD	cd	CON	n	cd.n.04	[]
+kostet	cost	ENS	(s:dcl\np)/np	cost.n.01	[Value,Theme]
+10	10	QUC	n/n	O	[Quantity]
+Dollar	dollar	UOM	n	dollar.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p33/d2145
+Sie	female	PRO	np	female.n.02	[]
+weinte	weep	EPS	s:dcl\np	weep.v.01	[Agent]
+bitterlich	bitterly	IST	(s:dcl\np)\(s:dcl\np)	bitterly.r.02	[Manner]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p82/d1894
+Ich	speaker	PRO	np	O	[]
+mag	like	ENS	(s:dcl\np)/np	like.v.02	[Stimulus,Experiencer]
+auch	also	ALT	(s:dcl\np)\(s:dcl\np)	O	[]
+Kuchen	cake	CON	n	cake.n.03	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p22/d1923
+Er	male	PRO	np	male.n.02	[]
+wurde	be	PST	(s:dcl\np)/(s:pss\np)	O	[]
+durch	by	REL	((s:pss\np)/(s:pss\np))/np	O	[Causer]
+eine	a	DIS	np/n	O	[]
+Kugel	bullet	CON	n	bullet.n.01	[]
+verwundet	wound	EXS	s:pss\np	wound.v.01	[Patient]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p43/d2051
+Wer	person	AND	np/(s:dcl\np)	person.n.01	[]
+das	the	DEF	np/n	O	[]
+Geld	money	CON	n	money.n.01	[]
+hat	have	EXS	(s:dcl\np)\np	have.v.01	[Theme,Pivot]
+,	,	NIL	(s:dcl/(s:dcl\np))\(s:dcl/(s:dcl\np))	O	[]
+hat	have	EXS	(s:dcl\np)/np	have.v.01	[Theme,Pivot]
+die	the	DEF	np/n	O	[]
+Macht	power	CON	n	power.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p93/d1426
+Jemand	person	DIS	np	person.n.01	[]
+klopft	knock	ENS	(s:dcl\np)/pp	knock.v.02	[Agent]
+an	at	REL	pp/np	O	[Patient]
+deine	hearer	HAS	np/(n/pp)	O	[User]
+Tür	door	CON	n/pp	door.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p33/d1977
+Wir	speaker	PRO	np	O	[]
+essen	eat	ENS	(s:dcl\np)/np	eat.v.01	[Patient,Agent]
+Äpfel	apple	CON	n	apple.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p93/d1391
+Wer	person	QUE	s:wq/(s:dcl\np)	O	[Name]
+erfand	invent	EPS	(s:dcl\np)/np	invent.v.01	[Result,Agent]
+das	the	DEF	np/n	O	[]
+Radio	radio	CON	n	radio.n.03	[]
+?	?	QUE	s:wq\s:wq	O	[]
+
+
+# newdoc id = p62/d2811
+Emily	emily	PER	n	female.n.02	[]
+aß	eat	EPS	(s:dcl\np)/np	eat.v.01	[Patient,Agent]
+einen	an	DIS	np/n	O	[]
+Apfel	apple	CON	n	apple.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p62/d2037
+Ich	speaker	PRO	np	O	[]
+habe	habe	NOW	(s:dcl\np)/(s:pt\np)	O	[]
+das	the	DEF	np/n	O	[]
+Wochenende	weekend	CON	n	weekend.n.01	[]
+mit	with	REL	pp/np	O	[Co-Agent]
+Freunden	friend	ROL	n	friend.n.01	[]
+verbracht	spend	EXT	((s:pt\np)\np)\pp	spend.v.01	[Duration,Agent]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p82/d2462
+Die	the	DEF	np/n	O	[]
+Möwen	sea~gull	CON	n	sea_gull.n.01	[]
+fliegen	fly	ENS	s:dcl\np	fly.v.01	[Theme]
+tief	low	IST	(s:dcl\np)\(s:dcl\np)	low.r.01	[Manner]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p62/d2973
+Der	der	DEF	np/n	O	[]
+Orkan	hurricane	CON	n/n	hurricane.n.01	[Equal]
+Sandy	sandy	NTH	n	cyclone.n.02	[]
+kommt	come	ENS	s:dcl\np	come.v.01	[Theme]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p12/d3094
+Er	male	PRO	np	male.n.02	[]
+ist	be	NOW	(s:dcl\np)/(s:adj\np)	O	[]
+acht	8	QUC	s:adj\np	O	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p13/d2548
+Ich	speaker	PRO	np	O	[]
+schulde	owe	ENS	((s:dcl\np)/np)/np	owe.v.03	[Beneficiary,Theme,Agent]
+ihr	female	PRO	np	female.n.02	[]
+hunderttausend	100000	QUC	n/n	O	[Quantity]
+Yen	yen	UOM	n	yen.n.02	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p03/d1876
+Ich	speaker	PRO	np	O	[]
+habe	habe	NOW	(s:dcl\np)/(s:pt\np)	O	[]
+dir	hearer	PRO	np	O	[]
+etwas	entity	DIS	np	entity.n.01	[]
+mitgebracht	bring	EXT	((s:pt\np)\np)\np	bring.v.01	[Theme,Destination,Agent]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p23/d1160
+Andrew~Conway	andrew~conway	PER	n	male.n.02	[]
+
+
+# newdoc id = p73/d1603
+Es	there	NIL	np	O	[]
+gibt	be	ENS	(s:dcl\np)/np	be.v.03	[Theme,Equal]
+in	in	REL	((s:dcl\np)\(s:dcl\np))/np	O	[Location]
+Tōkyō	tōkyō	GPE	n	city.n.01	[]
+etwa	about	APX	(n/n)/(n/n)	O	[]
+460000	460000	QUC	n/n	O	[Equal]
+Millionäre	millionaire	ROL	n	millionaire.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p53/d2257
+Tom	tom	PER	n	male.n.02	[]
+stahl	steal	EPS	((s:dcl\np)/pp)/np	steal.v.01	[Theme,Agent]
+etwas	entity	DIS	np	entity.n.01	[]
+aus	from	REL	pp/np	O	[Source]
+meinem	speaker	HAS	np/(n/pp)	O	[User]
+Hause	house	CON	n/pp	house.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p32/d1912
+Sie	female	PRO	np	female.n.02	[]
+verachtet	look~down~on	ENS	(s:dcl\np)/np	look_down_on.v.01	[]
+Menschen	person	CON	n	person.n.01	[]
+,	,	NIL	n\n	O	[]
+die	who	AND	(n\n)/(s:dcl\np)	O	[]
+faul	idle	IST	s:adj\np	idle.a.01	[Attribute]
+sind	be	NOW	(s:dcl\np)\(s:adj\np)	O	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p02/d2472
+Dieser	this	PRX	np/n	O	[]
+Pinguin	penguin	CON	n	penguin.n.01	[]
+ist	be	NOW	(s:dcl\np)/(s:adj\np)	O	[]
+echt	really	INT	(s:adj\np)/(s:adj\np)	really.r.04	[]
+süß	cute	IST	s:adj\np	cute.a.01	[Attribute]
+!	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p72/d0916
+Vielleicht	maybe	POS	s:dcl/s:dcl	O	[]
+war	be	PST	(s:dcl/np)/(s:adj\np)	O	[]
+er	male	PRO	np	male.n.02	[]
+krank	ill	IST	s:adj\np	ill.a.01	[Attribute]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p42/d2000
+Das	the	DEF	np/n	O	[]
+Hemd	shirt	CON	n	shirt.n.01	[]
+muss	need	NEC	(s:dcl\np)/(s:b\np)	O	[]
+gebügelt	iron	EXS	s:pss\np	iron.v.01	[Patient]
+werden	werden	NOW	(s:b\np)\(s:pss\np)	O	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p93/d2377
+Tom	tom	PER	n	male.n.02	[]
+weinte	weep	EPS	s:dcl\np	weep.v.01	[Agent]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p02/d3417
+Mary	mary	PER	n	female.n.02	[]
+ölte	oil	EPS	(s:dcl\np)/np	oil.v.01	[Destination,Agent]
+ihr	female	HAS	np/n	female.n.02	[User]
+Fahrrad	bicycle	CON	n	bicycle.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p03/d2896
+Das	the	DEF	np/n	O	[]
+kleine	little	IST	n/n	little.a.03	[Attribute]
+Mädchen	girl	CON	n	girl.n.01	[]
+nuckelt	suck	ENS	s:dcl\np	suck.v.01	[Agent]
+an	an	REL	((s:dcl\np)\(s:dcl\np))/np	O	[Patient]
+seinem	female	HAS	np/(n/pp)	female.n.02	[PartOf]
+Finger	finger	CON	n/pp	finger.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p13/d1659
+Ich	speaker	PRO	np	O	[]
+mag	like	ENS	(s:dcl\np)/np	like.v.03	[Stimulus,Experiencer]
+Pferde	horse	CON	n	horse.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p92/d1552
+Tom	tom	PER	n	male.n.02	[]
+fuhr	ride	EPS	s:dcl\np	ride.v.02	[Theme,Agent]
+mit	mit	REL	((s:dcl\np)\(s:dcl\np))/np	O	[Theme]
+der	the	DEF	np/n	O	[]
+Berg-~und~Talbahn	roller~coaster	CON	n	roller_coaster.n.02	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p03/d0925
+Tom	tom	PER	n	male.n.02	[]
+verschüttete	spill	EPS	(s:dcl\np)/np	spill.v.01	[Theme,Agent]
+die	the	DEF	np/n	O	[]
+Milch	milk	CON	n	milk.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p72/d2326
+Er	male	PRO	np	male.n.02	[]
+starb	die	EPS	s:dcl\np	die.v.01	[Patient]
+an	an	REL	((s:dcl\np)\(s:dcl\np))/np	O	[Causer]
+einem	a	DIS	np/n	O	[]
+Herzanfall	heart~attack	CON	n	heart_attack.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p22/d1202
+http://www.hoechst.com/willk.htm	http://www.hoechst.com/willk.htm	CTC	n	url.n.01	[]
+
+
+# newdoc id = p22/d3460
+Die	the	DEF	np/n	O	[]
+Rebellen	rebel	ROL	n	rebel.n.02	[]
+haben	have	NOW	(s:dcl\np)/(s:pt\np)	O	[]
+den	the	DEF	np/n	O	[]
+Rundfunksender	broadcasting~station	CON	n	broadcasting_station.n.01	[]
+erobert	capture	EXT	(s:pt\np)\np	capture.v.05	[Theme,Agent]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p02/d2269
+Ihr	female	HAS	np/n	female.n.02	[Owner]
+Hund	dog	CON	n	dog.n.01	[]
+ist	be	NOW	(s:dcl\np)/(s:adj\np)	O	[]
+nicht	not	NOT	(s:dcl\np)\(s:dcl\np)	O	[]
+besonders	very	INT	(s:adj\np)/(s:adj\np)	very.r.01	[]
+flink	fast	DEG	s:adj\np	fast.a.01	[Attribute]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p82/d2011
+Napoleon~Bonaparte	napoleon~bonaparte	PER	n	male.n.02	[]
+hatte	be	PST	(s:dcl\np)/(s:adj\np)	O	[]
+Angst	afraid	IST	(s:adj\np)/pp	afraid.a.01	[Experiencer]
+vor	vor	REL	pp/np	O	[Stimulus]
+schwarzen	black	COL	n/n	black.a.01	[Colour]
+Katzen	cat	CON	n	cat.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p02/d2477
+Ich	speaker	PRO	np	O	[]
+verwechsle	confuse	ENS	((s:dcl\np)/pp)/np	confuse.v.01	[]
+John	john	PER	n	male.n.02	[]
+immer	time	AND	(s:dcl\np)\(s:dcl\np)	O	[]
+mit	with	REL	pp/np	O	[Co-Patient]
+Paul	paul	PER	n	male.n.02	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p12/d0821
+Er	male	PRO	np	male.n.02	[]
+ist	be	NOW	(s:dcl\np)/(s:adj\np)	O	[]
+stolz	proud	IST	s:adj\np	proud.a.01	[Experiencer]
+auf	auf	REL	((s:dcl\np)\(s:dcl\np))/np	O	[Stimulus]
+seinen	male	HAS	np/(n/pp)	male.n.02	[Of]
+Sohn	son	ROL	n/pp	son.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p03/d3144
+Die	the	DEF	np/n	O	[]
+Wolken	cloud	CON	n	cloud.n.02	[]
+hängen	hang	ENS	(s:dcl\np)/pp	hang.v.05	[Theme]
+in	in	REL	pp/np	O	[Location]
+der	the	DEF	np/n	O	[]
+Luft	sky	CON	n	sky.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p52/d2976
+Ich	speaker	PRO	np	O	[]
+spreche	speak	ENS	(s:dcl\np)/np	speak.v.03	[]
+kein	not	NOT	(s:dcl\np)\(s:dcl\np)	O	[]
+Schwedisch	swedish	CON	n	swedish.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p03/d1541
+Dieser	entity	PRX	np/n	entity.n.01	[]
+Rasenmäher	lawn~mower	CON	n	lawn_mower.n.01	[]
+läuft	run	ENS	(s:dcl\np)/pp	run.v.13	[Theme]
+mit	mit	REL	pp/np	O	[Instrument]
+Benzin	petrol	CON	n	petrol.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p92/d3458
+Das	the	DEF	np/n	O	[]
+Baby	baby	CON	n	baby.n.01	[]
+ist	be	NOW	(s:dcl\np)/(s:adj\np)	O	[]
+wach	awake	IST	s:adj\np	awake.a.01	[Attribute]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p93/d0762
+Anna~Politkovskaya	anna~politkovskaya	PER	n	female.n.02	[]
+wurde	be	PST	(s:dcl\np)/(s:pss\np)	O	[]
+ermordet	murder	EXS	s:pss\np	murder.v.01	[Patient]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p32/d0930
+Tom	tom	PER	n	male.n.02	[]
+hat	have	ENS	(s:dcl\np)/np	have.v.04	[Theme,Pivot]
+einen	a	DIS	np/n	O	[]
+Wagen	car	CON	n	car.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p12/d1127
+Todesstrafe	death~penalty	CON	n	death_penalty.n.01	[]
+
+
+# newdoc id = p43/d1205
+Dies	entity	PRX	np	entity.n.01	[]
+grenzt	border~on	ENS	(s:dcl\np)/pp	border_on.v.01	[Theme]
+an	on	REL	pp/np	O	[Co-Theme]
+wissenschaftliche	scientific	IST	n/n	scientific.a.01	[Attribute]
+Unredlichkeit	dishonesty	CON	n	dishonesty.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p82/d2353
+Mein	speaker	HAS	np/n	O	[User]
+Ballon	balloon	CON	n	balloon.n.02	[]
+platzte	pop	EPS	s:dcl\np	pop.v.12	[Patient]
+.	!	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p32/d1440
+Der	the	DEF	np/n	O	[]
+Hund	dog	CON	n	dog.n.01	[]
+bellte	bark	EPS	((s:dcl\np)/pr)/np	bark.v.04	[Recipient,Agent]
+einen	a	DIS	np/n	O	[]
+Fremden	stranger	ROL	n	stranger.n.02	[]
+an	an	REL	pr	O	[Recipient]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p33/d2982
+Die	the	DEF	np/n	O	[]
+Quadratwurzel	square~root	CON	n/pp	square_root.n.01	[]
+von	of	REL	pp/np	O	[Of]
+hundertvierundvierzig	144	QUC	np	O	[]
+ist	be	EXS	(s:dcl\np)/np	be.v.05	[Co-Theme,Theme]
+zwölf	12	QUC	np	O	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p03/d2676
+Maria	maria	PER	n	female.n.02	[]
+liebt	love	ENS	(s:dcl\np)/np	love.v.01	[Stimulus,Experiencer]
+ihr	female	HAS	np/n	female.n.02	[Owner]
+Pferdchen	pony	CON	n	pony.n.05	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p52/d0761
+Die	die	DEF	np/n	O	[]
+Einnahmen	revenue	CON	n/pp	revenue.n.01	[]
+von	von	REL	pp/np	O	[Creator]
+Tom~Online	tom~online	ORG	n	company.n.01	[]
+sind	sind	NOW	(s:dcl\np)/(s:pt\np)	O	[]
+um	by	REL	pp/np	O	[Value]
+38,5	38.5	QUC	n/n	O	[Quantity]
+%	percent	UOM	n	percent.n.01	[]
+gestiegen	rise	EXT	(s:pt\np)\pp	rise.v.02	[Attribute]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p62/d1901
+Sie	female	PRO	np	female.n.02	[]
+gab	give	EPS	((s:dcl\np)/np)/np	give.v.12	[Recipient,Theme,Agent]
+mir	speaker	PRO	np	O	[]
+ihre	female	HAS	np/(n/pp)	female.n.02	[User]
+Telefonnummer	phone~number	CON	n/pp	phone_number.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p43/d1770
+Die	the	DEF	np/n	O	[]
+Goblins	goblin	CON	n	goblin.n.01	[]
+grinsten	grin	EPS	s:dcl\np	grin.v.01	[Agent]
+grausig	gruesomely	IST	(s:dcl\np)\(s:dcl\np)	gruesomely.r.01	[Manner]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p92/d0764
+Verdens~Gang	verdens~gang	ORG	n	company.n.01	[]
+ist	be	ENS	(s:dcl\np)/np	be.v.01	[Co-Theme,Theme]
+eine	a	DIS	np/n	O	[]
+norwegische	norway	GPO	n/n	country.n.02	[Location]
+Zeitung	newspaper	CON	n	newspaper.n.02	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p63/d1951
+Alle	person	AND	np	person.n.01	[]
+warten	wait	ENS	(s:dcl\np)/pp	wait.v.01	[Theme]
+auf	for	REL	pp/np	O	[Goal]
+dich	hearer	PRO	np	O	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p23/d1604
+Wir	speaker	PRO	np	O	[]
+verbinden	associate	ENS	(s:dcl\np)/np	associate.v.03	[Theme,Agent]
+Einstein	einstein	PER	n	male.n.02	[]
+mit	with	REL	((s:dcl\np)\(s:dcl\np))/np	O	[Co-Theme]
+der	the	DEF	np/n	O	[]
+Relativitätstheorie	relativity	CON	n	relativity.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p72/d2423
+Ich	speaker	PRO	np	O	[]
+bin	be	NOW	(s:dcl\np)/(s:adj\np)	O	[]
+enttäuscht	disappointed	IST	s:adj\np	disappointed.a.01	[Experiencer]
+über	at	REL	((s:adj\np)\(s:adj\np))/np	O	[Stimulus]
+die	the	DEF	np/n	O	[]
+Nachricht	news	CON	n	news.n.02	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p63/d2839
+Woodrow~Wilson	woodrow~wilson	PER	n	male.n.02	[]
+war	be	PST	(s:dcl\np)/(s:adj\np)	O	[]
+äußerst	extremely	INT	(s:adj\np)/(s:adj\np)	extremely.r.02	[]
+krank	sick	IST	s:adj\np	sick.a.01	[Attribute]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p03/d1674
+Tom	tom	PER	n	male.n.02	[]
+entfernte	remove	EPS	((s:dcl\np)/pp)/np	remove.v.01	[Theme,Agent]
+den	the	DEF	np/n	O	[]
+Splitter	splinter	CON	n	splinter.n.01	[]
+aus	from	REL	pp/np	O	[Source]
+Maria	maria	PER	n	female.n.02	[]
+s	s	HAS	(np/(n/pp))\np	O	[PartOf]
+Finger	finger	CON	n/pp	finger.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p02/d0897
+Sie	female	PRO	np	female.n.02	[]
+beleidigte	insult	EPS	(s:dcl\np)/np	insult.v.01	[Theme,Agent]
+ihn	male	PRO	np	male.n.02	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p73/d0796
+Dies	entity	PRX	np	entity.n.01	[]
+ist	be	NOW	(s:dcl\np)/(s:adj\np)	O	[]
+eine	eine	DIS	np/n	O	[]
+Million	1000000	QUC	n/n	O	[Quantity]
+Yen	yen	UOM	n	yen.n.02	[]
+wert	worth	IST	(s:adj\np)\np	worth.a.02	[Value,Theme]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p92/d2129
+Der	the	DEF	np/n	O	[]
+Hund	dog	CON	n	dog.n.01	[]
+jagte	chase	EPS	(s:dcl\np)/np	chase.v.01	[Theme,Agent]
+die	the	DEF	np/n	O	[]
+Katze	cat	CON	n	cat.n.01	[]
+auf	up	REL	((s:dcl\np)\(s:dcl\np))/np	O	[Destination]
+einen	a	DIS	np/n	O	[]
+Baum	tree	CON	n	tree.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p22/d0813
+Wir	speaker	PRO	np	O	[]
+haben	have	ENS	(s:dcl\np)/np	have.v.04	[Theme,Pivot]
+dreizehn	13	QUC	n/n	O	[Quantity]
+Knüppel	club	CON	n	club.n.03	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p22/d1939
+Wir	speaker	PRO	np	O	[]
+ignorieren	ignore	ENS	(s:dcl\np)/np	ignore.v.01	[]
+Tom	tom	PER	n	male.n.02	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p52/d1677
+Dieses	this	PRX	np/n	O	[]
+Café	coffee~shop	CON	n	coffee_shop.n.01	[]
+ist	be	NOW	(s:dcl\np)/(s:adj\np)	O	[]
+gemütlich	cozy	IST	s:adj\np	cozy.a.02	[Attribute]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p82/d2388
+Der	the	DEF	np/n	O	[]
+Wein	wine	CON	n	wine.n.01	[]
+war	be	PST	(s:dcl\np)/(s:adj\np)	O	[]
+ausgezeichnet	excellent	IST	s:adj\np	excellent.a.01	[Attribute]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p72/d2936
+Ich	speaker	PRO	np	O	[]
+bin	be	ENS	(s:dcl\np)/np	be.v.08	[Co-Theme,Theme]
+ein	an	DIS	np/n	O	[]
+ehemaliger	ex	PST	n/(n/pp)	O	[]
+Marinesoldat	marine	ROL	n/pp	marine.n.02	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p03/d2806
+Ich	speaker	PRO	np	O	[]
+hatte	have	EPS	(s:dcl\np)/np	have.v.16	[Stimulus,Experiencer]
+heute	day	NOW	(s:dcl\np)\(s:dcl\np)	O	[]
+Nasenbluten	nosebleed	CON	n	nosebleed.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p42/d2863
+Sie	female	PRO	np	female.n.02	[]
+bügelte	iron	EPS	(s:dcl\np)/np	iron.v.01	[Patient,Agent]
+ihr	female	HAS	np/n	female.n.02	[User]
+Shirt	shirt	CON	n	shirt.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p12/d3079
+Tom	tom	PER	n	male.n.02	[]
+hat	hat	NOW	(s:dcl\np)/(s:pt\np)	O	[]
+die	the	DEF	np/n	O	[]
+Suppe	soup	CON	n	soup.n.01	[]
+aufgegessen	finish~off	EXT	(s:pt\np)\np	finish_off.v.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p22/d0712
+Maler	maler	PER	n	male.n.02	[]
+lebte	live	EPS	s:dcl\np	live.v.01	[Theme]
+in	in	REL	((s:dcl\np)\(s:dcl\np))/np	O	[Location]
+Yucatán	yucatán	GPE	n	state.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p12/d0896
+Ich	speaker	PRO	np	O	[]
+habe	have	NOW	(s:dcl\np)/(s:pt\np)	O	[]
+das	the	DEF	np/n	O	[]
+Radio	radio	CON	n	radio.n.02	[]
+für	for	REL	pp/np	O	[Beneficiary]
+ihn	male	PRO	np	male.n.02	[]
+repariert	fix	EXT	((s:pt\np)\np)\pp	fix.v.01	[Patient,Agent]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p72/d1494
+Wir	speaker	PRO	np	O	[]
+haben	have	NOW	(s:dcl\np)/(s:pt\np)	O	[]
+3~zu~0	3-0	SCO	np	O	[]
+verloren	lose	EXT	(s:pt\np)\np	lose.v.02	[Extent,Agent]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p03/d2405
+Tom	tom	PER	n	male.n.02	[]
+legte	put	EPS	((s:dcl\np)/pp)/np	put.v.01	[Theme,Agent]
+sein	male	HAS	np/(n/pp)	male.n.02	[Owner]
+Portemonnaie	wallet	CON	n/pp	wallet.n.01	[]
+auf	on	REL	pp/np	O	[Destination]
+den	the	DEF	np/n	O	[]
+Tisch	table	CON	n	table.n.02	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p73/d3523
+Seine	male	HAS	np/(n/pp)	male.n.02	[Creator]
+lange	long	DEG	n/n	long.a.01	[Attribute]
+Rede	speech	CON	n/pp	speech.n.01	[]
+langweilte	bore	EPS	(s:dcl\np)/np	bore.v.01	[Experiencer,Stimulus]
+alle	person	AND	np	person.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p13/d2643
+Vier	4	QUC	np	O	[]
+und	plus	CON	(np\np)/np	plus.n.02	[]
+achtzehn	18	QUC	np	O	[]
+macht	be	EXS	(s:dcl\np)/np	be.v.06	[Co-Theme,Theme]
+zweiundzwanzig	22	QUC	np	O	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p43/d2025
+Dieses	this	PRX	np/n	O	[]
+Gebiet	area	CON	n	area.n.01	[]
+ist	be	NOW	(s:dcl\np)/(s:adj\np)	O	[]
+äußerst	extremely	INT	(s:adj\np)/(s:adj\np)	extremely.r.02	[]
+abgelegen	isolated	IST	s:adj\np	isolated.a.06	[Attribute]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p22/d1607
+Er	male	PRO	np	male.n.02	[]
+mag	like	ENS	(s:dcl\np)/np	like.v.02	[Stimulus,Experiencer]
+alles	entity	DIS	np	entity.n.01	[]
+,	,	NIL	np\np	O	[]
+was	that	IMP	(np\np)/(s:dcl\np)	O	[]
+süß	sweet	IST	s:adj\np	sweet.a.01	[Attribute]
+ist	be	NOW	(s:dcl\np)\(s:adj\np)	O	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p13/d1527
+Tom	tom	PER	n	male.n.02	[]
+schaltete	switch~off	EPS	((s:dcl\np)/np)/pr	switch_off.v.01	[Patient,Agent]
+den	the	DEF	np/n	O	[]
+Fernseher	tv	CON	n	tv.n.02	[]
+aus	aus	REL	pr	O	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p23/d1693
+Sie	female	PRO	np	female.n.02	[]
+ist	be	NOW	(s:dcl\np)/(s:adj\np)	O	[]
+sehr	very	INT	(s:adj\np)/(s:adj\np)	very.r.01	[]
+unbekümmert	happy-go-lucky	IST	s:adj\np	happy-go-lucky.a.01	[Attribute]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p73/d1611
+Tom	tom	PER	n	male.n.02	[]
+bläst	inflate	ENS	((s:dcl\np)/pr)/np	inflate.v.02	[Patient,Agent]
+einen	a	DIS	np/n	O	[]
+Ballon	balloon	CON	n	balloon.n.02	[]
+auf	auf	REL	pr	O	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p73/d2090
+Tom	tom	PER	n	male.n.02	[]
+spielte	play	EPS	(s:dcl\np)/np	play.v.07	[Theme,Agent]
+Gitarre	guitar	CON	n	guitar.n.01	[]
+,	,	NIL	(s:dcl\np)\(s:dcl\np)	O	[]
+und	and	AND	conj	O	[]
+Maria	maria	PER	n	female.n.02	[]
+sang	sing	EPS	s:dcl\np	sing.v.02	[Agent]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p83/d0814
+Meine	speaker	HAS	np/(n/pp)	O	[Of]
+Mutter	mother	ROL	n/pp	mother.n.01	[]
+ist	be	NOW	(s:dcl\np)/(s:adj\np)	O	[]
+schön	beautiful	IST	s:adj\np	beautiful.a.01	[Attribute]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p63/d1954
+Ich	speaker	PRO	np	O	[]
+aß	eat	EPS	(s:dcl\np)/np	eat.v.01	[Patient,Agent]
+die	the	DEF	np/n	O	[]
+roten	red	COL	n/n	red.a.01	[Colour]
+Äpfel	apple	CON	n	apple.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p52/d1971
+Wir	speaker	PRO	np	O	[]
+verkaufen	sell	ENS	(s:dcl\np)/np	sell.v.01	[Theme,Agent]
+Orangensaft	orange~juice	CON	n	orange_juice.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p53/d0857
+Es	thing	NIL	np	thing.n.05	[]
+schneit	snow	ENS	s:dcl\np	snow.v.01	[Equal]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p52/d1489
+Tom	tom	PER	n	male.n.02	[]
+las	read	EPS	(s:dcl\np)/np	read.v.01	[Source,Agent]
+das	the	DEF	np/n	O	[]
+Etikett	label	CON	n/pp	label.n.01	[]
+auf	on	REL	pp/np	O	[Bearer]
+der	the	DEF	np/n	O	[]
+Flasche	bottle	CON	n	bottle.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p32/d0835
+Ich	speaker	PRO	np	O	[]
+brauche	need	ENS	(s:dcl\np)/np	need.v.01	[Theme,Pivot]
+seine	male	HAS	np/(n/pp)	male.n.02	[Creator]
+Hilfe	help	CON	n/pp	help.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p93/d2676
+Der	the	DEF	np/n	O	[]
+Feueralarm	fire~alarm	CON	n	fire_alarm.n.02	[]
+erscholl	ring	EPS	s:dcl\np	ring.v.01	[Theme]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p63/d1920
+Tom	tom	PER	n	male.n.02	[]
+schaltete	switch~off	EPS	((s:dcl\np)/np)/pr	switch_off.v.01	[Patient,Agent]
+seinen	male	HAS	np/n	male.n.02	[Owner]
+Rechner	computer	CON	n	computer.n.01	[]
+aus	aus	REL	pr	O	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p93/d1504
+Die	the	DEF	np/n	O	[]
+Bank	bank	CON	n	bank.n.02	[]
+lieh	lend	EPS	((s:dcl\np)/np)/np	lend.v.02	[Recipient,Theme,Agent]
+ihr	female	PRO	np	female.n.02	[]
+500	500	QUC	n/n	O	[Quantity]
+Dollar	dollar	UOM	n	dollar.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p02/d1435
+Sie	person	PRO	np	person.n.01	[]
+pflanzten	plant	EPS	(s:dcl\np)/np	plant.v.01	[Theme,Agent]
+Apfelbäume	apple~tree	CON	n	apple_tree.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p93/d0836
+Er	male	PRO	np	male.n.02	[]
+machte	take	EPS	(s:dcl\np)/np	take.v.16	[Theme,Agent]
+ein	a	DIS	np/n	O	[]
+Foto	picture	CON	n/pp	picture.n.01	[]
+vom	von	REL	pp/n	O	[Theme]
+Koala	koala	CON	n	koala.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p73/d2412
+Dieser	this	PRX	np/n	O	[]
+Eimer	bucket	CON	n	bucket.n.01	[]
+leckt	leak	ENS	s:dcl\np	leak.v.04	[Source]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p02/d1850
+Wir	speaker	PRO	np	O	[]
+arbeiten	work	ENS	s:dcl\np	work.v.02	[Agent]
+für	for	REL	((s:dcl\np)\(s:dcl\np))/np	O	[Co-Agent]
+Sie	hearer	PRO	np	O	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p62/d1657
+Sie	female	PRO	np	female.n.02	[]
+klopfte	knock	EPS	s:dcl\np	knock.v.02	[Agent]
+an	on	REL	((s:dcl\np)\(s:dcl\np))/np	O	[Patient]
+die	the	DEF	np/n	O	[]
+Tür	door	CON	n	door.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p12/d1756
+Dein	hearer	HAS	np/n	O	[User]
+Reißverschluss	zipper	CON	n	zipper.n.01	[]
+ist	be	NOW	(s:dcl\np)/(s:adj\np)	O	[]
+offen	open	IST	s:adj\np	open.a.01	[Attribute]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p73/d1334
+http://www.uni-kassel.de/fb10/frieden/regionen/Israel/80thesen.html	http://www.uni-kassel.de/fb10/frieden/regionen/israel/80thesen.html	CTC	n	url.n.01	[]
+
+
+# newdoc id = p02/d2758
+Wessen	person	HAS	(s:wq/(s:q/np))/n	person.n.01	[User,Name]
+Handtasche	handbag	CON	n	handbag.n.01	[]
+ist	be	ENS	(s:q/np)/np	be.v.02	[Co-Theme,Theme]
+das	entity	PRX	np	entity.n.01	[]
+?	?	QUE	s:q\s:q	O	[]
+
+
+# newdoc id = p62/d2598
+Niemand	person	NOT	np	person.n.01	[]
+wettet	gamble	ENS	s:dcl\np	gamble.v.02	[Agent]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p83/d3332
+Mein	speaker	HAS	np/(n/pp)	O	[User]
+Spielzeug	toy	CON	n/pp	toy.n.01	[]
+ist	be	NOW	(s:dcl\np)/(s:pss\np)	O	[]
+zerbrochen	broken	IST	s:pss\np	broken.a.01	[Attribute]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p03/d2642
+Tom	tom	PER	n	male.n.02	[]
+ist	be	NOW	(s:dcl\np)/(s:adj\np)	O	[]
+groß	tall	DEG	s:adj\np	tall.a.01	[Attribute]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p73/d2123
+Ich	speaker	PRO	np	O	[]
+bin	belong	ENS	(s:dcl\np)/pp	belong.v.05	[Theme]
+bei	bei	REL	pp/np	O	[Goal]
+der	the	DEF	np/n	O	[]
+Blaskapelle	brass~band	CON	n	brass_band.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p43/d1776
+Alle	all	AND	np/n	O	[]
+Plätze	seat	CON	n	seat.n.01	[]
+sind	be	NOW	(s:dcl\np)/(s:adj\np)	O	[]
+ausgebucht	reserved	IST	s:adj\np	reserved.a.01	[Attribute]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p13/d2606
+Wer	person	QUE	s:wq/(s:dcl\np)	person.n.01	[Name]
+wird	will	FUT	(s:dcl\np)/(s:b\np)	O	[]
+die	the	DEF	np/n	O	[]
+Goldmedaille	gold~medal	CON	n	gold_medal.n.01	[]
+holen	win	EXS	(s:b\np)\np	win.v.01	[Theme,Agent]
+?	?	QUE	s:wq\s:wq	O	[]
+
+
+# newdoc id = p12/d1165
+Paul~Keast	paul~keast	PER	n	male.n.02	[]
+
+
+# newdoc id = p32/d1837
+Ich	speaker	PRO	np	O	[]
+schulde	owe	ENS	((s:dcl\np)/np)/np	owe.v.03	[Beneficiary,Theme,Agent]
+ihm	male	PRO	np	male.n.02	[]
+100	100	QUC	n/n	O	[Quantity]
+Yen	yen	UOM	n	yen.n.02	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p02/d2340
+Du	hearer	PRO	np	O	[]
+hast	hast	NOW	(s:dcl\np)/(s:pt\np)	O	[]
+mit	with	REL	pp/np	O	[Co-Agent]
+ihr	female	PRO	np	female.n.02	[]
+geschlafen	sleep~with	EXT	(s:pt\np)\pp	sleep_with.v.01	[Agent]
+?	?	QUE	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p93/d1717
+Nicht	not	NOT	np/np	O	[]
+jeder	person	AND	np	person.n.01	[]
+gewinnt	win	ENS	s:dcl\np	win.v.01	[Agent]
+!	!	EMP	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p22/d0783
+Maria	maria	PER	n	female.n.02	[]
+versteht	understand	ENS	(s:dcl\np)/np	understand.v.03	[Stimulus,Experiencer]
+Chinesisch	chinese	CON	n	chinese.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p32/d0955
+Mein	speaker	HAS	np/(n/pp)	O	[Of]
+Onkel	uncle	ROL	n/pp	uncle.n.01	[]
+ist	be	NOW	(s:dcl\np)/(s:adj\np)	O	[]
+verärgert	angry	IST	s:adj\np	angry.a.01	[Attribute]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p13/d1571
+Tom	tom	PER	n	male.n.02	[]
+schreibt	write	ENS	(s:dcl\np)/np	write.v.01	[Result,Agent]
+ein	a	DIS	np/n	O	[]
+Buch	book	CON	n	book.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p02/d2236
+Vielleicht	maybe	POS	s:dcl/s:dcl	O	[]
+hat	hat	NOW	(s:dcl/np)/(s:pt\np)	O	[]
+Tom	tom	PER	n	male.n.02	[]
+Mary	mary	PER	n	female.n.02	[]
+geküsst	kiss	EXT	(s:pt\np)\np	kiss.v.01	[Co-Agent,Agent]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p82/d1968
+Du	hearer	PRO	np	O	[]
+bist	be	ENS	(s:dcl\np)/np	be.v.01	[Co-Theme,Theme]
+ein	a	DIS	np/n	O	[]
+Serienmörder	serial~killer	ROL	n	serial_killer.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p22/d1526
+Ihr	female	HAS	np/(n/pp)	female.n.02	[Of]
+Vater	father	ROL	n/pp	father.n.01	[]
+betrat	enter	EPS	(s:dcl\np)/np	enter.v.01	[Destination,Theme]
+das	the	DEF	np/n	O	[]
+Zimmer	room	CON	n	room.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p73/d3347
+Sie	female	PRO	np	female.n.02	[]
+wurde	be	PST	(s:dcl\np)/(s:pss\np)	O	[]
+von	by	REL	((s:pss\np)/(s:pss\np))/np	O	[Agent]
+Maria	maria	PER	n	female.n.02	[]
+verführt	seduce	EXS	s:pss\np	seduce.v.01	[Patient]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p12/d2981
+Wo	location	QUE	s:wq/(s:dcl\np)	location.n.01	[Equal]
+ist	be	ENS	(s:dcl\np)/np	be.v.03	[Theme,Location]
+deine	hearer	HAS	np/n	O	[User]
+Jacke	jacket	CON	n	jacket.n.01	[]
+?	?	QUE	s:wq\s:wq	O	[]
+
+
+# newdoc id = p03/d2101
+Der	the	DEF	np/n	O	[]
+See	lake	CON	n	lake.n.01	[]
+ist	be	NOW	(s:dcl\np)/(s:adj\np)	O	[]
+sehr	very	INT	(s:adj\np)/(s:adj\np)	very.r.01	[]
+tief	deep	DEG	s:adj\np	deep.a.03	[AttributeOf]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p32/d1472
+Tom	tom	PER	n	male.n.02	[]
+ist	be	NOW	(s:dcl\np)/(s:adj\np)	O	[]
+überhaupt	at~all	EMP	(s:adj\np)/(s:adj\np)	O	[]
+nicht	not	NOT	(s:adj\np)/(s:adj\np)	O	[]
+glücklich	happy	IST	s:adj\np	happy.a.01	[Experiencer]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p42/d2326
+Er	male	PRO	np	male.n.02	[]
+verbrachte	spend	EPS	(s:dcl\np)/np	spend.v.01	[Duration,Agent]
+ein	a	DIS	np/n	O	[]
+paar	-	QUV	n/n	O	[Quantity]
+Monate	month	UOM	n	month.n.01	[]
+in	in	REL	((s:dcl\np)\(s:dcl\np))/np	O	[Location]
+Schottland	schottland	GPE	n	country.n.02	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p32/d2650
+Sie	person	PRO	np	person.n.01	[]
+räumten	clear	EPS	(s:dcl\np)/np	clear.v.01	[Theme,Agent]
+den	the	DEF	np/n	O	[]
+Schnee	snow	CON	n	snow.n.02	[]
+vo	von	REL	((s:dcl\np)\(s:dcl\np))/np	O	[Source]
+m	dem	DEF	np/n	O	[]
+Gehweg	pavement	CON	n	pavement.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p43/d2299
+Wir	speaker	PRO	np	O	[]
+schätzen	estimate	ENS	(s:dcl\np)/np	estimate.v.01	[Theme,Agent]
+den	the	DEF	np/n	O	[]
+Schaden	damage	CON	n/pp	damage.n.01	[]
+auf	at	REL	pp/np	O	[Value]
+tausend	1000	QUC	n/n	O	[Quantity]
+Dollar	dollar	UOM	n	dollar.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p23/d2398
+Jemand	person	DIS	np	person.n.01	[]
+hat	hat	NOW	(s:dcl\np)/(s:pt\np)	O	[]
+dich	hearer	PRO	np	O	[]
+gesehen	see	EXT	(s:pt\np)\np	see.v.01	[Stimulus,Experiencer]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p03/d2510
+Sie	female	PRO	np	female.n.02	[]
+wohnt	live	ENS	s:dcl\np	live.v.01	[Theme]
+in	in	REL	((s:dcl\np)\(s:dcl\np))/np	O	[Location]
+irgendeinem	some	DIS	np/n	O	[]
+Dorf	village	CON	n	village.n.02	[]
+in	in	REL	(n\n)/np	O	[PartOf]
+Indien	indien	GPE	n	country.n.02	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p02/d3335
+Dieses	this	PRX	np/n	O	[]
+Gemälde	painting	CON	n/pp	painting.n.01	[]
+von	by	REL	pp/np	O	[Creator]
+Rembrandt	rembrandt	PER	n	male.n.02	[]
+ist	be	ENS	(s:dcl\np)/np	be.v.01	[Co-Theme,Theme]
+ein	a	DIS	np/n	O	[]
+Meisterwerk	masterpiece	CON	n	masterpiece.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p22/d2673
+Tom	tom	PER	n	male.n.02	[]
+hackt	chop	ENS	(s:dcl\np)/np	chop.v.01	[Patient,Agent]
+Holz	wood	CON	n	wood.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p22/d2695
+Schwalben	swallow	CON	n	swallow.n.03	[]
+fliegen	fly	ENS	s:dcl\np	fly.v.01	[Theme]
+am	in	DEF	((s:dcl\np)\(s:dcl\np))/n	O	[Location]
+Himmel	sky	CON	n	sky.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p32/d2751
+Diebe	thief	ROL	n	thief.n.01	[]
+plünderten	plunder	EPS	(s:dcl\np)/np	plunder.v.03	[Source,Agent]
+das	the	DEF	np/n	O	[]
+Museum	museum	CON	n	museum.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p73/d1276
+http://www.anl.siemens.de/about/index_d.html	http://www.anl.siemens.de/about/index_d.html	CTC	n	O	[]
+
+
+# newdoc id = p83/d2586
+Yumi	yumi	PER	n	female.n.02	[]
+hat	have	ENS	(s:dcl\np)/np	have.v.04	[Theme,Pivot]
+viele	+	QUV	n/n	O	[Quantity]
+Bücher	book	CON	n	book.n.02	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p72/d2920
+Tom	tom	PER	n	male.n.02	[]
+bezahlte	pay	EPS	((s:dcl\np)/pp)/np	pay.v.01	[Theme,Agent]
+es	entity	PRO	np	entity.n.01	[]
+mit	by	REL	pp/np	O	[Instrument]
+Kreditkarte	credit~card	CON	n	credit_card.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p52/d1926
+Tom	tom	PER	n	male.n.02	[]
+spendete	donate	EPS	((s:dcl\np)/np)/np	donate.v.01	[Recipient,Theme,Agent]
+dem	the	DEF	np/n	O	[]
+Museum	museum	CON	n	museum.n.01	[]
+drei	3	QUC	n/n	O	[Quantity]
+Bilder	painting	CON	n	painting.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p92/d3092
+Tom	tom	PER	n	male.n.02	[]
+erstickte	suffocate	EPS	(s:dcl\np)/np	suffocate.v.01	[Patient,Agent]
+Maria	maria	PER	n	female.n.02	[]
+mit	with	REL	((s:dcl\np)\(s:dcl\np))/np	O	[Instrument]
+einer	a	DIS	np/n	O	[]
+Plastiktüte	plastic~bag	CON	n	plastic_bag.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p13/d1758
+Er	male	PRO	np	male.n.02	[]
+kennt	know	ENS	(s:dcl\np)/np	know.v.04	[Stimulus,Experiencer]
+keinen	person	NOT	np/pp	person.n.01	[]
+von	of	REL	pp/np	O	[SubOf]
+uns	speaker	PRO	np	O	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p12/d2043
+Er	male	PRO	np	male.n.02	[]
+kaufte	buy	EPS	(s:dcl\np)/np	buy.v.01	[Theme,Agent]
+Gemüse	vegetable	CON	n	vegetable.n.01	[]
+und	and	GRP	conj	O	[]
+ein	some	DIS	np/n	O	[]
+bisschen	-	QUV	n/n	O	[]
+Obst	fruit	CON	n	fruit.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p93/d3256
+Tom	tom	PER	n	male.n.02	[]
+hat	hat	NOW	(s:dcl\np)/(s:pt\np)	O	[]
+die	the	DEF	np/n	O	[]
+Münze	coin	CON	n	coin.n.01	[]
+eingesteckt	pocket	EXT	(s:pt\np)\np	pocket.v.01	[Theme,Agent]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p02/d2207
+Tom	tom	PER	n	male.n.02	[]
+ist	be	NOW	(s:dcl\np)/(s:adj\np)	O	[]
+nicht	not	NOT	(s:adj\np)/(s:adj\np)	O	[]
+berühmt	famous	IST	s:adj\np	famous.a.01	[Attribute]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p03/d0843
+Er	male	PRO	np	male.n.02	[]
+mag	like	ENS	(s:dcl\np)/np	like.v.03	[]
+keine	not	NOT	np/n	O	[]
+Katzen	cat	CON	n	cat.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p92/d1143
+Wir	speaker	PRO	np	O	[]
+öffneten	unlock	EPS	(s:dcl\np)/np	unlock.v.01	[Patient,Agent]
+die	the	DEF	np/n	O	[]
+Tür	door	CON	n	door.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p72/d2159
+Ich	speaker	PRO	np	O	[]
+erschlug	kill	EPS	(s:dcl\np)/np	kill.v.01	[Patient,Agent]
+die	the	DEF	np/n	O	[]
+Ratte	rat	CON	n	rat.n.01	[]
+mit	with	REL	((s:dcl\np)\(s:dcl\np))/np	O	[Instrument]
+einem	a	DIS	np/n	O	[]
+Stock	stick	CON	n	stick.n.02	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p23/d2417
+Der	the	DEF	np/n	O	[]
+Kater	cat	CON	n	cat.n.01	[]
+ruinierte	ruin	EPS	(s:dcl\np)/np	ruin.v.01	[Patient,Agent]
+mein	speaker	HAS	np/(n/pp)	O	[User]
+Sofa	sofa	CON	n/pp	sofa.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p22/d1967
+Tom	tom	PER	n	male.n.02	[]
+beschleunigte	accelerate	EPS	s:dcl\np	accelerate.v.01	[Agent]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p53/d2488
+Maria	maria	PER	n	female.n.02	[]
+salzte	salt	EPS	(s:dcl\np)/np	salt.v.01	[Destination,Agent]
+das	the	DEF	np/n	O	[]
+Fleisch	meat	CON	n	meat.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p92/d2611
+Das	entity	DST	np	entity.n.01	[]
+ist	be	ENS	(s:dcl\np)/np	be.v.02	[Co-Theme,Theme]
+mein	speaker	HAS	np/n	O	[Owner]
+Hund	dog	CON	n	dog.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p43/d2409
+Sie	female	PRO	np	female.n.02	[]
+schwärmt	adore	ENS	(s:dcl\np)/pp	adore.v.01	[Experiencer]
+für	für	REL	pp/np	O	[Stimulus]
+ihn	male	PRO	np	male.n.02	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p32/d2926
+Zwei	2	QUC	np	O	[]
+ist	be	EXS	(s:dcl\np)/np	be.v.06	[Co-Theme,Theme]
+die	the	DEF	np/n	O	[]
+vierte	4	ORD	n/n	O	[]
+Wurzel	root	CON	n/pp	root.n.04	[]
+von	of	REL	pp/np	O	[Of]
+sechzehn	16	QUC	np	O	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p03/d1867
+Die	the	DEF	np/n	O	[]
+Katze	cat	CON	n	cat.n.01	[]
+miaut	meow	ENS	s:dcl\np	meow.v.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p72/d1641
+Ein	an	AND	np/n	O	[]
+Elefant	elephant	CON	n	elephant.n.01	[]
+ist	be	EQU	(s:dcl\np)/np	O	[]
+ein	a	DIS	np/n	O	[]
+starkes	strong	IST	n/n	strong.a.01	[Attribute]
+Tier	animal	CON	n	animal.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p03/d2650
+Dieses	this	PRX	np/n	O	[]
+Auto	car	CON	n	car.n.01	[]
+wurde	be	PST	(s:dcl\np)/(s:pss\np)	O	[]
+in	in	REL	((s:pss\np)/(s:pss\np))/np	O	[Location]
+Japan	japan	GPE	n	country.n.02	[]
+produziert	make	EXS	s:pss\np	make.v.06	[Result]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p02/d2723
+Ich	speaker	PRO	np	O	[]
+wurde	be	PST	(s:dcl\np)/(s:pss\np)	O	[]
+von	by	REL	((s:pss\np)/(s:pss\np))/np	O	[Agent]
+Außerirdischen	extraterrestrial	CON	n	extraterrestrial.n.01	[]
+entführt	abduct	EXS	s:pss\np	abduct.v.01	[Theme]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p73/d2400
+Es	it	NIL	np	O	[]
+schneit	snow	ENS	s:dcl\np	snow.v.01	[Equal]
+seit	for	REL	((s:dcl\np)\(s:dcl\np))/np	O	[Duration]
+zwei	2	QUC	n/n	O	[Quantity]
+Tagen	day	UOM	n	day.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p12/d2176
+Tom	tom	PER	n	male.n.02	[]
+nahm	grab	EPS	(s:dcl\np)/np	grab.v.03	[Theme,Agent]
+seinen	male	HAS	np/(n/pp)	male.n.02	[User]
+Schirm	umbrella	CON	n/pp	umbrella.n.01	[]
+und	and	COO	((s:dcl\np)\(s:dcl\np))/(s:dcl\np)	O	[]
+begab	head	EPS	((s:dcl\np)/pp)/np	head.v.01	[Theme]
+sich	sich	REF	np	O	[]
+zum	for	REL	pp/np	O	[Destination]
+Aufzug	elevator	CON	n	elevator.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p93/d3548
+Die	the	DEF	np/n	O	[]
+Bücherei	library	CON	n	library.n.03	[]
+ist	be	NOW	(s:dcl\np)/(s:adj\np)	O	[]
+achtzig	80	QUC	n/n	O	[Quantity]
+Jahre	year	UOM	n	year.n.01	[]
+alt	old	DEG	(s:adj\np)\np	old.a.02	[Value,Theme]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p63/d3416
+Das	the	DEF	np/n	O	[]
+arme	poor	IST	n/n	poor.a.01	[Attribute]
+Kind	child	CON	n	child.n.01	[]
+leidet	suffer	ENS	s:dcl\np	suffer.v.02	[Experiencer]
+an	an	REL	((s:dcl\np)\(s:dcl\np))/np	O	[Stimulus]
+Heuschnupfen	hay~fever	CON	n	hay_fever.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p13/d0907
+Er	male	PRO	np	male.n.02	[]
+kann	can	POS	(s:dcl\np)/(s:b\np)	O	[]
+Flöte	flute	CON	n	flute.n.01	[]
+spielen	play	EXS	(s:b\np)\np	play.v.07	[Theme,Agent]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p92/d0820
+Meine	speaker	HAS	np/(n/pp)	O	[Owner]
+Uhr	watch	CON	n/pp	watch.n.01	[]
+wurde	have	PST	(s:dcl\np)/(s:pss\np)	O	[Beneficiary]
+gestohlen	steal	EXS	s:pss\np	steal.v.01	[Theme]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p72/d0945
+Der	the	DEF	np/n	O	[]
+Vogel	bird	CON	n	bird.n.01	[]
+fliegt	fly	ENS	s:dcl\np	fly.v.01	[Theme]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p53/d1656
+Tom	tom	PER	n	male.n.02	[]
+sah	see	EPS	(s:dcl\np)/np	see.v.01	[Stimulus,Experiencer]
+Maria	maria	PER	n	female.n.02	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p12/d2868
+Er	male	PRO	np	male.n.02	[]
+studiert	study	ENS	s:dcl\np	study.v.05	[Agent]
+gerade	now	NOW	(s:dcl\np)\(s:dcl\np)	O	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p22/d2237
+Das	entity	DST	np	entity.n.01	[]
+ist	be	ENS	(s:dcl\np)/np	be.v.02	[Co-Theme,Theme]
+Brian	brian	PER	n	male.n.02	[]
+s	s	HAS	(np/n)\np	O	[User]
+Auto	car	CON	n	car.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p22/d1484
+Robert	robert	PER	n	male.n.02	[]
+hat	hat	NOW	(s:dcl\np)/(s:pt\np)	O	[]
+mit	mit	REL	pp/np	O	[Theme]
+seinem	male	HAS	np/(n/pp)	male.n.02	[Owner]
+großen	big	IST	n/n	big.a.01	[Attribute]
+Boot	boat	CON	n/pp	boat.n.01	[]
+angegeben	brag	EXT	(s:pt\np)\pp	brag.v.01	[Agent]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p92/d2379
+Die	the	DEF	np/n	O	[]
+Stadt	city	CON	n	city.n.01	[]
+wurde	be	PST	(s:dcl\np)/(s:pss\np)	O	[]
+573	0573	YOC	(s:pss\np)/(s:pss\np)	O	[]
+gegründet	found	EXS	s:pss\np	found.v.01	[Theme]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p63/d3034
+Jemand	person	DIS	np	person.n.01	[]
+hat	hat	NOW	(s:dcl\np)/(s:pt\np)	O	[]
+mir	speaker	PRO	np	O	[]
+auf	on	REL	pp/np	O	[Patient]
+die	the	DEF	np/n	O	[]
+Schulter	shoulder	CON	n	shoulder.n.01	[]
+getippt	tap	EXT	((s:pt\np)\np)\pp	tap.v.03	[Experiencer,Agent]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p02/d3454
+Tom	tom	PER	n	male.n.02	[]
+wartet	wait	ENS	(s:dcl\np)/pp	wait.v.01	[]
+auf	for	REL	pp/np	O	[Goal]
+Maria	maria	PER	n	female.n.02	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p62/d1986
+Ich	speaker	PRO	np	O	[]
+habe	do	NOW	(s:dcl\np)/(s:b\np)	O	[]
+auch	also	ALT	(s:dcl\np)\(s:dcl\np)	O	[]
+nicht	not	NOT	(s:dcl\np)\(s:dcl\np)	O	[]
+angerufen	call	EXT	s:b\np	call.v.03	[Agent]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p63/d3079
+Meine	speaker	HAS	np/(n/pp)	O	[Of]
+Tante	aunt	ROL	n/pp	aunt.n.01	[]
+hat	hat	NOW	(s:dcl\np)/(s:pt\np)	O	[]
+das	the	DEF	np/n	O	[]
+riesige	huge	IST	n/n	huge.a.01	[Attribute]
+Grundstück	estate	CON	n	estate.n.02	[]
+geerbt	inherit	EXT	(s:pt\np)\np	O	[Theme,Agent]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p32/d2715
+Tom	tom	PER	n	male.n.02	[]
+ist	be	NOW	(s:dcl\np)/(s:adj\np)	O	[]
+immer	time	AND	(s:dcl\np)\(s:dcl\np)	O	[]
+online	online	IST	s:adj\np	online.a.02	[Attribute]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p63/d0828
+Der	the	DEF	np/n	O	[]
+Fluss	river	CON	n	river.n.01	[]
+fließt	flow	ENS	s:dcl\np	flow.v.02	[Theme]
+in	into	REL	((s:dcl\np)\(s:dcl\np))/np	O	[Destination]
+den	the	DEF	np/n	O	[]
+Pazifik	pazifik	GEO	n	ocean.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p53/d2469
+Tom	tom	PER	n	male.n.02	[]
+belud	load	EPS	(s:dcl\np)/np	load.v.01	[Destination,Agent]
+den	the	DEF	np/n	O	[]
+Lastwagen	truck	CON	n	truck.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p23/d2667
+Die	the	DEF	np/n	O	[]
+Japaner	japan	GPO	n	country.n.02	[]
+zerstörten	destroy	EPS	(s:dcl\np)/np	destroy.v.02	[Patient,Agent]
+Pearl~Harbor	pearl~harbor	ART	n	seaport.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p03/d2002
+Er	male	PRO	np	male.n.02	[]
+ist	be	NOW	(s:dcl\np)/(s:adj\np)	O	[]
+stockbetrunken	hammered	IST	s:adj\np	hammered.a.01	[Attribute]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p82/d1991
+Der	the	DEF	np/n	O	[]
+Chirurg	surgeon	ROL	n	surgeon.n.01	[]
+amputierte	amputate	EPS	(s:dcl\np)/np	amputate.v.01	[Theme,Agent]
+das	the	DEF	np/n	O	[]
+falsche	wrong	IST	n/n	wrong.a.03	[Attribute]
+Bein	leg	CON	n	leg.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p72/d0843
+Er	male	PRO	np	male.n.02	[]
+verstieß	break	EPS	(s:dcl\np)/pp	break.v.06	[Agent]
+gegen	gegen	REL	pp/np	O	[]
+das	the	DEF	np/n	O	[]
+Gesetz	law	CON	n	law.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p03/d2374
+Tom	tom	PER	n	male.n.02	[]
+hat	suffer	ENS	(s:dcl\np)/np	suffer.v.02	[]
+Krebs	cancer	CON	n	cancer.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p13/d2016
+Die	the	DEF	np/n	O	[]
+Antwort	answer	CON	n	answer.n.01	[]
+ist	be	NOW	(s:dcl\np)/(s:adj\np)	O	[]
+offensichtlich	clear	IST	s:adj\np	clear.a.01	[Attribute]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p12/d0869
+Meine	speaker	HAS	np/(n/pp)	O	[Of]
+Eltern	parent	ROL	n/pp	parent.n.01	[]
+stammen	be	ENS	(s:dcl\np)/pp	be.v.03	[Theme]
+aus	from	REL	pp/np	O	[Source]
+China	china	GPE	n	country.n.02	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p93/d2341
+Tom	tom	PER	n	male.n.02	[]
+hat	have	ENS	(s:dcl\np)/np	have.v.02	[Theme,Pivot]
+in	in	REL	((s:dcl\np)\(s:dcl\np))/np	O	[Location]
+seinem	male	HAS	np/n	male.n.02	[Owner]
+Garten	yard	CON	n	yard.n.02	[]
+drei	3	QUC	n/n	O	[Quantity]
+Apfelbäume	apple~tree	CON	n	apple_tree.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p22/d2603
+Sie	female	PRO	np	female.n.02	[]
+schluchzte	sob	EPS	s:dcl\np	sob.v.01	[Agent]
+heftig	heavily	IST	(s:dcl\np)\(s:dcl\np)	heavily.r.01	[Manner]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p82/d1886
+Tom	tom	PER	n	male.n.02	[]
+wohnt	live	ENS	s:dcl\np	live.v.01	[Theme]
+in	in	REL	((s:dcl\np)\(s:dcl\np))/np	O	[Location]
+Boston	boston	GPE	n	city.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p42/d2376
+Tom	tom	PER	n	male.n.02	[]
+ist	be	NOW	(s:dcl\np)/(s:adj\np)	O	[]
+allergisch	allergic	IST	(s:adj\np)/pp	allergic.a.02	[Experiencer]
+auf	auf	REL	pp/np	O	[Stimulus]
+Milchprodukte	dairy~product	CON	n	dairy_product.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p92/d0923
+Ihm	male	PRO	np	male.n.02	[]
+wurden	be	PST	(s:dcl\np)/(s:pss\np)	O	[]
+zehntausend	10000	QUC	n/n	O	[Quantity]
+Dollar	dollar	UOM	n	dollar.n.01	[]
+gezahlt	pay	EXS	(s:pss\np)\np	pay.v.01	[Asset,Recipient]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p83/d1943
+Ein	a	DIS	np/n	O	[]
+Hund	dog	CON	n	dog.n.01	[]
+wurde	be	PST	(s:dcl\np)/(s:pss\np)	O	[]
+von	by	REL	((s:pss\np)/(s:pss\np))/np	O	[Agent]
+einem	a	DIS	np/n	O	[]
+Lkw	truck	CON	n	truck.n.01	[]
+überfahren	run~over	EXS	s:pss\np	run_over.v.01	[Patient]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p52/d2223
+Die	the	DEF	np/n	O	[]
+Mütter	mother	ROL	n	mother.n.01	[]
+nähen	sew	ENS	s:dcl\np	sew.v.01	[Agent]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p22/d2444
+Ein	a	DIS	np/n	O	[]
+Vogel	bird	CON	n	bird.n.01	[]
+singt	sing	ENS	s:dcl\np	sing.v.03	[Agent]
+auf	in	REL	((s:dcl\np)\(s:dcl\np))/np	O	[Location]
+dem	the	DEF	np/n	O	[]
+Baum	tree	CON	n	tree.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p03/d2393
+Der	the	DEF	np/n	O	[]
+Schmerz	pain	CON	n	pain.n.01	[]
+wird	will	FUT	(s:dcl\np)/(s:b\np)	O	[]
+nachlassen	wear~off	EXS	s:b\np	wear_off.v.02	[Theme]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p52/d1897
+Das	the	DEF	np/n	O	[]
+Boot	boat	CON	n	boat.n.01	[]
+segelte	sail	EPS	s:dcl\np	sail.v.01	[Theme]
+über	across	REL	((s:dcl\np)\(s:dcl\np))/np	O	[Path]
+den	the	DEF	np/n	O	[]
+Pazifischen~Ozean	pazifischer~ozean	GEO	n	ocean.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p92/d0861
+Herr	mr	ROL	n/n	mr.n.01	[Title]
+Spencer	spencer	PER	n	male.n.02	[]
+arbeitet	work	ENS	s:dcl\np	work.v.02	[Agent]
+in	in	REL	((s:dcl\np)\(s:dcl\np))/np	O	[Location]
+einem	a	DIS	np/n	O	[]
+Geschäft	shop	CON	n	shop.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p63/d2467
+Die	the	DEF	np/n	O	[]
+Terroristen	terrorist	ROL	n	terrorist.n.01	[]
+griffen	attack	EPS	((s:dcl\np)/pr)/np	attack.v.01	[Patient,Agent]
+eine	a	DIS	np/n	O	[]
+Moschee	mosque	CON	n	mosque.n.01	[]
+an	an	REL	pr	O	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p92/d1691
+Er	male	PRO	np	male.n.02	[]
+räumte	acknowledge	EPS	(s:dcl\np)/np	acknowledge.v.01	[Topic,Agent]
+seine	male	HAS	np/n	male.n.02	[Creator]
+Fehler	fault	CON	n	fault.n.01	[]
+ein	ein	REL	n\n	O	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p03/d1600
+Seine	male	HAS	np/(n/pp)	male.n.02	[Creator]
+Rede	speech	CON	n/pp	speech.n.01	[]
+langweilte	bore	EPS	(s:dcl\np)/np	bore.v.01	[Experiencer,Stimulus]
+mich	speaker	PRO	np	O	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p02/d2162
+Tom	tom	PER	n	male.n.02	[]
+hat	do	PST	(s:dcl\np)/(s:pt\np)	O	[]
+keinen	not	NOT	(s:dcl\np)\(s:dcl\np)	O	[]
+Gesetzen	law	CON	n	law.n.02	[]
+zuwidergehandelt	break	EXT	(s:pt\np)\np	break.v.06	[Theme,Agent]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p33/d0764
+Der	the	DEF	np/n	O	[]
+Film	movie	CON	n/n	movie.n.01	[Equal]
+"	'	NIL	n/n	O	[]
+Speed	speed	ART	n	movie.n.01	[]
+"	'	NIL	n\n	O	[]
+wurde	be	PST	(s:dcl\np)/(s:pss\np)	O	[]
+von	by	REL	((s:pss\np)/(s:pss\np))/np	O	[Agent]
+Jan~De~Bont	jan~de~bont	PER	n	male.n.02	[]
+geleitet	direct	EXS	s:pss\np	direct.v.03	[Theme]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p03/d2095
+Mir	speaker	PRO	np	O	[]
+gefällt	like	ENS	(s:dcl\np)/np	like.v.02	[Stimulus,Experiencer]
+frische	fresh	IST	n/n	fresh.a.01	[Attribute]
+Luft	air	CON	n	air.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p22/d2422
+Maria	maria	PER	n	female.n.02	[]
+erhielt	receive	EPS	((s:dcl\np)/pp)/np	receive.v.01	[Theme,Agent]
+ein	a	DIS	np/n	O	[]
+Telegramm	telegram	CON	n	telegram.n.01	[]
+von	from	REL	pp/np	O	[Source]
+Tom	tom	PER	n	male.n.02	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p33/d1992
+Der	the	DEF	np/n	O	[]
+Bär	bear	CON	n	bear.n.01	[]
+fraß	eat	EPS	(s:dcl\np)/np	eat.v.01	[Patient,Agent]
+einen	an	DIS	np/n	O	[]
+Apfel	apple	CON	n	apple.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p03/d0900
+Sie	female	PRO	np	female.n.02	[]
+leidet	suffer	ENS	s:dcl\np	suffer.v.02	[]
+an	an	REL	((s:dcl\np)\(s:dcl\np))/np	O	[Stimulus]
+einer	a	DIS	np/n	O	[]
+ansteckenden	contagious	IST	n/n	contagious.a.01	[Attribute]
+Krankheit	disease	CON	n	disease.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p52/d3137
+Mir	speaker	PRO	np	O	[PartOf]
+tut	tut	NOW	(s:dcl\np)/(s:b\np)	O	[]
+der	der	DEF	np/n	O	[]
+Nacken	neck	CON	n	neck.n.01	[]
+weh	hurt	EXS	(s:b\np)\np	hurt.v.01	[Patient,Experiencer]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p33/d1580
+Spucken	spit	EXG	np	spit.v.01	[]
+ist	be	NOW	(s:dcl\np)/(s:pss\np)	O	[]
+verboten	prohibited	IST	s:pss\np	prohibited.a.01	[Attribute]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p02/d2690
+Tom	tom	PER	n	male.n.02	[]
+grillt	grill	ENS	(s:dcl\np)/np	grill.v.01	[Patient,Agent]
+Fleisch	meat	CON	n	meat.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p52/d3216
+Abrams	abrams	PER	n	male.n.02	[]
+jagte	chase	EPS	(s:dcl\np)/np	chase.v.01	[Theme,Agent]
+Browne	browne	PER	n	male.n.02	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p03/d2659
+Sie	female	PRO	np	female.n.02	[]
+legte	lay	EPS	(s:dcl\np)/np	lay.v.01	[Theme,Agent]
+die	the	DEF	np/n	O	[]
+Zeitschrift	magazine	CON	n	magazine.n.02	[]
+auf	on	REL	((s:dcl\np)\(s:dcl\np))/np	O	[Destination]
+den	the	DEF	np/n	O	[]
+Tisch	table	CON	n	table.n.02	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p72/d2962
+Jeder	each	AND	np/n	O	[]
+Einzelne	individual	CON	n	individual.n.01	[]
+zahlte	pay	EPS	(s:dcl\np)/np	pay.v.01	[Asset,Agent]
+7.000	7000	QUC	n/n	O	[Quantity]
+Dollar	dollar	UOM	n	dollar.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p73/d0760
+Louis~Riel	louis~riel	PER	n	male.n.02	[]
+hat	hat	NOW	(s:dcl\np)/(s:pt\np)	O	[]
+Scott	scott	PER	n	male.n.02	[]
+ermordet	assassinate	EXT	(s:pt\np)\np	assassinate.v.01	[Patient,Agent]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p12/d2264
+Das	the	DEF	np/n	O	[]
+Haus	house	CON	n	house.n.01	[]
+ist	be	NOW	(s:dcl\np)/(s:adj\np)	O	[]
+fünfhundert	500	QUC	n/n	O	[Quantity]
+Jahre	year	UOM	n	year.n.01	[]
+alt	old	DEG	(s:adj\np)\np	old.a.02	[Value,Theme]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p42/d3003
+Es	time	PRO	np	time.n.08	[]
+ist	be	NOW	(s:dcl\np)/np	O	[]
+fünf~vor~neun	08:55	CLO	n	O	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p93/d3252
+Tom	tom	PER	n	male.n.02	[]
+zerriss	snap	EPS	(s:dcl\np)/np	snap.v.02	[Patient,Agent]
+ein	a	DIS	np/n	O	[]
+Bild	picture	CON	n	picture.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p23/d1543
+Tom	tom	PER	n	male.n.02	[]
+trank	drink	EPS	(s:dcl\np)/np	drink.v.01	[Patient,Agent]
+drei	3	QUC	n/n	O	[Quantity]
+Gläser	glasses	CON	n	glasses.n.03	[]
+Wasser	water	CON	np\np	water.n.06	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p22/d0805
+Du	hearer	PRO	np	O	[]
+bist	be	NOW	(s:dcl\np)/(s:adj\np)	O	[]
+verrückt	crazy	IST	s:adj\np	crazy.a.01	[Attribute]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p53/d2221
+Der	the	DEF	np/n	O	[]
+Pfiff	whistle	CON	n	whistle.n.04	[]
+ertönte	blow	EPS	s:dcl\np	blow.v.05	[Theme]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p02/d2505
+Sie	female	PRO	np	female.n.02	[]
+trägt	have	ENS	(s:dcl\np)/np	have.v.02	[Theme,Pivot]
+falsche	fake	IST	n/n	fake.n.01	[Similar]
+Wimpern	eyelash	CON	n	eyelash.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p33/d1797
+Tom	tom	PER	n	male.n.02	[]
+ist	be	NOW	(s:dcl\np)/(s:adj\np)	O	[]
+sprachlos	dumbfounded	IST	s:adj\np	dumbfounded.a.01	[Experiencer]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p63/d1506
+Er	male	PRO	np	male.n.02	[]
+ließ	drop	PST	(s:dcl\np)/(s:b\np)	drop.v.01	[Theme,Agent]
+eine	a	DIS	np/n	O	[]
+Vase	vase	CON	n	vase.n.01	[]
+fallen	drop	EXS	(s:b\np)\np	drop.v.01	[Theme,Agent]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p13/d1260
+Steffi~Graf	steffi~graf	PER	n	female.n.02	[]
+schlug	defeat	EPS	((s:dcl\np)/pp)/np	defeat.v.01	[Co-Agent,Agent]
+die	die	DEF	np/n	O	[]
+Spanierin	spain	GPO	n/n	country.n.02	[Source]
+Conchita~Martinez	conchita~martinez	PER	n	female.n.02	[]
+mit	mit	REL	pp/np	O	[Extent]
+6:3	6-3	SCO	np	O	[]
+und	und	GRP	conj	O	[]
+6:1	6-1	SCO	np	O	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p12/d3037
+Ich	speaker	PRO	np	O	[]
+glaube	think	ENS	(s:dcl\np)/s:dcl	think.v.01	[Theme,Agent]
+,	,	NIL	np/np	O	[]
+mein	speaker	HAS	np/(n/pp)	O	[PartOf]
+rechter	right	IST	n/n	right.a.01	[Attribute]
+Arm	arm	CON	n/pp	arm.n.01	[]
+ist	be	NOW	(s:dcl\np)/(s:pss\np)	O	[]
+gebrochen	broken	IST	s:pss\np	broken.a.01	[Attribute]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p93/d0848
+Sie	female	PRO	np	female.n.02	[]
+ist	be	NOW	(s:dcl\np)/(s:adj\np)	O	[]
+stolz	proud	IST	(s:adj\np)/pp	proud.a.01	[Experiencer]
+auf	auf	REL	pp/np	O	[Stimulus]
+ihre	female	HAS	np/(n/pp)	female.n.02	[Of]
+Tochter	daughter	ROL	n/pp	daughter.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p22/d2375
+Die	the	DEF	np/n	O	[]
+Verletzten	injured	ROL	n	injured.a.01	[]
+wurden	be	PST	(s:dcl\np)/(s:pss\np)	O	[]
+vom	by	DEF	((s:pss\np)/(s:pss\np))/n	O	[Instrument]
+Rettungswagen	ambulance	CON	n	ambulance.n.01	[]
+transportiert	transport	EXS	s:pss\np	transport.v.01	[Theme]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p92/d1400
+Es	thing	NIL	np	thing.n.05	[]
+schneite	snow	EPS	s:dcl\np	snow.v.01	[Equal]
+an	an	REL	((s:dcl\np)\(s:dcl\np))/np	O	[Time]
+jenem	thing	DST	np/n	O	[Stimulus]
+Tag	day	CON	n	day.n.02	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p32/d2518
+Das	the	DEF	np/n	O	[]
+Buch	book	CON	n	book.n.02	[]
+kostet	cost	ENS	(s:dcl\np)/np	cost.v.01	[Value,Theme]
+vier	4	QUC	n/n	O	[Quantity]
+Dollar	dollar	UOM	n	dollar.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p43/d3144
+Das	entity	PRO	np	entity.n.01	[]
+sind	be	ENS	(s:dcl\np)/np	be.v.01	[Co-Theme,Theme]
+keine	not	NOT	np/n	O	[]
+Fische	fish	CON	n	fish.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p23/d1853
+Es	entity	PRO	np	entity.n.01	[]
+wird	will	FUT	(s:dcl\np)/(s:b\np)	O	[]
+mindestens	at~least	BOT	(n/n)/(n/n)	O	[]
+fünf	5	QUC	n/n	O	[Equal]
+Dollar	dollar	UOM	n	dollar.n.01	[]
+kosten	cost	EXS	(s:b\np)\np	cost.v.01	[Value,Theme]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p13/d1910
+Er	male	PRO	np	male.n.02	[]
+ist	be	NOW	(s:dcl\np)/(s:pss\np)	O	[]
+mit	upon	REL	pp/np	O	[Goal]
+einem	a	DIS	np/n	O	[]
+neuen	new	IST	n/n	new.a.01	[Attribute]
+Roman	novel	CON	n	novel.n.01	[]
+beschäftigt	engaged	IST	(s:pss\np)\pp	engaged.a.01	[Theme]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p13/d1589
+Ich	speaker	PRO	np	O	[]
+laufe	run	ENS	(s:dcl\np)/np	run.v.01	[Value,Theme]
+täglich	day	AND	(s:dcl\np)\(s:dcl\np)	day.n.01	[]
+zehn	10	QUC	n/n	O	[Quantity]
+Kilometer	kilometer	UOM	n	kilometer.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p13/d2209
+Tom	tom	PER	n	male.n.02	[]
+hat	hat	NOW	(s:dcl\np)/(s:pt\np)	O	[]
+einen	a	DIS	np/n	O	[]
+gefälschten	fake	IST	n/n	fake.a.02	[Similar]
+Ausweis	id	CON	n	id.n.02	[]
+benutzt	use	EXT	(s:pt\np)\np	use.v.01	[Theme,Agent]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p03/d1775
+Ich	speaker	PRO	np	O	[]
+möchte	want	ENS	(s:dcl\np)/np	want.v.01	[Theme,Pivot]
+einen	an	DIS	np/n	O	[]
+englischen	england	GPO	n/n	country.n.02	[Source]
+Muffin	muffin	CON	n	muffin.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p03/d2800
+Ich	speaker	PRO	np	O	[]
+schäme	ashamed	ENS	(s:dcl\np)/np	ashamed.a.01	[Equal,Experiencer]
+mich	speaker	NIL	np	O	[]
+nicht	not	NOT	(s:dcl\np)\(s:dcl\np)	O	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p03/d2290
+Sie	female	PRO	np	female.n.02	[]
+vergab	forgive	EPS	(s:dcl\np)/np	forgive.v.01	[Theme,Agent]
+ihm	male	PRO	np	male.n.02	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p53/d1553
+Das	the	DEF	np/n	O	[]
+Boot	boat	CON	n	boat.n.01	[]
+tanzte	dance	EPS	s:dcl\np	dance.v.03	[Theme]
+auf	on	REL	((s:dcl\np)\(s:dcl\np))/np	O	[Location]
+dem	the	DEF	np/n	O	[]
+bewegten	choppy	IST	n/n	choppy.a.02	[Attribute]
+Wasser	water	CON	n	water.n.02	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p72/d2908
+Der	the	DEF	np/n	O	[]
+Techniker	engineer	ROL	n	engineer.n.01	[]
+kletterte	climb	EPS	((s:dcl\np)/np)/pr	climb.v.01	[Theme,Agent]
+auf	auf	REL	pr	O	[]
+den	the	DEF	np/n	O	[]
+Telefonmast	telephone~pole	CON	n	telephone_pole.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p53/d3360
+Die	the	DEF	np/n	O	[]
+verletzte	wounded	IST	n/n	wounded.a.01	[Attribute]
+Frau	woman	CON	n	woman.n.01	[]
+war	be	EPS	(s:dcl\np)/np	be.v.01	[Co-Theme,Theme]
+eine	a	DIS	np/n	O	[]
+brasilianische	brazil	GPO	n/n	country.n.02	[Source]
+Urlaubsreisende	tourist	ROL	n	tourist.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p12/d2453
+Ich	speaker	PRO	np	O	[]
+liebe	love	ENS	(s:dcl\np)/np	love.v.01	[Stimulus,Experiencer]
+Hunde	dog	CON	n	dog.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p92/d3173
+Tom	tom	PER	n	male.n.02	[]
+ist	be	NOW	(s:dcl\np)/(s:adj\np)	O	[]
+total	completely	INT	(s:adj\np)/(s:adj\np)	completely.r.01	[]
+bekloppt	nuts	IST	s:adj\np	nuts.a.01	[Attribute]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p22/d1974
+Er	male	PRO	np	male.n.02	[]
+bürstete	brush	EPS	(s:dcl\np)/np	brush.v.03	[Patient,Agent]
+seinen	male	HAS	np/n	male.n.02	[User]
+Hut	hat	CON	n	hat.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p03/d0880
+Er	male	PRO	np	male.n.02	[]
+lernt	study	ENS	(s:dcl\np)/np	study.v.05	[]
+Chinesisch	chinese	CON	n	chinese.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p32/d2799
+Sie	female	PRO	np	female.n.02	[]
+stand	stand~up	EPS	(s:dcl\np)/pr	stand_up.v.01	[Agent]
+auf	up	REL	pr	O	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p23/d1756
+Die	the	DEF	np/n	O	[]
+Vögel	bird	CON	n	bird.n.01	[]
+fliegen	fly	ENS	s:dcl\np	fly.v.01	[Theme]
+unter	under	REL	((s:dcl\np)\(s:dcl\np))/np	O	[Location]
+den	the	DEF	np/n	O	[]
+Wolken	cloud	CON	n	cloud.n.02	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p82/d2043
+Die	the	DEF	np/n	O	[]
+Leitung	line	CON	n	line.n.09	[]
+ist	be	NOW	(s:dcl\np)/(s:pss\np)	O	[]
+besetzt	engaged	IST	s:pss\np	engaged.a.04	[Theme]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p02/d1970
+Der	the	DEF	np/n	O	[]
+Gefangene	prisoner	ROL	n	prisoner.n.01	[]
+wurde	be	PST	(s:dcl\np)/(s:pss\np)	O	[]
+freigelassen	release	EXS	s:pss\np	release.v.02	[Theme]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p52/d2324
+Fünfzehn	15	QUC	np	O	[]
+ist	be	EXS	(s:dcl\np)/np	be.v.01	[Co-Theme,Theme]
+keine	not	NOT	np/n	O	[]
+Primzahl	prime~number	CON	n	prime_number.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p12/d0929
+Ich	speaker	PRO	np	O	[]
+habe	habe	NOW	(s:dcl\np)/(s:pt\np)	O	[]
+ein	a	DIS	np/n	O	[]
+Taxi	taxi	CON	n	taxi.n.01	[]
+genommen	take	EXT	(s:pt\np)\np	take.v.09	[Theme,Agent]
+,	,	NIL	(s:dcl\np)\(s:dcl\np)	O	[]
+weil	because	SUB	((s:dcl\np)\(s:dcl\np))/s:dcl	O	[]
+es	it	NIL	np	O	[]
+regnete	rain	EPS	s:dcl\np	rain.v.01	[Equal]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p13/d0712
+Illinois	illinois	GPE	n	state.n.01	[]
+grenzt	border	ENS	(s:dcl\np)/pp	border.v.05	[Theme]
+an	on	REL	pp/np	O	[Co-Theme]
+Missouri	missouri	GPE	n	state.n.01	[]
+.	.	NIL	np\np	O	[]
+
+
+# newdoc id = p62/d2568
+Ich	speaker	PRO	np	O	[]
+spreche	speak	ENS	(s:dcl\np)/np	speak.v.03	[]
+kein	not	NOT	(s:dcl\np)\(s:dcl\np)	O	[]
+Französisch	french	CON	n	french.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p03/d2544
+Mir	speaker	PRO	np	O	[PartOf]
+tut	tut	NOW	(s:dcl\np)/(s:b\np)	O	[]
+das	das	DEF	np/n	O	[PartOf]
+Handgelenk	wrist	CON	n	wrist.n.01	[]
+weh	hurt	EXS	(s:b\np)\np	hurt.v.01	[Patient,Experiencer]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p22/d3214
+Mein	speaker	HAS	np/(n/pp)	O	[Of]
+Freund	friend	ROL	n/pp	friend.n.01	[]
+ist	be	NOW	(s:dcl\np)/(s:adj\np)	O	[]
+siebzehn	17	QUC	s:adj\np	O	[Theme]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p03/d2363
+Tom	tom	PER	n	male.n.02	[]
+schäkerte	flirt	EPS	(s:dcl\np)/pp	flirt.v.01	[Agent]
+mit	with	REL	pp/np	O	[Co-Agent]
+der	the	DEF	np/n	O	[]
+Kellnerin	waitress	ROL	n	waitress.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p23/d1936
+Ich	speaker	PRO	np	O	[]
+mag	like	ENS	(s:dcl\np)/np	like.v.02	[Stimulus,Experiencer]
+dunkle~Schokolade	dark~chocolate	CON	n	dark_chocolate.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p13/d2200
+Ich	speaker	PRO	np	O	[]
+habe	habe	NOW	(s:dcl\np)/(s:pt\np)	O	[]
+jemanden	person	DIS	np	person.n.01	[]
+gefunden	find	EXT	(s:pt\np)\np	find.v.01	[Theme,Agent]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p13/d1880
+Er	male	PRO	np	male.n.02	[]
+ist	be	NOW	(s:dcl\np)/(s:adj\np)	O	[]
+stockbetrunken	plastered	IST	s:adj\np	plastered.a.03	[Attribute]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p62/d2730
+Tom	tom	PER	n	male.n.02	[]
+streute	sprinkle	EXS	(s:dcl\np)/np	sprinkle.v.01	[Theme,Agent]
+etwas	some	DIS	np/n	O	[]
+Zucker	sugar	CON	n	sugar.n.01	[]
+auf	on	REL	((s:dcl\np)\(s:dcl\np))/np	O	[Destination]
+den	the	DEF	np/n	O	[]
+Toast	toast	CON	n	toast.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p02/d1705
+Sie	female	PRO	np	female.n.02	[]
+ist	be	NOW	(s:dcl\np)/(s:adj\np)	O	[]
+in~keiner~Weise	in~keiner~weise	NOT	(s:adj\np)/(s:adj\np)	O	[]
+egoistisch	selfish	IST	s:adj\np	selfish.a.01	[Attribute]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p82/d2142
+Tom	tom	PER	n	male.n.02	[]
+sagte	say	EPS	(s:dcl\np)/np	say.v.01	[Topic,Agent]
+nichts	entity	NOT	np	entity.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p12/d1366
+Die	the	DEF	np/n	O	[]
+vier	4	QUC	n/n	O	[Quantity]
+grossen	great	IST	n/n	great.a.03	[Attribute]
+Irrthümer	error	CON	n	error.n.01	[]
+.	.	NIL	np\np	O	[]
+
+
+# newdoc id = p72/d1695
+Er	male	PRO	np	male.n.02	[]
+stopfte	stuff	EPS	((s:dcl\np)/pp)/np	stuff.v.01	[Theme,Agent]
+seine	male	HAS	np/n	male.n.02	[User]
+Wäsche	laundry	CON	n	laundry.n.01	[]
+in	into	REL	pp/np	O	[Destination]
+einen	a	DIS	np/n	O	[]
+großen	large	IST	n/n	large.a.01	[Theme]
+Sack	bag	CON	n	bag.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p02/d2210
+Lämmchen	lamb	CON	n	lamb.n.01	[]
+sind	be	NOW	(s:dcl\np)/(s:adj\np)	O	[]
+sehr	very	INT	(s:adj\np)/(s:adj\np)	O	[]
+süß	cute	IST	s:adj\np	cute.a.01	[Attribute]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p42/d2430
+Sie	female	PRO	np	female.n.02	[]
+hat	hat	NOW	(s:dcl\np)/(s:pt\np)	O	[]
+ihn	male	PRO	np	male.n.02	[]
+erstochen	stab	EXT	(s:pt\np)\np	stab.v.01	[Patient,Agent]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p92/d2921
+Ich	speaker	PRO	np	O	[]
+übertreibe	exaggerate	ENS	s:dcl\np	exaggerate.v.01	[Agent]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p12/d1817
+Maria	maria	PER	n	female.n.02	[]
+lachte	laugh	EPS	s:dcl\np	laugh.v.01	[Agent]
+und	and	COO	((s:dcl\np)\(s:dcl\np))/(s:dcl\np)	O	[]
+bewarf	throw	EPS	((s:dcl\np)/pp)/np	throw.v.01	[Destination,Agent]
+mich	speaker	PRO	np	O	[]
+mit	mit	REL	pp/np	O	[Theme]
+einem	a	DIS	np/n	O	[]
+Kissen	pillow	CON	n	pillow.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p82/d2217
+Tom	tom	PER	n	male.n.02	[]
+kicherte	giggle	EPS	s:dcl\np	giggle.v.01	[Agent]
+mädchenhaft	girlishly	IST	(s:dcl\np)\(s:dcl\np)	girlishly.r.01	[Manner]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p13/d1573
+Das	das	DEF	np/n	O	[]
+Abendessen	dinner	CON	n	dinner.n.01	[]
+wird	will	FUT	(s:dcl\np)/(s:b\np)	O	[]
+um	um	REL	((s:b\np)/(s:b\np))/np	O	[Time]
+18:30~Uhr	18:30	CLO	n	O	[]
+fertig	ready	IST	s:adj\np	ready.a.01	[Theme]
+sein	be	NIL	(s:b\np)\(s:adj\np)	O	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p02/d2102
+Es	entity	PRO	np	entity.n.01	[]
+ist	be	NOW	(s:dcl\np)/(s:pss\np)	O	[]
+unter	under	REL	pp/np	O	[Location]
+dem	the	DEF	np/n	O	[]
+Bett	bed	CON	n	bed.n.01	[]
+versteckt	hide	EXS	(s:pss\np)\pp	hide.v.01	[Patient]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p02/d2479
+Tom	tom	PER	n	male.n.02	[]
+umarmte	hug	EPS	(s:dcl\np)/np	hug.v.01	[Co-Agent,Agent]
+Mary	mary	PER	n	female.n.02	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p03/d2059
+Ich	speaker	PRO	np	O	[]
+bin	be	NOW	(s:dcl\np)/(s:adj\np)	O	[]
+nicht	not	NOT	(s:adj\np)/(s:adj\np)	O	[]
+dreißig	30	QUC	n/n	O	[Quantity]
+Jahre	year	UOM	n	year.n.01	[]
+alt	old	DEG	(s:adj\np)\np	old.n.01	[Value,Theme]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p93/d2450
+Wir	speaker	PRO	np	O	[]
+müssen	need	ENS	(s:dcl\np)/(s:b\np)	need.v.01	[Theme,Pivot]
+Hundefutter	dog~food	CON	n	dog_food.n.01	[]
+kaufen	buy	EXS	(s:b\np)\np	buy.v.01	[Theme,Agent]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p92/d0712
+Nancy~Ianiero	nancy~ianiero	PER	n	female.n.02	[]
+wurde	be	PST	(s:dcl\np)/(s:pss\np)	O	[]
+in	in	REL	((s:pss\np)/(s:pss\np))/np	O	[Location]
+Mexiko	mexiko	GPE	n	country.n.02	[]
+getötet	kill	EXS	s:pss\np	kill.v.01	[Patient]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p73/d2984
+Lincoln	lincoln	PER	n	male.n.02	[]
+starb	die	EPS	s:dcl\np	die.v.01	[Location,Patient]
+1865	1865	YOC	(s:dcl\np)\(s:dcl\np)	O	[Time]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p13/d0713
+Kanada	kanada	ORG	n	team.n.01	[]
+schlägt	beat	EPS	(s:dcl\np)/np	beat.v.01	[Co-Agent,Agent]
+die	die	DEF	np/n	O	[Co-Agent,Agent]
+USA	usa	ORG	n	team.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p53/d3342
+Eine	a	AND	np/n	O	[]
+Biene	bee	CON	n	bee.n.01	[]
+summt	buzz	EXS	s:dcl\np	buzz.v.01	[Agent]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p53/d1950
+Das	entity	DST	np	entity.n.01	[]
+ist	be	NOW	(s:dcl\np)/(s:adj\np)	O	[]
+total	totally	INT	(s:adj\np)/(s:adj\np)	totally.r.01	[]
+verrückt	crazy	IST	s:adj\np	crazy.a.02	[Attribute]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p93/d2304
+Es	it	NIL	np	O	[]
+schneite	snow	EPS	s:dcl\np	snow.v.01	[Equal]
+in	in	REL	((s:dcl\np)\(s:dcl\np))/np	O	[Location]
+Osaka	osaka	GPE	n	city.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p03/d1813
+Tom	tom	PER	n	male.n.02	[]
+rannte	run	EPS	(s:dcl\np)/pp	run.v.01	[Theme]
+ins	ins	DEF	pp/n	O	[Destination]
+Haus	house	CON	n	house.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p73/d1885
+Das	entity	PRX	np	entity.n.01	[]
+wird	will	FUT	(s:dcl\np)/(s:b\np)	O	[]
+um~die	about	APX	(n/n)/(n/n)	O	[]
+zehntausend	10000	QUC	n/n	O	[Equal]
+Yen	yen	UOM	n	yen.n.02	[]
+kosten	cost	EXS	(s:b\np)\np	cost.v.01	[Value,Theme]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p52/d3385
+Tom	tom	PER	n	male.n.02	[]
+fuhr	drive	EPS	(s:dcl\np)/pp	drive.v.02	[Agent]
+zur	to	REL	pp/np	O	[Destination]
+Schule	school	CON	n	school.n.02	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p02/d2318
+Sie	female	PRO	np	female.n.02	[]
+hat	have	NOW	(s:dcl\np)/(s:pt\np)	O	[Recipient,Theme,Agent]
+ihm	male	PRO	np	male.n.02	[]
+das	the	DEF	np/n	O	[]
+Geld	money	CON	n	money.n.01	[]
+gegeben	give	EXT	((s:pt\np)\np)\np	give.v.03	[Theme,Recipient,Agent]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p63/d2899
+Ich	speaker	PRO	np	O	[]
+mag	like	ENS	(s:dcl\np)/np	like.v.02	[Stimulus,Experiencer]
+Volkslieder	folk~song	CON	n	folk_song.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p92/d3480
+Der	the	DEF	np/n	O	[]
+Hund	dog	CON	n	dog.n.01	[]
+ist	be	NOW	(s:dcl\np)/(s:adj\np)	O	[]
+auf	in	REL	((s:adj\np)/(s:adj\np))/np	O	[Location]
+einem	1	QUC	n/n	O	[Quantity]
+Auge	eye	CON	n	eye.n.01	[]
+blind	blind	IST	s:adj\np	blind.a.01	[Theme]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p23/d0840
+Er	male	PRO	np	male.n.02	[]
+überquert	cross	EXG	(s:dcl\np)/np	cross.v.01	[Path,Theme]
+gerade	now	NOW	(s:dcl\np)\(s:dcl\np)	O	[]
+die	the	DEF	np/n	O	[]
+Straße	street	CON	n	street.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p42/d3088
+Tom	tom	PER	n	male.n.02	[]
+tat	put	EPS	((s:dcl\np)/pp)/np	put.v.01	[Theme,Agent]
+etwas	some	DIS	np/n	O	[]
+Reis	rice	CON	n	rice.n.01	[]
+in	in	REL	pp/np	O	[Destination]
+eine	a	DIS	np/n	O	[]
+Schüssel	bowl	CON	n	bowl.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p13/d2232
+Welche	entity	QUE	(s:wq/(s:q/np))/n	entity.n.01	[Equal]
+Instrumente	instrument	CON	n	instrument.n.06	[]
+spielst	play	ENS	(s:q/np)/np	play.v.07	[Agent,Theme]
+du	hearer	PRO	np	O	[]
+?	?	QUE	s:q\s:q	O	[]
+
+
+# newdoc id = p02/d3292
+Du	hearer	PRO	np	O	[]
+trägst	wear	ENS	(s:dcl\np)/np	wear.v.01	[]
+dein	hearer	HAS	np/(n/pp)	O	[Owner]
+T-Shirt	shirt	CON	n/pp	shirt.n.01	[]
+verkehrt~herum	inside~out	IST	(s:dcl\np)\(s:dcl\np)	inside_out.r.01	[Manner]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p62/d3415
+Tom	tom	PER	n	male.n.02	[]
+ist	be	NOW	(s:dcl\np)/(s:adj\np)	O	[]
+bestürzt	upset	IST	s:adj\np	upset.n.01	[Experiencer]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p33/d2068
+Du	hearer	PRO	np	O	[]
+schmunzelst	smirk	ENS	s:dcl\np	smirk.v.01	[Agent]
+wieder	again	ALT	(s:dcl\np)\(s:dcl\np)	O	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p02/d2775
+Unsere	speaker	HAS	np/(n/pp)	O	[Part]
+Mannschaft	team	CON	n/pp	team.n.01	[]
+gewann	beat	EPS	((s:dcl\np)/pp)/np	beat.v.01	[Result,Agent]
+3~zu~0	3-0	SCO	n	O	[]
+gegen	gegen	REL	pp/np	O	[Co-Agent]
+die	the	DEF	np/n	O	[]
+Lions	lions	ORG	n	team.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p13/d1529
+Maria	maria	PER	n	female.n.02	[]
+wohnt	live	ENS	s:dcl\np	live.v.01	[Theme]
+in	in	REL	((s:dcl\np)\(s:dcl\np))/np	O	[Location]
+Kairo	kairo	GPE	n	city.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p63/d2262
+Ein	1	QUC	np/n	O	[]
+Dollar	dollar	UOM	n	dollar.n.01	[]
+ist	be	NIL	(s:dcl\np)/(s:adj\np)	O	[]
+gleich	equal	IST	(s:adj\np)/np	equal.a.01	[Co-Theme,Theme]
+hundert	100	QUC	n/n	O	[Quantity]
+Cent	cent	UOM	n	cent.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p12/d0837
+Er	male	PRO	np	male.n.02	[]
+trug	have~on	EPS	(s:dcl\np)/np	have_on.v.01	[Theme,Agent]
+sein	male	HAS	np/(n/pp)	male.n.02	[Owner]
+Hemd	shirt	CON	n/pp	shirt.n.01	[]
+verkehrt~herum	inside~out	IST	(s:dcl\np)\(s:dcl\np)	inside_out.r.01	[Manner]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p33/d3557
+Tom	tom	PER	n	male.n.02	[]
+tanzte	dance	EPS	(s:dcl\np)/pp	dance.v.02	[Theme]
+mit	with	REL	pp/np	O	[Co-Theme]
+Mary	mary	PER	n	female.n.02	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p22/d1491
+Mein	speaker	HAS	np/(n/pp)	O	[Of]
+Großvater	grandfather	ROL	n/pp	grandfather.n.01	[]
+wurde	be	PST	(s:dcl\np)/(s:pss\np)	O	[]
+im	in	DEF	((s:pss\np)/(s:pss\np))/n	O	[Context]
+Krieg	war	CON	n	war.n.01	[]
+verletzt	wound	EXS	s:pss\np	wound.v.01	[Patient]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p92/d2261
+Tom	tom	PER	n	male.n.02	[]
+rief	call	EPS	((s:dcl\np)/pr)/np	call.v.03	[Theme,Agent]
+Mary	mary	PER	n	female.n.02	[]
+an	an	REL	pr	O	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p32/d2195
+Mein	speaker	HAS	np/(n/pp)	O	[Of]
+Großvater	grandfather	ROL	n/pp	grandfather.n.01	[]
+war	be	EPS	(s:dcl\np)/np	be.v.08	[Co-Theme,Theme]
+Müller	miller	ROL	n	miller.n.04	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p03/d1869
+Die	the	DEF	np/n	O	[]
+Versammlung	convention	CON	n	convention.n.01	[]
+wählte	vote	EPS	s:dcl\np	vote.v.01	[Agent]
+wieder	again	ALT	(s:dcl\np)\(s:dcl\np)	O	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p92/d3273
+Eine	eine	DIS	np/n	O	[]
+Bande	gangster	ROL	n	gangster.n.01	[]
+raubte	rob	EPS	((s:dcl\np)/pp)/np	rob.v.01	[Theme,Agent]
+tausende	2000	QUV	n/pp	O	[]
+von	of	REL	pp/n	O	[Equal]
+Dollars	dollar	UOM	n	dollar.n.01	[]
+aus	aus	REL	pp/np	O	[Source]
+einer	a	DIS	np/n	O	[]
+Bank	bank	CON	n	bank.n.02	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p23/d0808
+Rosa~Montero	rosa~montero	PER	n	female.n.02	[]
+ist	be	ENS	(s:dcl\np)/np	be.v.01	[Co-Theme,Theme]
+eine	an	DIS	np/n	O	[]
+außergewöhnliche	extraordinary	IST	n/n	extraordinary.a.01	[Attribute]
+Frau	woman	CON	n	woman.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p63/d2659
+Ich	speaker	PRO	np	O	[]
+schrieb	write	EPS	(s:dcl\np)/np	write.v.02	[Result,Agent]
+Briefe	letter	CON	n	letter.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p62/d2982
+Sie	female	PRO	np	female.n.02	[]
+ergriff	grab	EPS	(s:dcl\np)/np	grab.v.05	[Theme,Agent]
+meine	speaker	HAS	np/(n/pp)	O	[PartOf]
+Hand	hand	CON	n/pp	hand.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p23/d2141
+Er	male	PRO	np	male.n.02	[]
+hat	have	ENS	(s:dcl\np)/np	have.v.01	[Theme,Pivot]
+kein	no	NOT	np/n	O	[]
+Fahrrad	bicycle	CON	n	bicycle.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p02/d0917
+Maria	maria	PER	n	female.n.02	[]
+wurde	be	PST	(s:dcl\np)/(s:pss\np)	O	[]
+von	by	REL	((s:pss\np)/(s:pss\np))/np	O	[Agent]
+Piraten	pirate	ROL	n	pirate.n.02	[]
+entführt	kidnap	EXS	s:pss\np	kidnap.v.01	[Theme]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p82/d2132
+Sie	female	PRO	np	female.n.02	[]
+lehrt	teach	ENS	((s:dcl\np)/np)/np	O	[Recipient,Theme,Agent]
+uns	speaker	PRO	np	O	[]
+Französisch	french	CON	n	french.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p73/d2352
+Ich	speaker	PRO	np	O	[]
+spreche	speak	ENS	(s:dcl\np)/np	speak.v.03	[]
+kein	not	NOT	np/n	O	[]
+Hebräisch	hebrew	CON	n	hebrew.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p23/d1000
+Anne~Will	anne~will	PER	n	female.n.02	[]
+
+
+# newdoc id = p52/d3066
+Er	male	PRO	np	male.n.02	[]
+hat	have	ENS	(s:dcl\np)/np	have.v.12	[Stimulus,Experiencer]
+Alzheimer	alzheimers	CON	n	alzheimers.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p03/d2294
+Ich	speaker	PRO	np	O	[]
+esse	eat	ENS	(s:dcl\np)/np	eat.v.01	[Patient,Agent]
+Käse	cheese	CON	n	cheese.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p23/d3557
+Edison	edison	PER	n	male.n.02	[]
+hat	hat	NOW	(s:dcl\np)/(s:pt\np)	O	[]
+die	the	DEF	np/n	O	[]
+Glühbirne	light~bulb	CON	n	light_bulb.n.01	[]
+erfunden	invent	EXT	(s:pt\np)\np	invent.v.01	[Result,Agent]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p43/d0766
+Großbritannien	großbritannien	GPE	n	state.n.04	[]
+verärgert	anger	EPS	(s:dcl\np)/np	anger.v.01	[Experiencer,Stimulus]
+Argentinien	argentinien	GPE	n	state.n.04	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p73/d2477
+Ich	speaker	PRO	np	O	[]
+kann	can	POS	(s:dcl\np)/(s:b\np)	O	[]
+dich	hearer	PRO	np	O	[]
+jetzt	now	NOW	(s:dcl\np)\(s:dcl\np)	O	[]
+nicht	not	NOT	(s:dcl\np)\(s:dcl\np)	O	[]
+küssen	kiss	EXS	(s:b\np)\np	kiss.v.01	[Co-Agent,Agent]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p02/d2031
+Tom	tom	PER	n	male.n.02	[]
+kann	can	POS	(s:dcl\np)/(s:b\np)	O	[]
+überhaupt	at~all	EMP	(s:b\np)/(s:b\np)	O	[]
+nicht	not	NOT	(s:dcl\np)\(s:dcl\np)	O	[]
+schwimmen	swim	EXS	s:b\np	swim.v.01	[Theme]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p03/d3443
+Das	the	DEF	np/n	O	[]
+Hotel	hotel	CON	n	hotel.n.01	[]
+wurde	be	PST	(s:dcl\np)/(s:pss\np)	O	[]
+niedergebrannt	burn~down	EXS	s:pss\np	burn_down.v.01	[Patient]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p83/d1974
+Er	male	PRO	np	male.n.02	[]
+leidet	suffer	ENS	s:dcl\np	suffer.v.02	[Experiencer]
+unter	unter	REL	((s:dcl\np)\(s:dcl\np))/np	O	[Stimulus]
+Zahnschmerzen	toothache	CON	n	toothache.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p62/d3416
+Ich	speaker	PRO	np	O	[]
+habe	habe	NOW	(s:dcl\np)/(s:pt\np)	O	[]
+nie	time	NOT	(s:dcl\np)\(s:dcl\np)	O	[]
+Golf	golf	CON	n	golf.n.01	[]
+gespielt	play	EXT	(s:pt\np)\np	play.v.01	[Theme,Agent]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p03/d1740
+Er	male	PRO	np	male.n.02	[]
+fasste	touch	EPS	(s:dcl\np)/np	touch.v.01	[Experiencer,Agent]
+ihr	female	PRO	np	female.n.02	[]
+auf	on	REL	((s:dcl\np)\(s:dcl\np))/np	O	[Location]
+die	the	DEF	np/n	O	[]
+Schulter	shoulder	CON	n	shoulder.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p12/d2136
+Herr	mr	ROL	n/n	mr.n.01	[Title]
+Smith	smith	PER	n	male.n.02	[]
+lebt	live	ENS	s:dcl\np	live.v.01	[Theme]
+jetzt	now	NOW	(s:dcl\np)\(s:dcl\np)	O	[]
+in	in	REL	((s:dcl\np)\(s:dcl\np))/np	O	[Location]
+Kioto	kioto	GPE	n	city.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p43/d3167
+Tom	tom	PER	n	male.n.02	[]
+s	's	HAS	(np/(n/pp))\np	O	[Creator]
+Essay	essay	CON	n/pp	essay.n.01	[]
+enthielt	have	EPS	(s:dcl\np)/np	have.v.02	[Theme,Pivot]
+viele	+	QUV	n/n	O	[Quantity]
+Tippfehler	typo	CON	n	typo.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p22/d1401
+Der	the	DEF	np/n	O	[]
+Krieg	war	CON	n	war.n.01	[]
+dauerte	last	EPS	(s:dcl\np)/np	last.v.01	[Value,Theme]
+fast	nearly	LES	(n/n)/(n/n)	O	[]
+zehn	10	QUC	n/n	O	[Equal]
+Jahre	year	UOM	n	year.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p12/d0877
+Ich	speaker	PRO	np	O	[]
+wurde	be	PST	(s:dcl\np)/(s:pss\np)	O	[]
+von	by	REL	((s:pss\np)/(s:pss\np))/np	O	[Agent]
+einem	an	DIS	np/n	O	[]
+alten	old	IST	n/(n/pp)	old.a.02	[Theme]
+Freund	friend	ROL	n/pp	friend.n.01	[]
+eingeladen	invite	EXS	s:pss\np	invite.v.02	[Theme]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p93/d0913
+Sie	female	PRO	np	female.n.02	[]
+hat	have	ENS	(s:dcl\np)/np	have.v.01	[Theme,Pivot]
+ungefähr	about	APX	(n/n)/(n/n)	O	[]
+zweitausend	2000	QUC	n/n	O	[Equal]
+Bücher	book	CON	n	book.n.02	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p13/d2721
+Der	the	DEF	np/n	O	[]
+Priester	priest	ROL	n	priest.n.01	[]
+segnete	bless	EPS	(s:dcl\np)/np	bless.v.01	[Theme,Agent]
+die	the	DEF	np/n	O	[]
+Gemeinde	congregation	CON	n	congregation.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p53/d3455
+Ich	speaker	PRO	np	O	[]
+brate	fry	ENS	(s:dcl\np)/np	fry.v.02	[]
+Fisch	fish	CON	n	fish.n.02	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p93/d0763
+Brian~Goodell	brian~goodell	PER	n	male.n.02	[]
+gewann	win	EPS	(s:dcl\np)/np	win.v.01	[Theme,Agent]
+drei	3	QUC	n/n	O	[Quantity]
+Goldmedaillen	gold~medal	CON	n	gold_medal.n.01	[]
+bei	in	REL	((s:dcl\np)\(s:dcl\np))/np	O	[Context]
+den	the	DEF	np/n	O	[]
+Pan~American~Games	pan~american~games	HAP	n	tournament.n.01	[]
+1979	1979	YOC	n\n	O	[Time]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p03/d2390
+Diese	this	PRX	np/n	O	[]
+Arbeit	work	CON	n	work.n.01	[]
+ist	be	NOW	(s:dcl\np)/(s:adj\np)	O	[]
+auf~keinen~Fall	auf~keinen~fall	NOT	(s:adj\np)/(s:adj\np)	O	[]
+einfach	easy	IST	s:adj\np	easy.a.01	[Attribute]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p22/d0944
+Der	the	DEF	np/n	O	[]
+Polizist	policeman	ROL	n	policeman.n.01	[]
+verfolgte	chase	EPS	(s:dcl\np)/np	chase.v.01	[Theme,Agent]
+den	the	DEF	np/n	O	[]
+Einbrecher	burglar	ROL	n	burglar.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p42/d2299
+Ich	speaker	PRO	np	O	[]
+habe	habe	NOW	(s:dcl\np)/(s:pt\np)	O	[]
+Tom	tom	PER	n	male.n.02	[]
+verziehen	forgive	EXT	(s:pt\np)\np	forgive.v.01	[Theme,Agent]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p73/d1848
+Tom	tom	PER	n	male.n.02	[]
+wiegt	weigh	ENS	(s:dcl\np)/np	weigh.v.01	[Value,Theme]
+ca.	around	APX	(n/n)/(n/n)	O	[]
+300	300	QUC	n/n	O	[Equal]
+Pfund	pound	UOM	n	pound.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p23/d2526
+Wie	how	EMP	(s:dcl/(s:dcl/(s:adj\np)))/(s:adj\np)	O	[]
+schön	beautiful	IST	s:adj\np	beautiful.a.01	[Attribute]
+sie	female	PRO	np	female.n.02	[]
+ist	be	NOW	(s:dcl\np)/(s:adj\np)	O	[]
+!	!	EMP	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p22/d2640
+Hat	have	NOW	(s:dcl/(s:pt\np))/np	O	[]
+jemand	person	DIS	np	person.n.01	[]
+mit	with	REL	pp/np	O	[Co-Agent]
+ihm	male	PRO	np	male.n.02	[]
+gesprochen	speak	EXT	(s:pt\np)\pp	speak.v.02	[Agent]
+?	?	QUE	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p23/d3358
+Drei	3	QUC	np	O	[]
+mal	times	CON	(np\np)/np	times.n.02	[Theme]
+drei	3	QUC	np	O	[]
+ist	be	NIL	(s:dcl\np)/(s:adj\np)	be.v.06	[Co-Theme,Theme]
+gleich	equal	IST	(s:adj\np)/np	equal.a.01	[Co-Theme,Theme]
+neun	9	QUC	np	O	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p92/d3199
+Sie	person	PRO	np	person.n.01	[]
+nennen	call	ENS	((s:dcl\np)/np)/np	call.v.01	[Theme,Result,Agent]
+Robert	robert	PER	n	male.n.02	[]
+"	"	NIL	np/np	O	[]
+Bob	bob	LIT	np	O	[]
+"	"	NIL	np\np	O	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p23/d2365
+Sie	person	PRO	np	person.n.01	[]
+graben	dig	ENS	(s:dcl\np)/np	dig.v.02	[]
+ein	a	DIS	np/n	O	[]
+Loch	hole	CON	n	hole.n.02	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p02/d2037
+Tom	tom	PER	n	male.n.02	[]
+hat	hat	NOW	(s:dcl\np)/(s:pt\np)	O	[]
+einen	a	DIS	np/n	O	[]
+Geigerzähler	geiger~counter	CON	n	geiger_counter.n.01	[]
+gekauft	buy	EXT	(s:pt\np)\np	buy.v.01	[Theme,Agent]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p02/d1581
+Sie	female	PRO	np	female.n.02	[]
+gehorcht	obey	ENS	(s:dcl\np)/np	obey.v.01	[Theme,Agent]
+ihm	male	PRO	np	male.n.02	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p93/d1735
+Ich	speaker	PRO	np	O	[]
+geb	admit	ENS	((s:dcl\np)/pr)/np	admit.v.01	[Topic,Agent]
+es	entity	PRO	np	entity.n.01	[]
+zu	zu	REL	pr	O	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p82/d1409
+Du	hearer	PRO	np	O	[]
+hast	hast	NOW	(s:dcl\np)/(s:pt\np)	O	[]
+mich	speaker	PRO	np	O	[]
+hereingelegt	trick	EXT	(s:pt\np)\np	trick.v.01	[Patient,Agent]
+!	!	EMP	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p63/d3175
+Es	time	PRO	np	time.n.08	[]
+war	be	PST	(s:dcl\np)/np	O	[]
+halb~acht	19:30	CLO	n	O	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p02/d2639
+Tom	tom	PER	n	male.n.02	[]
+und	and	GRP	conj	O	[]
+Maria	maria	PER	n	female.n.02	[]
+spielten	play	EPS	(s:dcl\np)/np	play.v.01	[Theme,Agent]
+Schach	chess	CON	n	chess.n.02	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p92/d3481
+Ich	speaker	PRO	np	O	[]
+lebe	live	ENS	s:dcl\np	live.v.01	[Theme]
+in	in	REL	((s:dcl\np)\(s:dcl\np))/np	O	[Location]
+Tiflis	tiflis	GPE	n	city.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p02/d3017
+Der	the	DEF	np/n	O	[]
+berühmte	famous	IST	n/n	famous.a.01	[Attribute]
+Dirigent	conductor	ROL	n	conductor.n.01	[]
+lebt	live	ENS	s:dcl\np	live.v.01	[Theme]
+in	in	REL	((s:dcl\np)\(s:dcl\np))/np	O	[Location]
+New~York	new~york	GPE	n	city.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p03/d0877
+Sie	female	PRO	np	female.n.02	[]
+trägt	wear	ENS	(s:dcl\np)/np	wear.v.02	[Theme,Agent]
+eine	eine	DIS	np/n	O	[]
+Sonnenbrille	sunglasses	CON	n	sunglasses.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p13/d1526
+Die	the	DEF	np/n	O	[]
+Schlange	snake	CON	n	snake.n.01	[]
+verschlang	swallow	EPS	(s:dcl\np)/np	swallow.v.01	[Patient,Agent]
+einen	a	DIS	np/n	O	[]
+Frosch	frog	CON	n	frog.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p72/d2704
+Dieses	this	PRX	np/n	O	[]
+Tier	animal	CON	n	animal.n.01	[]
+ist	be	NOW	(s:dcl\np)/(s:adj\np)	O	[]
+sehr	very	INT	(s:adj\np)/(s:adj\np)	very.r.01	[]
+intelligent	clever	IST	s:adj\np	clever.a.02	[Attribute]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p12/d1544
+Der	the	DEF	np/n	O	[]
+Drucker	printer	CON	n	printer.n.03	[]
+funktioniert	work	ENS	s:dcl\np	work.v.04	[Theme]
+nicht	not	NOT	(s:dcl\np)\(s:dcl\np)	O	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p22/d2901
+Mit	with	REL	(s:wq/(s:q/pp))/(s:wq/(s:q/np))	O	[Co-Agent]
+wem	person	QUE	s:wq/(s:q/np)	person.n.01	[Name]
+redest	talk	ENS	(s:q/pp)/np	talk.v.01	[Agent]
+du	hearer	PRO	np	O	[]
+?	?	QUE	s:wq\s:wq	O	[]
+
+
+# newdoc id = p02/d3279
+Sasaki~Sadako	sasaki~sadako	PER	n	female.n.02	[]
+starb	die	EPS	s:dcl\np	die.v.01	[Patient]
+am	on	REL	((s:dcl\np)\(s:dcl\np))/np	O	[Time]
+25.	25	DOM	n	O	[]
+Oktober	october	MOY	n\n	O	[Equal]
+1955	1955	YOC	n\n	O	[Equal]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p72/d1933
+Der	the	DEF	np/n	O	[]
+Journalist	journalist	ROL	n	journalist.n.01	[]
+wurde	be	PST	(s:dcl\np)/(s:pss\np)	O	[]
+von	by	REL	((s:pss\np)/(s:pss\np))/np	O	[Agent]
+Terroristen	terrorist	ROL	n	terrorist.n.01	[]
+entführt	kidnap	EXS	s:pss\np	kidnap.v.01	[Theme]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p03/d2085
+Der	the	DEF	np/n	O	[]
+amerikanische	america	GPO	n/n	country.n.02	[Source]
+Junge	boy	CON	n	boy.n.01	[]
+sprach	speak	EPS	(s:dcl\np)/np	speak.v.03	[Theme,Agent]
+gebrochenes	broken	IST	n/n	broken.a.07	[Attribute]
+Japanisch	japanese	CON	n	japanese.n.02	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p82/d2308
+Wir	speaker	PRO	np	O	[]
+erreichten	reach	EPS	(s:dcl\np)/np	reach.v.01	[Goal,Theme]
+London	london	GPE	n	city.n.01	[]
+um	at	REL	((s:dcl\np)\(s:dcl\np))/np	O	[Time]
+Mitternacht	00:00	CLO	n	O	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p52/d2057
+Keiner	person	NOT	np/pp	person.n.01	[]
+von	of	REL	pp/np	O	[SubOf]
+uns	speaker	PRO	np	O	[]
+ist	be	ENS	(s:dcl\np)/np	be.v.01	[Co-Theme,Theme]
+ein	ein	DIS	np/n	O	[]
+Feigling	coward	ROL	n	coward.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p53/d1483
+Unser	speaker	HAS	np/(n/pp)	O	[User]
+Haus	house	CON	n/pp	house.n.01	[]
+hat	have	ENS	(s:dcl\np)/np	have.v.02	[Theme,Pivot]
+sieben	7	QUC	n/n	O	[Quantity]
+Zimmer	room	CON	n	room.n.01	[]
+,	,	NIL	np\np	O	[]
+das	the	DEF	np/n	O	[]
+Wohnzimmer	living~room	CON	n	living_room.n.01	[]
+eingeschlossen	eingeschlossen	REL	(np\np)\np	O	[Sub]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p83/d2619
+Die	the	DEF	np/n	O	[]
+Spinne	spider	CON	n	spider.n.01	[]
+kitzelt	tickle	ENS	(s:dcl\np)/np	tickle.v.01	[Experiencer,Stimulus]
+mich	speaker	PRO	np	O	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p42/d1745
+Ich	speaker	PRO	np	O	[]
+klettere	climb	ENS	(s:dcl\np)/pp	climb.v.01	[Theme]
+auf	auf	REL	pp/np	O	[Path]
+eine	a	DIS	np/n	O	[]
+Palme	palm~tree	CON	n	palm_tree.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p12/d1730
+Ich	speaker	PRO	np	O	[]
+hasse	hate	ENS	(s:dcl\np)/np	hate.v.01	[Stimulus,Experiencer]
+mich	speaker	REF	np	O	[]
+nicht	not	NOT	(s:dcl\np)\(s:dcl\np)	O	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p42/d0712
+André~Henri~Constant~van~Hasselt	andré~henri~constant~van~hasselt	PER	n	male.n.02	[]
+wurde	be	PST	(s:dcl\np)/(s:pss\np)	O	[]
+in	in	REL	((s:pss\np)/(s:pss\np))/np	O	[Location]
+Maastricht	maastricht	GPE	n	city.n.01	[]
+ausgebildet	educate	EXS	s:pss\np	educate.v.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p42/d3160
+Der	the	DEF	np/n	O	[]
+Hund	dog	CON	n	dog.n.01	[]
+knurrte	growl	EPS	s:dcl\np	growl.v.01	[Agent]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p12/d1995
+Der	the	DEF	np/n	O	[]
+Krieg	war	CON	n	war.n.01	[]
+endete	end	EPS	s:dcl\np	end.v.01	[Theme]
+1945	1945	YOC	(s:dcl\np)\(s:dcl\np)	O	[Time]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p73/d1725
+Ich	speaker	PRO	np	O	[]
+ermutige	encourage	ENS	(s:dcl\np)/np	encourage.v.02	[Recipient,Agent]
+meinen	speaker	HAS	np/(n/pp)	O	[Of]
+Bruder	brother	ROL	n/pp	brother.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p93/d0901
+Was	entity	QUE	s:wq/(s:dcl\np)	entity.n.01	[Equal]
+ist	be	EXS	(s:dcl\np)/np	be.v.06	[Co-Theme,Theme]
+die	the	DEF	np/n	O	[]
+Quadratwurzel	square~root	CON	n/pp	square_root.n.01	[]
+aus	aus	REL	pp/np	O	[Of]
+100	100	QUC	np	O	[]
+?	?	QUE	np\np	O	[]
+
+
+# newdoc id = p03/d0946
+Es	there	NIL	np	O	[]
+gibt	be	ENS	(s:dcl\np)/np	be.v.04	[Theme,Equal]
+auch	also	ALT	(n/n)/(n/n)	O	[]
+französische	france	GPO	n/n	country.n.02	[Source]
+Touristen	tourist	ROL	n	tourist.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p53/d3477
+Tom	tom	PER	n	male.n.02	[]
+warf	toss	EPS	(((s:dcl\np)/pr)/np)/np	toss.v.01	[Destination,Theme,Agent]
+Maria	maria	PER	n	female.n.02	[]
+die	the	DEF	np/n	O	[]
+Schlüssel	key	CON	n	key.n.01	[]
+zu	zu	REL	pr	O	[Destination]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p03/d0823
+Ich	speaker	PRO	np	O	[]
+kenne	know	ENS	(s:dcl\np)/np	know.v.04	[Stimulus,Experiencer]
+keine	entity	NOT	np/pp	entity.n.01	[]
+von	of	REL	pp/np	O	[SubOf]
+ihnen	person	PRO	np	person.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p82/d0716
+Johann~Wolfgang~von~Goethe	johann~wolfgang~von~goethe	PER	n	male.n.02	[]
+wurde	be	PST	(s:dcl\np)/(s:pss\np)	O	[]
+in	in	REL	((s:pss\np)/(s:pss\np))/np	O	[Location]
+Deutschland	deutschland	GPE	n	country.n.02	[]
+geboren	bear	EXS	s:pss\np	bear.v.02	[Patient]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p02/d1641
+Zweitausendfünfhundert	2500	QUC	n/n	O	[Quantity]
+britische	britain	GPO	n/n	country.n.02	[Source]
+Soldaten	soldier	ROL	n	soldier.n.01	[]
+bewachten	guard	EPS	(s:dcl\np)/np	guard.v.03	[Theme,Agent]
+die	the	DEF	np/n	O	[]
+Grenze	frontier	CON	n	frontier.n.02	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p02/d2344
+Tom	tom	PER	n	male.n.02	[]
+lernt	study	ENS	(s:dcl\np)/pp	study.v.05	[]
+gerade	now	NOW	(s:dcl\np)\(s:dcl\np)	O	[]
+in	in	REL	pp/np	O	[Location]
+der	the	DEF	np/n	O	[]
+Bibliothek	library	CON	n	library.n.03	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p02/d2227
+Ich	speaker	PRO	np	O	[]
+mache	do	ENS	(s:dcl\np)/np	do.v.02	[Theme,Agent]
+eine	a	DIS	np/n	O	[]
+Ausbildung	training	CON	n	training.n.01	[]
+bei	at	REL	((s:dcl\np)\(s:dcl\np))/np	O	[Location]
+Ford	ford	ORG	n	O	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p93/d1734
+Ich	speaker	PRO	np	O	[]
+hole	pick~up	EFS	((s:dcl\np)/pr)/np	pick_up.v.03	[]
+dich	hearer	PRO	np	O	[]
+um	at	REL	((s:dcl\np)\(s:dcl\np))/np	O	[Time]
+2.30~Uhr	14:30	CLO	n	O	[]
+ab	up	REL	pr	O	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p62/d0784
+Betty	betty	PER	n	female.n.02	[]
+hat	hat	NOW	(s:dcl\np)/(s:pt\np)	O	[]
+ihn	male	PRO	np	male.n.02	[]
+getötet	kill	EXT	(s:pt\np)\np	kill.v.01	[Patient,Agent]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p03/d3034
+Wir	speaker	PRO	np	O	[]
+klettern	climb	ENS	s:dcl\np	climb.v.01	[Theme]
+auf	auf	REL	((s:dcl\np)\(s:dcl\np))/np	O	[Path]
+die	the	DEF	np/n	O	[]
+Palme	palm~tree	CON	n	palm_tree.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p62/d2006
+Mit~anderen~Worten	in~other~words	ALT	s:dcl/s:dcl	O	[]
+,	,	NIL	(s:dcl/s:dcl)\(s:dcl/s:dcl)	O	[]
+er	male	PRO	np	male.n.02	[]
+ist	be	NOW	(s:dcl\np)/(s:adj\np)	O	[]
+faul	lazy	IST	s:adj\np	lazy.a.02	[Attribute]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p33/d2760
+Tom	tom	PER	n	male.n.02	[]
+hat	hat	NOW	(s:dcl\np)/(s:pt\np)	O	[]
+gesehen	see	EXT	(s:pt\np)/s:qem	see.v.06	[Stimulus,Experiencer]
+,	,	NIL	(s:dcl\np)\(s:dcl\np)	O	[]
+wo	location	QUE	s:qem/(s:dcl/pp)	location.n.01	[Location,Equal]
+Mary	mary	PER	n	female.n.02	[]
+wohnt	live	ENS	(s:dcl\np)/pp	live.v.01	[Theme]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p83/d1973
+Sie	female	PRO	np	female.n.02	[]
+ist	be	NOW	(s:dcl\np)/(s:adj\np)	O	[]
+freundlich	kind	IST	(s:adj\np)/pp	kind.a.01	[Agent]
+zu	zu	REL	pp/np	O	[Beneficiary]
+ihm	male	PRO	np	male.n.02	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p03/d0766
+Alfred~Nobel	alfred~nobel	PER	n	male.n.02	[]
+erfand	invent	EPS	(s:dcl\np)/np	invent.v.01	[Result,Agent]
+1866	1866	YOC	(s:dcl\np)\(s:dcl\np)	O	[Time]
+das	das	DEF	np/n	O	[]
+Dynamit	dynamite	CON	n	dynamite.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p23/d0711
+Sandra~Goudie	sandra~goudie	PER	n	female.n.02	[]
+wurde	be	PST	(s:dcl\np)/(s:pss\np)	O	[]
+von	by	REL	((s:pss\np)/(s:pss\np))/np	O	[Agent]
+Max~Purnell	max~purnell	PER	n	male.n.02	[]
+besiegt	defeat	EXS	s:pss\np	defeat.v.01	[Co-Agent]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p23/d1518
+Ich	speaker	PRO	np	O	[]
+pflanze	plant	ENS	(s:dcl\np)/np	plant.v.01	[Theme,Agent]
+Bohnen	bean	CON	n	bean.n.03	[]
+in	in	REL	((s:dcl\np)\(s:dcl\np))/np	O	[Destination]
+meinem	speaker	HAS	np/n	O	[User]
+Garten	garden	CON	n	garden.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p12/d0922
+Es	it	NIL	np	O	[]
+hat	hat	NOW	(s:dcl\np)/(s:pt\np)	O	[]
+geschneit	snow	EXT	s:pt\np	snow.v.01	[Equal]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p02/d1800
+Mit	with	REL	(s:wq/(s:q/pp))/(s:wq/(s:q/np))	O	[Co-Agent]
+wem	person	QUE	s:wq/(s:q/np)	person.n.01	[Name]
+spreche	speak	ENS	(s:q/pp)/np	speak.v.02	[Agent]
+ich	speaker	PRO	np	O	[]
+?	?	QUE	s:wq\s:wq	O	[]
+
+
+# newdoc id = p62/d1397
+Er	male	PRO	np	male.n.02	[]
+wurde	be	PST	(s:dcl\np)/(s:pss\np)	O	[]
+von	by	REL	((s:pss\np)/(s:pss\np))/np	O	[Agent]
+Tom	tom	PER	n	male.n.02	[]
+verführt	seduce	EXS	s:pss\np	seduce.v.01	[Patient]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p73/d2380
+Tom	tom	PER	n	male.n.02	[]
+bügelte	iron	EPS	(s:dcl\np)/np	iron.v.01	[Patient,Agent]
+seine	male	HAS	np/n	male.n.02	[User]
+Kleidung	clothes	CON	n	clothes.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p02/d1537
+Beethoven	beethoven	PER	n	male.n.02	[]
+hat	hat	NOW	(s:dcl\np)/(s:pt\np)	O	[]
+neun	9	QUC	n/n	O	[Quantity]
+Sinfonien	symphony	CON	n	symphony.n.01	[]
+geschrieben	write	EXT	(s:pt\np)\np	write.v.06	[Result,Agent]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p72/d1515
+Tom	tom	PER	n	male.n.02	[]
+schreibt	write	ENS	(s:dcl\np)/pp	write.v.01	[Result,Agent]
+gerade	now	NOW	(s:dcl\np)\(s:dcl\np)	O	[]
+an	an	REL	pp/np	O	[Result]
+einem	a	DIS	np/n	O	[]
+Roman	novel	CON	n	novel.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p03/d2769
+Sie	female	PRO	np	female.n.02	[]
+ist	be	NOW	(s:dcl\np)/(s:adj\np)	O	[]
+sehr	very	INT	(s:adj\np)/(s:adj\np)	very.r.01	[]
+geschickt	handy	IST	(s:adj\np)/pp	handy.a.03	[Attribute]
+mit	with	REL	pp/np	O	[Instrument]
+der	der	DEF	np/n	O	[]
+Säge	saw	CON	n	saw.n.02	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p03/d0884
+Er	male	PRO	np	male.n.02	[]
+braute	brew	EPS	(s:dcl\np)/np	brew.v.01	[Product,Agent]
+Bier	beer	CON	n	beer.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p42/d0765
+Wolfgang~Amadeus~Mozart	wolfgang~amadeus~mozart	PER	n	male.n.02	[]
+wurde	be	PST	(s:dcl\np)/(s:pss\np)	O	[]
+in	in	REL	((s:pss\np)/(s:pss\np))/np	O	[Location]
+Salzburg	salzburg	GPE	n	city.n.01	[]
+geboren	bear	EXS	s:pss\np	bear.v.02	[Patient]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p32/d3162
+Das	the	DEF	np/n	O	[]
+Düsenflugzeug	jet	CON	n	jet.n.01	[]
+landete	land	EPS	s:dcl\np	land.v.02	[Theme]
+in	at	REL	((s:dcl\np)\(s:dcl\np))/np	O	[Location]
+Tokyo	tokyo	GPE	n	city.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p43/d2503
+Meine	speaker	HAS	np/(n/pp)	O	[Of]
+Mutter	mother	ROL	n/pp	mother.n.01	[]
+probierte	taste	EPS	(s:dcl\np)/pp	taste.v.03	[Agent]
+von	von	REL	pp/np	O	[Theme]
+der	the	DEF	np/n	O	[]
+Milch	milk	CON	n	milk.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p02/d1535
+Der	the	DEF	np/n	O	[]
+Löwe	lion	CON	n	lion.n.01	[]
+brüllt	roar	ENS	s:dcl\np	roar.v.05	[Agent]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p12/d0949
+Sie	hearer	PRO	np	O	[]
+haben	haben	NOW	(s:dcl\np)/(s:pt\np)	O	[]
+einen	a	DIS	np/n	O	[]
+Ara	macaw	CON	n	macaw.n.01	[]
+gekauft	buy	EXT	(s:pt\np)\np	buy.v.01	[Theme,Agent]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p43/d3154
+Ein	a	DIS	np/n	O	[]
+Baby	baby	CON	n	baby.n.01	[]
+schläft	sleep	ENS	(s:dcl\np)/pp	sleep.v.01	[]
+in	inside	REL	pp/np	O	[Location]
+der	the	DEF	np/n	O	[]
+Wiege	cradle	CON	n	cradle.n.01	[]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p03/d0903
+Ich	speaker	PRO	np	O	[]
+bin	be	NOW	(s:dcl\np)/(s:pt\np)	O	[]
+in	in	REL	((s:pt\np)/(s:pt\np))/np	O	[Location]
+Russland	russland	GPE	n	country.n.02	[]
+geboren	bear	EXT	s:pt\np	bear.v.02	[Patient]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p53/d2341
+Sie	female	PRO	np	female.n.02	[]
+hat	hat	NOW	(s:dcl\np)/(s:pt\np)	O	[]
+ihn	male	PRO	np	male.n.02	[]
+getreten	kick	EXT	(s:pt\np)\np	kick.v.03	[Patient,Agent]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p83/d1420
+Ich	speaker	PRO	np	O	[]
+hatte	have	PST	(s:dcl\np)/(s:pt\np)	O	[]
+meine	speaker	HAS	np/(n/pp)	O	[Owner]
+Armbanduhr	watch	CON	n/pp	watch.n.01	[]
+repariert	repair	EXT	(s:pt\np)\np	repair.v.01	[Patient,Agent]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
+# newdoc id = p02/d0713
+9	9	QUC	n/n	O	[Quantity]
+Menschen	person	CON	n	person.n.01	[]
+wurden	be	PST	(s:dcl\np)/(s:pss\np)	O	[]
+von	by	REL	((s:pss\np)/(s:pss\np))/np	O	[Agent]
+Raman~Raghav	raman~raghav	PER	n	male.n.02	[]
+ermordet	assassinate	EXS	s:pss\np	assassinate.v.01	[Patient]
+.	.	NIL	s:dcl\s:dcl	O	[]
+
+
