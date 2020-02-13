@@ -14,6 +14,12 @@ git clone https://github.com/RikVN/DRS_parsing
 pip install -r requirements.txt
 ```
 
+Make sure evaluation/ is on your PYTHONPATH like this:
+
+```
+export PYTHONPATH=${PYTHONPATH}:/your/folders/here/DRS_parsing/evaluation/
+```
+
 All Python scripts should use Python 3, though some might work with Python 2 (Counter).
 
 ### Running on older data ###
