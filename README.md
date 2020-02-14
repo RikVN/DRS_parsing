@@ -178,6 +178,8 @@ The file ``run_boxer.py`` is able to provide you with DRSs if you provide it wit
 
 We have provided the gold standard layer information (see parsing/layer_data/) as an example of what input Boxer expects.
 
+Boxer is created in prolog and needs swipl version 7.2.3 to run, please check [here](https://www.swi-prolog.org/build/PPA.html) and [here](https://launchpad.net/~swi-prolog/+archive/ubuntu/stable) to obtain a working version.
+
 You only need to the provide the supertags, but Boxer still needs access to the full parse. The script will take care of this. However, it needs access to our version of easyCCG, with a corresponding model.
 
 Run this to install these dependencies + the parsing model:
