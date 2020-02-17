@@ -10,16 +10,22 @@ def dummy_drs():
 
 
 def spar_drs():
-    '''Return the SPAR DRS of "He smiled"'''
+    '''Return the SPAR DRS of "He bragged about it."
+       SPAR for PMB release 3.0.0'''
     return [['b1', 'REF', 'x1'],
-    ['b1', 'male', '"n.02"', 'x1'],
-    ['b3', 'REF', 't1'],
-    ['b3', 'TPR', 't1', '"now"'],
-    ['b3', 'time', '"n.08"', 't1'],
-    ['k0', 'Agent', 'e1', 'x1'],
-    ['k0', 'REF', 'e1'],
-    ['k0', 'Time', 'e1', 't1'],
-    ['k0', 'smile', '"v.01"', 'e1']]
+            ['b1', 'PRESUPPOSITION', 'b2'],
+            ['b1', 'male', '"n.02"', 'x1'],
+            ['b2', 'REF', 'e1'],
+            ['b2', 'REF', 't1'],
+            ['b2', 'Agent', 'e1', 'x1'],
+            ['b2', 'TPR', 't1', '"now"'],
+            ['b2', 'Time', 'e1', 't1'],
+            ['b2', 'brag', '"v.01"', 'e1'],
+            ['b2', 'time', '"n.08"', 't1'],
+            ['b2', 'Theme', 'e1', 'x2'],
+            ['b3', 'REF', 'x2'],
+            ['b3', 'PRESUPPOSITION', 'b2'],
+            ['b3', 'entity', '"n.01"', 'x2']]
 
 
 def write_to_file(lst, out_file):
