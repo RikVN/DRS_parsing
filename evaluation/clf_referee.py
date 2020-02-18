@@ -446,6 +446,9 @@ def clf_to_box_dict(clf, op_types, arg_typing, v=0):
             if v >=4: print("Adding {} as {}".format(cl, op_type))
             assert (arg_typing[b1], arg_typing[b2]) == ('b', 'b')
             presupp_rels.add((b1, b2)) # b1 subordinates b2 if b1 is a presupposition of b2
+            # since there can be an empty box, allow PREs to introduce boxes
+            box_dict.setdefault(b1, Box(b1))
+            box_dict.setdefault(b2, Box(b2))
             continue
         # clause for a condition with Role predicate
         if op_type in ['ROL']:
