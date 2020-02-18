@@ -77,7 +77,7 @@ If all clauses are correctly formatted syntactically, they do not necessarily fo
 * Recovers a transitive subordinate relation over boxes in such a way that free occurrences of variables are avoided (if possible) by inducing parts of the relation;
 * Checks that the subordinate relation is loop-free;
 * Verifies that every discourse referent is bound;
-* makes sure that the DRSs are forming a connected graph, i.e, any two DRSs are connected with a series of discourse relations;
+* Makes sure that the DRSs are forming a connected graph, i.e, any two DRSs are connected with a series of discourse relations;
 
 Counter uses Referee to determine whether the input is well-formed, and throws an error otherwise. The Referee script can also be run separately to spot ill-formed DRSs (with or without the signature file):
 
