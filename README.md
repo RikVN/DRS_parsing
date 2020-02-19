@@ -71,22 +71,22 @@ DRSs in clause format follow a strict format. The second value in the clause ide
 
 Clauses can have two types of variable, box variables and other variables. The type of variable can be determined by the place it occurs in a clause, e.g. the first variable is always a box variable. This means that you can name the variables to whatever is convenient for you, but realize that using the same name in a DRS matches the same variable.
 
-If all clauses are correctly formatted syntactically, they do not necessarily form a well-formed DRS (e.g. translatable into a first-order logic formula without free occurrences of a variable). To check if the input is well-formed, we use a format checker called Referee (see `evaluation/clf_referee.py` by [Lasha Abzianidze](https://sites.google.com/site/lashabzianidze/home)). Referee does the following things:
+If all clauses are correctly formatted syntactically, they do not necessarily form a well-formed DRS (e.g. translatable into a first-order logic formula without free occurrences of a variable). To check if the input is a well-formed DRS, we use a format checker called Referee (see `evaluation/clf_referee.py` by [Lasha Abzianidze](https://naturallogic.pro/)). Referee does the following things:
 
-* Checks individual clauses on well-formedness (distinguishing between box and entity variables)
-* Recovers all subordinate relations between boxes in such a way that free occurrences of variables are avoided (if possible)
-* Makes sure that there are no free occurrences of variables
-* Checks that the subordinate relation is loop-free.
-* Finds a unique main box (if exists)
+* Checks individual clauses on well-formedness (distinguishing between box variables, entity variables and constants);
+* Recovers a transitive subordinate relation over boxes in such a way that free occurrences of variables are avoided (if possible) by inducing parts of the relation;
+* Checks that the subordinate relation is loop-free;
+* Verifies that every discourse referent is bound;
+* Makes sure that the DRSs are forming a connected graph, i.e, any two DRSs are connected with a series of discourse relations;
 
 Counter uses Referee to determine whether the input is well-formed, and throws an error otherwise. The Referee script can also be run separately to spot ill-formed DRSs (with or without the signature file):
 
 ```
 python evaluation/clf_referee.py $DRS_FILE
-python evluation/clf_referee.py $DRS_FILE -s evaluation/clf_signature.yaml
+python evluation/clf_referee.py $DRS_FILE -s evaluation/clf_signature.yaml -v 3
 ```
 
-When Referee is run without signature, it assumes simple heuristics for operators. Roles are in initial caps, comparison operators (e.g., temporal and spatial) in 3-letter all caps, and discourse relations in >3-letter all caps. With a specified signature, Referee is stricter as the signature restricts a set of allowed roles, comparison operators and discourse relatons.
+When Referee is run without a signature, it assumes simple heuristics for operators. Roles are in initial caps, comparison operators (e.g., temporal and spatial) in 3-letter all caps, and discourse relations in >3-letter all caps. With a specified signature, Referee is stricter as the signature restricts a set of allowed roles, comparison operators and discourse relations. It supports the verbosity levels that help to expose the details of validity checking.
 
 Counter contains a setting to automatically replace ill-formed DRSs by either a dummy DRS (-ill dummy) or the SPAR default DRS (-ill spar) to make sure you can still get a score when producing ill-formed output.
 
