@@ -83,6 +83,11 @@ def get_conll_blocks(in_file, split_lines=True, add_doc=False):
     if cur_doc:
         docs.append(cur_doc)
         doc_ids.append(num_lines)
+    # If num_lines is never increased, this means that the # newdoc information was not added
+    # In that case we just assume the default of 1 doc per block
+    if num_lines == -1:
+        info("Assuming 1 document per CoNLL block")
+        doc_ids = range(0, len(docs))
     info("Extracted {0} sents, for {1} docs".format(len(docs), doc_ids[-1] + 1))
     return docs, doc_ids
 
@@ -123,6 +128,7 @@ def retry_failed_parses(parses, conll_blocks):
                 else:
                     # Parse still failed, add failed
                     warning("Parse {0} still failed without supertag constraints".format(num))
+                    raise ValueError("ERROR ABOVE")
                     new_parses.append(["FAILED"])
         # Always add the current parse
         new_parses.append(parse)
