@@ -11,6 +11,7 @@ Usage:
 python run_boxer.py -c $CONLL_FILE -o $OUTPUT_FOLDER -b $BOXER -e $EASYCCG -em $CCG_MODEL
 '''
 
+import sys
 import argparse
 import os
 import re
@@ -107,44 +108,60 @@ def read_blocks(lines):
     return blocks
 
 
-def parse_block(block, output_folder, easyccg, easyccg_model, num):
-    '''Parse an input CoNLL block, error is parse failed'''
-    p_input = prepare_parse_format(block, use_tags=False)
-    p_output = parse_sentences(p_input, output_folder, easyccg, easyccg_model, tmp="{0}".format(num))
-    # Rewrite the output to the block format again
-    block_parse = strip_ccg(p_output)
-    if ccg_succeeded(block_parse):
-        warning("Parse {0} succeeded without supertag constraints".format(num))
-        return block_parse
-    raise ValueError("Parse {0} still failed without supertag constraints, no workaround currently, error".format(num))
+def get_missing_indices(parses, conll_blocks):
+    '''Find all the missing indices from the easyCCG parse output'''
+    retry_indices = []
+    prev_id = 0
+    block_dict = {}
+    for parse in parses:
+        cur_id = int(re.findall(r'[\d]+', parse[0])[0])
+        # Check if we skipped one, if so save, and try again later
+        if cur_id != prev_id + 1:
+            # Do in a forloop if we skipped more in a row
+            for num in range(prev_id, cur_id - 1):
+                retry_indices.append(num)
+        block_dict[cur_id-1] = parse
+        prev_id = cur_id
+    # It is possible that the last parse(s) failed, so always check if
+    # we have enough parses here, and if not, also retry those
+    missed_num = len(retry_indices)
+    for num in range(len(block_dict) + missed_num , len(conll_blocks)):
+        retry_indices.append(num)
+    return retry_indices, block_dict
 
 
 def retry_failed_parses(parses, conll_blocks):
     '''Parses sometimes fail, if so, try again without the supertag constraints'''
+    missing_indices, correct_parse_dict = get_missing_indices(parses, conll_blocks)
+    info ("Missing indices: {0}".format(missing_indices))
+    # Retry all the failed parses here
+    retry_conll_blocks = [block for idx, block in enumerate(conll_blocks) if idx in missing_indices]
+    info("Retry {0} parses that failed initially, now without supertag constraints\n".format(len(retry_conll_blocks)))
+    p_input = prepare_parse_format(retry_conll_blocks, use_tags=False)
+    p_output = parse_sentences(p_input, args.output_folder, args.easyccg, args.easyccg_model, tmp="retry")
+    # Put in correct format again
+    p_lines = strip_ccg(p_output)
+    p_parses = read_blocks(p_lines)
+
+    # Now do a sanity check: there shouldn't be any missing parses for the retried version
+    new_missing_indices, new_parse_dict = get_missing_indices(p_parses, retry_conll_blocks)
+    if new_missing_indices:
+        raise ValueError("Even after retrying without fixed supertags there is an invalid parse.\nNo workaround has been implemented \
+                          so far. This is the CoNLL block that resulted in the error: {0}".format(retry_conll_blocks[new_missing_indices[0]]))
+
+    # If all is well, add the new parses in the correct place
+    retry_idx = 0
     new_parses = []
-    prev_id = 0
-    for parse in parses:
-        cur_id = int(re.findall(r'[\d]+', parse[0])[0])
-        # Check if we skipped one, if so try again
-        if cur_id != prev_id + 1:
-            # Do in a forloop if we skipped more in a row
-            for num in range(prev_id, cur_id - 1):
-                warning("Parse {0} failed, try again without supertag constraints".format(num))
-                new_parses.append(parse_block([conll_blocks[num]], args.output_folder, args.easyccg, args.easyccg_model, num))
-        # Always add the current parse
-        new_parses.append(parse)
-        prev_id = cur_id
-    # It is possible that the last parse(s) failed, so always check if
-    # we have enough parses here, and if not, also retry those
-    for num in range(len(parses), len(conll_blocks)):
-        warning("Parse {0} failed, try again without supertag constraints".format(num))
-        new_parses.append(parse_block([conll_blocks[num]], args.output_folder, args.easyccg, args.easyccg_model, num))
+    for num in range(len(conll_blocks)):
+        if num in correct_parse_dict:
+            # Succeeded parse, simply add it
+            new_parses.append(correct_parse_dict[num])
+        else:
+            # Add one of the initially failed blocks
+            new_parses.append(p_parses[retry_idx])
+            # Increase idx so we move on to the next one
+            retry_idx += 1
     return new_parses
-
-
-def ccg_succeeded(lines):
-    '''Check if CCG parse succeeded for single sentence'''
-    return len([x for x in lines if x.startswith('ccg')]) > 0
 
 
 def strip_ccg(output):
@@ -173,7 +190,6 @@ def parse_output_per_doc(output, doc_ids, conll_blocks):
     # Parses sometimes fail, if so, try again without the supertag constraints
     # Print a warning if that happens
     parses = retry_failed_parses(parses, conll_blocks)
-
     # Now add blocks together that belong to the same document
     parses = merge_by_document(parses, doc_ids)
     return parses
@@ -314,7 +330,6 @@ def boxer_list(conll_blocks, parse_output, boxer, out_fol):
 
 if __name__ == "__main__":
     args = create_arg_parser()
-
     # First get the data in the correct format
     conll_blocks, doc_ids = get_conll_blocks(args.conll_file)
 
