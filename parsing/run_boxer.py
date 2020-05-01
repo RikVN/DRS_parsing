@@ -107,6 +107,18 @@ def read_blocks(lines):
     return blocks
 
 
+def parse_block(block, output_folder, easyccg, easyccg_model, num):
+    '''Parse an input CoNLL block, error is parse failed'''
+    p_input = prepare_parse_format(block, use_tags=False)
+    p_output = parse_sentences(p_input, output_folder, easyccg, easyccg_model, tmp="{0}".format(num))
+    # Rewrite the output to the block format again
+    block_parse = strip_ccg(p_output)
+    if ccg_succeeded(block_parse):
+        warning("Parse {0} succeeded without supertag constraints".format(num))
+        return block_parse
+    raise ValueError("Parse {0} still failed without supertag constraints, no workaround currently, error".format(num))
+
+
 def retry_failed_parses(parses, conll_blocks):
     '''Parses sometimes fail, if so, try again without the supertag constraints'''
     new_parses = []
@@ -118,21 +130,15 @@ def retry_failed_parses(parses, conll_blocks):
             # Do in a forloop if we skipped more in a row
             for num in range(prev_id, cur_id - 1):
                 warning("Parse {0} failed, try again without supertag constraints".format(num))
-                p_input = prepare_parse_format([conll_blocks[num]], use_tags=False)
-                p_output = parse_sentences(p_input, args.output_folder, args.easyccg, args.easyccg_model, tmp="{0}".format(num))
-                # Rewrite the output to the block format again
-                block_parse = strip_ccg(p_output)
-                if ccg_succeeded(block_parse):
-                    new_parses.append(block_parse)
-                    warning("Parse {0} succeeded without supertag constraints".format(num))
-                else:
-                    # Parse still failed, add failed
-                    warning("Parse {0} still failed without supertag constraints".format(num))
-                    raise ValueError("ERROR ABOVE")
-                    new_parses.append(["FAILED"])
+                new_parses.append(parse_block([conll_blocks[num]], args.output_folder, args.easyccg, args.easyccg_model, num))
         # Always add the current parse
         new_parses.append(parse)
         prev_id = cur_id
+    # It is possible that the last parse(s) failed, so always check if
+    # we have enough parses here, and if not, also retry those
+    for num in range(len(parses), len(conll_blocks)):
+        warning("Parse {0} failed, try again without supertag constraints".format(num))
+        new_parses.append(parse_block([conll_blocks[num]], args.output_folder, args.easyccg, args.easyccg_model, num))
     return new_parses
 
 
