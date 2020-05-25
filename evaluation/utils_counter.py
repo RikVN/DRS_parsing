@@ -2,17 +2,20 @@
 import sys, os, re, codecs, random
 
 
-def dummy_drs():
+def dummy_drs(list_output=True):
     '''Return dummy DRS in clause format'''
     # Add random string so it never matches with anything
     rand_string = "".join([random.choice(['a','b','c','d','e','f','g','h']) for x in range(10)])
-    return [['b1', 'REF', 'x1'], ['b1', 'alwayswrongconcept' + rand_string, '"n.01"', 'x1']]
+    dummy = [['b1', 'REF', 'x1'], ['b1', 'alwayswrongconcept' + rand_string, '"n.01"', 'x1']]
+    if list_output:
+        return dummy
+    else:
+        return [" ".join(x) for x in dummy]
 
-
-def spar_drs():
+def spar_drs(list_output=True):
     '''Return the SPAR DRS of "He bragged about it."
        SPAR for PMB release 3.0.0'''
-    return [['b1', 'REF', 'x1'],
+    spar =  [['b1', 'REF', 'x1'],
             ['b1', 'PRESUPPOSITION', 'b2'],
             ['b1', 'male', '"n.02"', 'x1'],
             ['b2', 'REF', 'e1'],
@@ -26,6 +29,10 @@ def spar_drs():
             ['b3', 'REF', 'x2'],
             ['b3', 'PRESUPPOSITION', 'b2'],
             ['b3', 'entity', '"n.01"', 'x2']]
+    if list_output:
+        return spar
+    else:
+        return [" ".join(x) for x in spar]
 
 
 def write_to_file(lst, out_file):
@@ -130,8 +137,30 @@ def merge_dicts(all_dicts, args):
     return new_dict, f_dict
 
 
-def create_tab_list(print_rows, print_item, joiner):
+def multiply_if_float(string, first_item, multiplier=100, do_round=4):
+    '''Multiply in string by 100 if it's a float between 0 and 1
+       Return value as a string, not float
+       Hacky fix for not doing for whole numbers: if first item starts with "#",
+       we just return the string'''
+    if first_item.strip().startswith("#"):
+        return string
+    try:
+        float(string)
+        if float(string) > 0 and float(string) <= 1 and "." in string:
+            return str(round(float(string) * multiplier, do_round))
+        else:
+            return string
+    except:
+        return string
+
+
+def create_tab_list(print_rows, print_item, joiner, do_percentage=False):
     '''For multiple rows, return row of strings nicely separated by tabs'''
+    print_rows = [[str(x) for x in item] for item in print_rows]
+    # Check if we want to change floats between 0 and 1 to their percentage between 0-100
+    # So essentially multiply each float >0 and <1 with 100
+    if do_percentage:
+        print_rows = [[multiply_if_float(x, item[0]) for x in item] for item in print_rows]
     col_widths = []
     if print_item:
         return_rows = [print_item]

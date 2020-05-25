@@ -101,6 +101,8 @@ def build_arg_parser():
 						help='Output multiple scores (one pair per score) instead of a single document-level score (Default: false)')
 	parser.add_argument('-ms_file', default = '',
 						help='The file where we print the individual scores per DRS to -- one score per line (float) -- default empty means do not print to file')
+	parser.add_argument('-al', '--all_idv', action='store_true',
+						help='Add all idv information in the --ms_file file (match, prod, gold), not just the F-score')
 	parser.add_argument('-sig', '--significant', type=int,
 						default=4, help='significant digits to output (default: 4)')
 	parser.add_argument('-st', '--stats', default='', type=str,
@@ -716,18 +718,18 @@ def save_detailed_stats(all_dicts, args):
 
 	# Create lists to print when looping over the sorted dictionary
 	for w in sorted(f_dict, key=f_dict.get, reverse=True):
-		if final_dict[w][1] > args.detailed_stats or final_dict[w][2] > args.detailed_stats: #only print if it has a minimum occurrence in prod or gold
+		if final_dict[w][1] >= args.detailed_stats or final_dict[w][2] >= args.detailed_stats: #only print if it has a minimum occurrence in prod or gold
 			if all_upper(w):
-				print_list[0].append([w, str(f_dict[w]), str(final_dict[w][2])])
+				print_list[0].append([w, str(f_dict[w]), str(final_dict[w][1]), str(final_dict[w][2]), str(final_dict[w][0])])
 			elif is_role(w):
-				print_list[1].append([w, str(f_dict[w]), str(final_dict[w][2])])
+				print_list[1].append([w, str(f_dict[w]), str(final_dict[w][1]), str(final_dict[w][2]), str(final_dict[w][0])])
 			else:
-				print_list[2].append([w, str(f_dict[w]), str(final_dict[w][2])])
+				print_list[2].append([w, str(f_dict[w]), str(final_dict[w][1]), str(final_dict[w][2]), str(final_dict[w][0])])
 
 	# Now print a nicely aligned tab-list for the three types of clauses so it is easier to keep them straight
 	for idx, item in enumerate(print_list):
 		print('\n{0} {1}:\n'.format(print_line, print_headers[idx].lower()))
-		to_print = create_tab_list([[print_headers[idx], 'F-score','Gold inst']] + print_list[idx], [], '\t')
+		to_print = create_tab_list([[print_headers[idx], 'F-score', 'Prod inst', 'Gold inst', "Match"]] + print_list[idx], [], '\t')
 		for t in to_print: print(t)
 
 
@@ -821,7 +823,11 @@ def main(args):
 		with open(args.ms_file, 'w') as out_f:
 			for items in all_results:
 				_, _, f_score = compute_f(items[0], items[1], items[2], args.significant, False)
-				out_f.write(str(f_score) + '\n')
+				if args.all_idv:
+					print_line = " ".join([str(x) for x in [items[0], items[1], items[2]]])
+					out_f.write(print_line + '\n')
+				else:
+					out_f.write(str(f_score) + '\n')
 		out_f.close()
 
 	# We might want to output statistics about individual types of clauses
