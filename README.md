@@ -25,10 +25,10 @@ All Python scripts should use Python 3, though some might work with Python 2 (Co
 
 ### Running on older data ###
 
-This version contains the scripts that work with version 3.0.0 (should mostly concern referee, see below). If you plan to do experiments on release 2.2.0, please check out the 2.2.0 version of this repo:
+This version contains the scripts that work with version 4.0.0 (should mostly concern referee, see below). If you plan to do experiments on release 2.2.0 or 3.0.0, please check out the correct version of this repo like this:
 
 ```
-git checkout v.2.2.0
+git checkout v.3.0.0
 ```
 
 ## Counter: evaluating scoped meaning representations
@@ -76,7 +76,7 @@ Counter contains a setting to automatically replace ill-formed DRSs by either a 
 
 ### Data ###
 
-The data folder contains some data for release 2.1.0, 2.2.0 and 3.0.0. If you're interested in DRS parsing, please see our [Neural_DRS](https://github.com/RikVN/Neural_DRS) and see the setup scripts to easily get DRS parsing data for releases 2.2.0 and 3.0.0, for all four languages in the PMB.
+The data folder contains some data for release 2.1.0, 2.2.0, 3.0.0 and 4.0.0. If you're interested in DRS parsing, please see our [Neural_DRS](https://github.com/RikVN/Neural_DRS) and see the setup scripts to easily get DRS parsing data for releases 2.2.0, 3.0.0 and 4.0.0, for all four languages in the PMB.
 
 For full releases, please see [the PMB webpage](http://pmb.let.rug.nl/data.php).
 
