@@ -261,7 +261,7 @@ def get_signature(sig_file, out='{op:(kind,types)}', v=0):
     # read signature from the yaml file
     if os.path.isfile(sig_file):
         with codecs.open(sig_file, 'r', encoding='UTF-8') as f:
-            sig = yaml.load(f)
+            sig = yaml.load(f, Loader=yaml.BaseLoader)
     else:
         raise ValueError("Specified signature file is not a file")
     # original as it is from the yaml file
