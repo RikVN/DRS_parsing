@@ -403,7 +403,7 @@ def same_edge_type_check(edge1, edge2):
 	   concepts: verb
 	   operators: REF, EQU'''
 
-	if edge1.isupper() and edge2.isupper():  # operator
+	if (edge1.isupper() and edge2.isupper()) or (edge1 in ['SY1', 'SY2'] and edge in ['SY1', 'SY2']):  # operator
 		return True
 	elif edge1[0].isupper() and edge1[1:].islower() and edge2[0].isupper() and edge2[1:].islower():  # role
 		return True

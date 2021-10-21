@@ -292,7 +292,7 @@ def get_clause_id(clause):
 	'''Get individual clause ID, e.g. Theme, work, IMP
 	   However, for concepts we also want the sense!'''
 	spl_line = clause.split()
-	if all_upper(spl_line[1]) or is_role(spl_line[1]):
+	if all_upper(spl_line[1]) or spl_line[1] in ['SY1', 'SY2'] or is_role(spl_line[1]):
 		return spl_line[1]
 	else:
 		return spl_line[1] + '.' + spl_line[2].replace('"','') #get sense without quotes
@@ -302,7 +302,7 @@ def get_num_concepts(clause_list, pos_tag):
 	'''Get the number of concepts with a certain pos-tag'''
 	num_concepts = 0
 	for clause in clause_list:
-		if not all_upper(clause[1]) and not is_role(clause[1]):
+		if not all_upper(clause[1]) and not is_role(clause[1]) and not clause[1] in ['SY1', 'SY2']:
 			try:
 				cur_pos_tag = clause[2].split('.')[0][-1]
 				if cur_pos_tag == 's':
@@ -323,7 +323,7 @@ def get_detailed_results(match):
 		spl_line = clause.split()
 		if '%' in spl_line:
 			spl_line = spl_line[0:spl_line.index('%')]
-		if all_upper(spl_line[1]):
+		if all_upper(spl_line[1]) or spl_line[1] in ['SY1', 'SY2']:
 			match_division[0] += 1
 		elif is_role(spl_line[1]):
 			match_division[1] += 1
@@ -695,7 +695,7 @@ class DRS:
 			else:
 				# First item always is a box variable
 				val0 = self.rename_var(cur_clause[0], 'b', args)
-				if all_upper(cur_clause[1]): # Second item is an operator
+				if all_upper(cur_clause[1]) or cur_clause[1] in ['SY1', 'SY2']: # Second item is an operator
 					self.add_operator_clauses(val0, cur_clause, idx, args)
 				elif is_role(cur_clause[1]): # Second item is a role
 					self.add_role_clauses(cur_clause, val0, idx, args)
@@ -719,7 +719,7 @@ def save_detailed_stats(all_dicts, args):
 	# Create lists to print when looping over the sorted dictionary
 	for w in sorted(f_dict, key=f_dict.get, reverse=True):
 		if final_dict[w][1] >= args.detailed_stats or final_dict[w][2] >= args.detailed_stats: #only print if it has a minimum occurrence in prod or gold
-			if all_upper(w):
+			if all_upper(w) or w in ['SY1', 'SY2']:
 				print_list[0].append([w, str(f_dict[w]), str(final_dict[w][1]), str(final_dict[w][2]), str(final_dict[w][0])])
 			elif is_role(w):
 				print_list[1].append([w, str(f_dict[w]), str(final_dict[w][1]), str(final_dict[w][2]), str(final_dict[w][0])])
