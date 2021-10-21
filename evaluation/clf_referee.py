@@ -167,6 +167,10 @@ def operator_type(op, args, sig, v=0):
         if op_kind in ['DRL', 'PRE', 'PPS']:
             return (op_kind, arg_types)
         return ('ROL', arg_types) # treat all different types of role as of type ROL
+    # Roles can be always be RoleOf instead of just Role, but make sure only to verify roles
+    elif op.endswith('Of') and len(op) > 2 and op[:-2] in sig and op[-3].islower() and op[0].isupper():
+        (op_kind, arg_types) = sig[op[:-2]]
+        return ('ROL', arg_types)
     report_error("unknown clause || {} @ {}".format(op, args).encode('UTF-8'), v=v)
 
 #################################
@@ -410,7 +414,7 @@ def clf_to_box_dict(clf, op_types, arg_typing, v=0):
                 box_dict[b1].subs.add(b2) # antecedent subordinates consequent
             continue
         # clause for a propositional condition
-        if op_type in ['PRP', 'PPS']:
+        if op_type in ['PRP', 'PPS', 'Proposition']:
             (b0, op, x, b1) = cl
             if v >=4: print("Adding {} to {} as {}".format(cl, b0, op_type))
             assert (arg_typing[b0], arg_typing[x], arg_typing[b1]) == ('b', 'x', 'b')
