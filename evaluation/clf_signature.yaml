@@ -51,6 +51,7 @@ bb:
     - PARALLEL
     - PRECONDITION
     - RESULT
+    - SOURCE
     - TOPIC
 
   PRE:
@@ -59,6 +60,8 @@ bb:
 bxb:
   DRS:
     - PRP
+  PPS:
+    - Proposition  
 
 btc:
   CRO:
@@ -156,7 +159,7 @@ btt:
     - MonthOfYear
     - YearOfCentury
   ORO:
-    # Other roles. #FIXME They need to be verified
+    # Other roles.
     - Affector
     - Context
     - Equal

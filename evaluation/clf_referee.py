@@ -164,7 +164,7 @@ def operator_type(op, args, sig, v=0):
         (op_kind, arg_types) = sig[op]
         if op_kind in ['DRS']:
             return (op, arg_types)
-        if op_kind in ['DRL', 'PRE']:
+        if op_kind in ['DRL', 'PRE', 'PPS']:
             return (op_kind, arg_types)
         return ('ROL', arg_types) # treat all different types of role as of type ROL
     report_error("unknown clause || {} @ {}".format(op, args).encode('UTF-8'), v=v)
@@ -181,7 +181,7 @@ def operator_type_default(op, args, v=0):
         return (op, 'bb')
     if op in ['IMP', 'DIS', 'DUP']:
         return (op, 'bbb')
-    if op in ['PRP']:
+    if op in ['PRP', 'Proposition']:
         return (op, 'bxb')
     if op in ['PRESUPPOSITION']:
         return ('PRE', 'bb')
@@ -261,7 +261,7 @@ def get_signature(sig_file, out='{op:(kind,types)}', v=0):
     # read signature from the yaml file
     if os.path.isfile(sig_file):
         with codecs.open(sig_file, 'r', encoding='UTF-8') as f:
-            sig = yaml.load(f)
+            sig = yaml.load(f, Loader=yaml.BaseLoader)
     else:
         raise ValueError("Specified signature file is not a file")
     # original as it is from the yaml file
@@ -410,7 +410,7 @@ def clf_to_box_dict(clf, op_types, arg_typing, v=0):
                 box_dict[b1].subs.add(b2) # antecedent subordinates consequent
             continue
         # clause for a propositional condition
-        if op_type in ['PRP']:
+        if op_type in ['PRP', 'PPS']:
             (b0, op, x, b1) = cl
             if v >=4: print("Adding {} to {} as {}".format(cl, b0, op_type))
             assert (arg_typing[b0], arg_typing[x], arg_typing[b1]) == ('b', 'x', 'b')
