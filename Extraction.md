@@ -63,7 +63,7 @@ export PYTHONPATH=${PYTHONPATH}:${cur_dir}/Neural_DRS/src/
 To test your setup, you can run Boxer on the gold-standard layer data for the dev set like this:
 
 ```
-python parsing/run_boxer.py -c parsing/layer_data/gold/en/dev.conll -o parsing/output/
+python parsing/run_boxer.py -c parsing/layer_data/3.0.0/en/gold/dev.conll -o parsing/output/
 ```
 
 The final DRSs are now in parsing/output/final_drss.txt. If you compare this to the gold standard using Counter, it should score an F-score of > 0.99.
